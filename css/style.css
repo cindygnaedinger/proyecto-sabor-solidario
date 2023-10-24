@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+    --primer-color: #FF6100;
+    --segundo-color: #75CFE9;
+    --dark-color: #434343;
+    --light-color: #fff;
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 1024px;
+    font-family: 'Karla', sans-serif;
+    color: var(--primer-color);
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primer-color);
+
+}
+
+header {
+    height: 557px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    font-weight: 500;
+    background-image: url(../imgs/hero-banner.png);
+}
+
+    #header-logo {
+        display: block;
+        width: 289px;
+        height: 86px;
+        margin: 0 0 0 24px;
+    }
+
+    header nav {
+        width: 537px;
+        height: 23px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 20px;
+        margin: 32px 84px 0 0;
+    }
+
+        header nav a {
+            padding: 10px;
+            transition: .5s;
+        }
+
+        header nav a:hover {
+            text-shadow: 0px 1px 30px hsla(193, 73%, 69%, 0.39);
+            color: hsl(193, 73%, 69%);
+        }
+
+#hero-banner {
+    position: absolute;
+    top: 135px;
+    left: 300px;
+}
+
+    #hero-banner h1 {
+        width: 399px;
+        font-size: 48px;
+        font-weight: bold;
+    }
+
+    #hero-banner h2 {
+        width: 336px;
+        font-size: 24px;
+        font-weight: normal;
+    }
+
+    #hero-banner div {
+        width: 364px;
+        height: 68px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 32px;
+    }
+
+        #hero-banner div a{
+            display: block;
+            width: 168px;
+            height: 58px;
+            font-size: 24px;
+            font-weight: bold;
+            border: solid 3px var(--primer-color);
+            border-radius: 8px;
+            text-align: center;
+            padding-top: 12px;
+            background-color: var(--light-color);
+            transition: .5s;
+        }
+
+        #hero-banner div a:hover{
+          background-color: var(--primer-color);
+          color: var(--light-color) ;
+        }
+        
