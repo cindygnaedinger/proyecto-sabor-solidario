@@ -108,4 +108,68 @@ header {
           background-color: var(--primer-color);
           color: var(--light-color) ;
         }
+
+        #buscar-donadores{
+            background-image: url(../imgs/bgi-contactar-donadores.png);
+            height: 1074px;
+            margin-top: 131px;
+            background-position: 0 94px;
+            background-repeat: no-repeat;
+            display: block;
+            text-align: center;
+        }
         
+            #buscar-donadores div {
+                height: 957px;
+                margin-top: 49px;
+                display: block;
+                justify-content: space-around;
+        
+            
+        
+            }
+        
+            #buscar-donadores h3 {
+                font-size: 36px;
+                font-weight: bold;
+              
+            }
+        
+            
+            #buscar-donadores h2 { 
+                font-size: 62px;
+                font-weight: bold;
+                margin: 80px 0 102px 0
+                
+                
+            }
+        
+            #buscar-donadores h4 { 
+                font-size: 40px;
+                margin: 52px 0 18px 0;
+                font-weight: 400;
+                
+            }
+        
+            #buscar-donadores input{
+                width: 455px;
+                height: 36px;
+                font-size: 23px;
+                font-weight: 500;
+                background-color: rgba(43, 43, 43, 0.17);
+                border: black 1px solid;
+                transition: background-color 0.3s ease;        
+            }
+        
+            #buscar-donadores input:focus{
+                outline:none;
+                background-color: hsla(0, 0%, 50%, 0.17);
+        
+            }
+        
+            img[alt="Buscar"]{
+                vertical-align: middle;
+                margin: 0 0 7.5px 0;
+                cursor: pointer;
+                padding: 8px;
+            }
