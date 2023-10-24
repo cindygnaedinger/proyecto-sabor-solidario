@@ -110,21 +110,21 @@ header {
         }
 
         #buscar-donadores{
-            background-image: url(../imgs/bgi-contactar-donadores.png);
             height: 1074px;
             margin-top: 131px;
-            background-position: 0 94px;
-            background-repeat: no-repeat;
             display: block;
             text-align: center;
         }
+
         
-            #buscar-donadores div {
+            #ingresar-donacion {
+                background-image: url(../imgs/bgi-contactar-donadores.png);
                 height: 957px;
                 margin-top: 49px;
                 display: block;
                 justify-content: space-around;
-        
+                background-repeat: no-repeat;
+                display: none        
             
         
             }
@@ -136,22 +136,23 @@ header {
             }
         
             
-            #buscar-donadores h2 { 
+           #ingresar-donacion h2 { 
                 font-size: 62px;
                 font-weight: bold;
-                margin: 80px 0 102px 0
+                padding-top: 34px;
+                margin-bottom: 68px;
                 
                 
             }
-        
-            #buscar-donadores h4 { 
+            
+            #ingresar-donacion h4 { 
                 font-size: 40px;
                 margin: 52px 0 18px 0;
                 font-weight: 400;
                 
             }
         
-            #buscar-donadores input{
+            #ingresar-donacion input{
                 width: 455px;
                 height: 36px;
                 font-size: 23px;
@@ -161,15 +162,18 @@ header {
                 transition: background-color 0.3s ease;        
             }
         
-            #buscar-donadores input:focus{
+            #ingresar-donacion input:focus{
                 outline:none;
                 background-color: hsla(0, 0%, 50%, 0.17);
         
             }
         
-            img[alt="Buscar"]{
+            #ingresar-donacion img[alt="Buscar"]{
                 vertical-align: middle;
                 margin: 0 0 7.5px 0;
                 cursor: pointer;
                 padding: 8px;
             }
+
+
+
