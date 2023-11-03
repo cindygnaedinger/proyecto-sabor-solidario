@@ -81,7 +81,7 @@ header nav a:hover {
 }
 
 #hero-banner div {
-  width: 364px;
+  width: 354px;
   height: 68px;
   display: flex;
   align-items: center;
@@ -91,9 +91,9 @@ header nav a:hover {
 
 #hero-banner div a {
   display: block;
-  width: 168px;
+  width: 148px;
   height: 58px;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
   border: solid 3px var(--primer-color);
   border-radius: 8px;
@@ -101,6 +101,7 @@ header nav a:hover {
   padding-top: 12px;
   background-color: var(--light-color);
   transition: 0.5s;
+  margin-top: 90px;
 }
 
 #hero-banner div a:hover {
