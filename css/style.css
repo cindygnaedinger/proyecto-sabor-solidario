@@ -116,6 +116,11 @@ header {
             text-align: center;
         }
 
+            #buscar-donadores h3 {
+                font-size: 36px;
+                font-weight: bold;
+            
+            }
         
             #ingresar-donacion {
                 background-image: url(../imgs/bgi-contactar-donadores.png);
@@ -124,56 +129,67 @@ header {
                 display: block;
                 justify-content: space-around;
                 background-repeat: no-repeat;
-                display: none        
+                      
             
         
             }
         
-            #buscar-donadores h3 {
-                font-size: 36px;
-                font-weight: bold;
-              
-            }
         
             
-           #ingresar-donacion h2 { 
-                font-size: 62px;
-                font-weight: bold;
-                padding-top: 34px;
-                margin-bottom: 68px;
+                #ingresar-donacion h2 { 
+                    font-size: 62px;
+                    font-weight: bold;
+                    padding-top: 34px;
+                    margin-bottom: 68px;
+                    
+                    
+                }
                 
-                
-            }
+                #ingresar-donacion h4 { 
+                    font-size: 40px;
+                    margin: 52px 0 18px 0;
+                    font-weight: 400;
+                    
+                }
             
-            #ingresar-donacion h4 { 
-                font-size: 40px;
-                margin: 52px 0 18px 0;
-                font-weight: 400;
-                
+                #ingresar-donacion input{
+                    width: 455px;
+                    height: 36px;
+                    font-size: 23px;
+                    font-weight: 500;
+                    background-color: rgba(43, 43, 43, 0.17);
+                    border: black 1px solid;
+                    transition: background-color 0.3s ease;        
+                }
+            
+                #ingresar-donacion input:focus{
+                    outline:none;
+                    background-color: hsla(0, 0%, 50%, 0.17);
+            
+                }
+            
+                #ingresar-donacion img[alt="Buscar-Donador"]{
+                    vertical-align: middle;
+                    margin: 0 0 7.5px 0;
+                    cursor: pointer;
+                    padding: 8px;
+                }
+            
+            #resultados-donadores{
+                background-image: url(../imgs/bgi-resultados-donadores.png);
+                height: 957px;
+                margin-top: 49px;
+                justify-content: space-around;
+                background-repeat: no-repeat;
+                display: none
             }
-        
-            #ingresar-donacion input{
-                width: 455px;
-                height: 36px;
-                font-size: 23px;
-                font-weight: 500;
-                background-color: rgba(43, 43, 43, 0.17);
-                border: black 1px solid;
-                transition: background-color 0.3s ease;        
-            }
-        
-            #ingresar-donacion input:focus{
-                outline:none;
-                background-color: hsla(0, 0%, 50%, 0.17);
-        
-            }
-        
-            #ingresar-donacion img[alt="Buscar"]{
-                vertical-align: middle;
-                margin: 0 0 7.5px 0;
-                cursor: pointer;
-                padding: 8px;
-            }
+
+                #resultados-donadores h2{
+                    font-weight: bold;
+                    font-size: 80px;
+                    padding-top: 219px;
+                }
+            
 
 
 
