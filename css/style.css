@@ -171,9 +171,10 @@ header {
                 #ingresar-donacion img[alt="Buscar-Donador"]{
                     vertical-align: middle;
                     margin: 0 0 7.5px 0;
-                    cursor: pointer;
                     padding: 8px;
                 }
+
+                
             
             #resultados-donadores{
                 background-image: url(../imgs/bgi-resultados-donadores.png);

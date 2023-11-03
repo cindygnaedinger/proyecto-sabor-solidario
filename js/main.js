@@ -4,7 +4,7 @@
 
 let divBuscarDonador = document.getElementById("ingresar-donacion")
 let inputBuscarDonador = document.getElementById("input-buscar-donador")
-let btnBuscarDonador = document.getElementById("Btn-Buscar-Donar")
+let btnBuscarDonador = document.getElementById("btn-buscar-donar")
 let divResultadosDonadores = document.getElementById("resultados-donadores")
 
 // FUNCIONES
@@ -61,7 +61,9 @@ function buscarDonadores(donacionBuscada){
             mostrarDonadores(donadoresFiltrados)
 
         } else{
-            console.log('hubo un error')
+            divBuscarDonador.style.display = 'block'
+            divResultadosDonadores.style.display = 'none'
+            window.alert('Hubo un error')
         }
     
     } 
@@ -80,3 +82,13 @@ btnBuscarDonador.addEventListener('click', () => {
    
 
 })
+
+inputBuscarDonador.addEventListener('input', () => {
+    if (inputBuscarDonador.value) {
+        btnBuscarDonador.disabled = false; 
+        btnBuscarDonador.style.cursor = 'pointer';
+    } else {
+        btnBuscarDonador.disabled = true; 
+        btnBuscarDonador.style.cursor = 'default';
+    }
+});
