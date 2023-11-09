@@ -136,7 +136,7 @@ header nav a:hover {
 #buscar-donadores {
   background-image: url(../imgs/bgi-contactar-donadores.png);
   height: 1074px;
-  margin-top: 131px;
+  margin-top: 1px;
   background-position: 0 94px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -183,11 +183,11 @@ header nav a:hover {
   background-color: hsla(0, 0%, 50%, 0.17);
 }
 
-img[alt="Buscar"] {
+img[alt="Buscar-Donador"] {
   vertical-align: middle;
   margin: 0 0 7.5px 0;
-  cursor: pointer;
   padding: 8px;
+  opacity: 0.3;
 }
 
 /* ------ GUÍA ------------------------------------*/

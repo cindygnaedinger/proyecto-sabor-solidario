@@ -59,22 +59,26 @@
 
       <section></section>
 
-      <!-- Buscar Donadores -->
-      <section id="buscar-donadores">
-        <h3>BUSCAR DONADORES</h3>
-        <div>
-          <h2>CONTACTA CON UN DONADOR</h2>
-          <img
-            src="imgs/imagen-central-donadores.png"
-            alt="Persona donando un corazón"
-          />
-          <h4>Ingresa la donación que necesitas</h4>
-          <input />
-          <button style="background: transparent; border: none">
-            <img src="imgs/Lupa.png" alt="Buscar" />
-          </button>
-        </div>
-      </section>
+          <!-- Buscar Donadores -->
+          <section id ='buscar-donadores'>
+
+            <h3>BUSCAR DONADORES</h3>
+
+            <div id="ingresar-donacion">
+                <h2>CONTACTA CON UN DONADOR</h2>
+                <img src="imgs/imagen-central-donadores.png" alt="Persona donando un corazón">
+                <h4>Ingresa la donación que necesitas</h4>
+                <input id="input-buscar-donador" autocomplete="off">
+                <button id="btn-buscar-donar" style="background: transparent; border: none;" disabled = "true">        
+                    <img id='img-buscar-donador'src="imgs/Lupa.png" alt="Buscar-Donador">
+                </button>
+           </div>
+    
+            <div id="resultados-donadores"  style="display:none">
+                <h2>DONADORES</h2>
+            </div>
+            
+        </section>
     </main>
 
     <!-- FOOTER -->
