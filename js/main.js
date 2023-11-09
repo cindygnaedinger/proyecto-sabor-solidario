@@ -32,7 +32,6 @@ function filtrarDonadores(donadores, donacionBuscada){
 
 function mostrarDonadores(donadoresFiltrados){
     if(donadoresFiltrados != 0){
-        //article
         donadoresFiltrados.forEach(donador => {
             const nuevoDonadorArt = document.createElement('article')
             nuevoDonadorArt.textContent = `${donador.nombre} ---> ${donador.donaciones.join(", ")} `
@@ -85,15 +84,16 @@ btnBuscarDonador.addEventListener('click', () => {
 
 inputBuscarDonador.addEventListener('input', () => {
 
-    let imgLupa = btnBuscarDonador.querySelector('img')
+    let imgLupa = document.getElementById('img-buscar-donador')
+
     if (inputBuscarDonador.value) {
         btnBuscarDonador.disabled = false; 
-        btnBuscarDonador.style.cursor = 'pointer';
-        imgLupa.style.transition = 'opacity 0.8s'
+        imgLupa.style.cursor = 'pointer';
+        imgLupa.style.transition = 'opacity 0.4s'
         imgLupa.style.opacity = '1'
     } else {
         btnBuscarDonador.disabled = true; 
-        btnBuscarDonador.style.cursor = 'default';
+        imgLupa.style.cursor = 'default';
         imgLupa.style.transition = 'opacity 0.6s'
         imgLupa.style.opacity = '0.3'
         

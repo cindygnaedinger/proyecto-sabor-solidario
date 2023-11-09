@@ -1,197 +1,191 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&family=Poppins:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&family=Poppins:wght@400;500;600&display=swap");
 
 :root {
-    --primer-color: #FF6100;
-    --segundo-color: #75CFE9;
-    --dark-color: #434343;
-    --light-color: #fff;
-
+  --primer-color: #ff6100;
+  --segundo-color: #75cfe9;
+  --dark-color: #434343;
+  --light-color: #fff;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    width: 1024px;
-    font-family: 'Karla', sans-serif;
-    color: var(--primer-color);
-    margin: auto;
+  font-family: "Karla", sans-serif;
+  color: var(--primer-color);
+  margin: auto;
+  width: 1024px;
 }
 
 a {
-    text-decoration: none;
-    color: var(--primer-color);
-
+  text-decoration: none;
+  color: var(--primer-color);
 }
 
 header {
-    height: 557px;
-    display: flex;
-    justify-content: space-between;
-    padding-top: 20px;
-    font-weight: 500;
-    background-image: url(../imgs/hero-banner.png);
+  height: 557px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  font-weight: 500;
+  background-image: url(../imgs/hero-banner.png);
+  background-repeat: no-repeat;
 }
 
-    #header-logo {
-        display: block;
-        width: 289px;
-        height: 86px;
-        margin: 0 0 0 24px;
-    }
+#header-logo {
+  display: block;
+  width: 289px;
+  height: 86px;
+  margin: 0 0 0 24px;
+}
 
-    header nav {
-        width: 537px;
-        height: 23px;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        font-size: 20px;
-        margin: 32px 84px 0 0;
-    }
+header nav {
+  width: 537px;
+  height: 23px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 20px;
+  margin: 32px 84px 0 0;
+}
 
-        header nav a {
-            padding: 10px;
-            transition: .5s;
-        }
+header nav a {
+  padding: 10px;
+  transition: 0.5s;
+}
 
-        header nav a:hover {
-            text-shadow: 0px 1px 30px hsla(193, 73%, 69%, 0.39);
-            color: hsl(193, 73%, 69%);
-        }
+header nav a:hover {
+  text-shadow: 0px 1px 30px hsla(193, 73%, 69%, 0.39);
+  color: hsl(193, 73%, 69%);
+}
 
 #hero-banner {
-    position: absolute;
-    top: 135px;
-    left: 300px;
+  position: absolute;
+  top: 135px;
+  left: 300px;
 }
 
-    #hero-banner h1 {
-        width: 399px;
-        font-size: 48px;
-        font-weight: bold;
-    }
+#hero-banner h1 {
+  width: 399px;
+  font-size: 48px;
+  font-weight: bold;
+}
 
-    #hero-banner h2 {
-        width: 336px;
-        font-size: 24px;
-        font-weight: normal;
-    }
+#hero-banner h2 {
+  width: 336px;
+  font-size: 24px;
+  font-weight: normal;
+}
 
-    #hero-banner div {
-        width: 364px;
-        height: 68px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-top: 32px;
-    }
+#hero-banner div {
+  width: 354px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 32px;
+}
 
-        #hero-banner div a{
-            display: block;
-            width: 168px;
-            height: 58px;
-            font-size: 24px;
-            font-weight: bold;
-            border: solid 3px var(--primer-color);
-            border-radius: 8px;
-            text-align: center;
-            padding-top: 12px;
-            background-color: var(--light-color);
-            transition: .5s;
-        }
+#hero-banner div a {
+  display: block;
+  width: 148px;
+  height: 58px;
+  font-size: 22px;
+  font-weight: bold;
+  border: solid 3px var(--primer-color);
+  border-radius: 8px;
+  text-align: center;
+  padding-top: 12px;
+  background-color: var(--light-color);
+  transition: 0.5s;
+  margin-top: 90px;
+}
 
-        #hero-banner div a:hover{
-          background-color: var(--primer-color);
-          color: var(--light-color) ;
-        }
+#hero-banner div a:hover {
+  background-color: var(--primer-color);
+  color: var(--light-color);
+}
 
-        #buscar-donadores{
-            height: 1074px;
-            margin-top: 131px;
-            display: block;
-            text-align: center;
-        }
+/* BANNER SECUNDARIO - "NOSOTROS" */
 
-            #buscar-donadores h3 {
-                font-size: 36px;
-                font-weight: bold;
-            
-            }
-        
-            #ingresar-donacion {
-                background-image: url(../imgs/bgi-contactar-donadores.png);
-                height: 957px;
-                margin-top: 49px;
-                display: block;
-                justify-content: space-around;
-                background-repeat: no-repeat;
-                      
-            
-        
-            }
-        
-        
-            
-                #ingresar-donacion h2 { 
-                    font-size: 62px;
-                    font-weight: bold;
-                    padding-top: 34px;
-                    margin-bottom: 68px;
-                    
-                    
-                }
-                
-                #ingresar-donacion h4 { 
-                    font-size: 40px;
-                    margin: 52px 0 18px 0;
-                    font-weight: 400;
-                    
-                }
-            
-                #ingresar-donacion input{
-                    width: 455px;
-                    height: 36px;
-                    font-size: 23px;
-                    font-weight: 500;
-                    background-color: rgba(43, 43, 43, 0.17);
-                    border: black 1px solid;
-                    transition: background-color 0.3s ease;        
-                }
-            
-                #ingresar-donacion input:focus{
-                    outline:none;
-                    background-color: hsla(0, 0%, 50%, 0.17);
-            
-                }
-            
-                #ingresar-donacion img[alt="Buscar-Donador"]{
-                    vertical-align: middle;
-                    margin: 0 0 7.5px 0;
-                    padding: 8px;
-                    opacity: 0.3;
-                }
+.banner--secundario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 24px;
+  padding-right: 109px;
+  padding-top: 80px;
+  max-width: 1024px;
+  margin: 0 auto;
+}
 
-                
-            
-            #resultados-donadores{
-                background-image: url(../imgs/bgi-resultados-donadores.png);
-                height: 957px;
-                margin-top: 49px;
-                justify-content: space-around;
-                background-repeat: no-repeat;
-                display: none
-            }
+.banner--secundario__imagen {
+  width: 574px;
+  height: 499px;
+}
 
-                #resultados-donadores h2{
-                    font-weight: bold;
-                    font-size: 80px;
-                    padding-top: 219px;
-                }
-            
+.banner--secundario__titulo {
+  padding-bottom: 38px;
+}
+/*-----------------------------------*/
 
+#buscar-donadores {
+  background-image: url(../imgs/bgi-contactar-donadores.png);
+  height: 1074px;
+  margin-top: 1px;
+  background-position: 0 94px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  text-align: center;
+}
 
+#buscar-donadores div {
+  height: 957px;
+  margin-top: 49px;
+  display: block;
+  justify-content: space-around;
+}
 
+#buscar-donadores h3 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+#buscar-donadores h2 {
+  font-size: 62px;
+  font-weight: bold;
+  margin: 80px 0 102px 0;
+}
+
+#buscar-donadores h4 {
+  font-size: 40px;
+  margin: 52px 0 18px 0;
+  font-weight: 400;
+}
+
+#buscar-donadores input {
+  width: 455px;
+  height: 36px;
+  font-size: 23px;
+  font-weight: 500;
+  background-color: rgba(43, 43, 43, 0.17);
+  border: black 1px solid;
+  transition: background-color 0.3s ease;
+}
+
+#buscar-donadores input:focus {
+  outline: none;
+  background-color: hsla(0, 0%, 50%, 0.17);
+}
+
+img[alt="Buscar-Donador"] {
+  vertical-align: middle;
+  margin: 0 0 7.5px 0;
+  padding: 8px;
+  opacity: 0.3;
+}
