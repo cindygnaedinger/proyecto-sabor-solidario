@@ -131,7 +131,7 @@ header nav a:hover {
 .banner--secundario__titulo {
   padding-bottom: 38px;
 }
-/*-----------------------------------*/
+/*--------------- DONADORES --------------------*/
 
 #buscar-donadores {
   background-image: url(../imgs/bgi-contactar-donadores.png);
@@ -188,4 +188,56 @@ img[alt="Buscar"] {
   margin: 0 0 7.5px 0;
   cursor: pointer;
   padding: 8px;
+}
+
+/* ------ GUÍA ------------------------------------*/
+
+.btn-guia {
+  background-color: #75CFE9;
+  width: 390px;
+  height: 82px;
+  border-radius: 8px;
+  font-size: 36px;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 15px;
+  margin: 0 auto 50px auto;
+
+}
+
+#container-guia {
+  width: 600px;
+  color: #434343;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: justify;
+  margin: auto;
+}
+
+.container-texto {
+  margin-bottom: 50px;
+}
+
+#btn-guia-hero {
+  position: absolute;
+  top: 350px;
+  left: 250px;
+}
+
+#container-guia p {
+  font-size: 26px;
+  font-weight: bold;
+  margin: 30px 0 30px 0;
+}
+
+#container-guia h3 {
+  font-weight: normal;
+  font-size: 36px;
+  color: #ff6100;
+  text-align: center;
+}
+
+#container-guia h3 span{
+  font-weight: 700;
 }
