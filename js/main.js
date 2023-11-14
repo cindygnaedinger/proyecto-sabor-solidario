@@ -6,6 +6,8 @@ let divBuscarDonador = document.getElementById("ingresar-donacion")
 let inputBuscarDonador = document.getElementById("input-buscar-donador")
 let btnBuscarDonador = document.getElementById("btn-buscar-donar")
 let divResultadosDonadores = document.getElementById("resultados-donadores")
+let btnBuscarComedor = document.getElementById("btn-buscar-comedor")
+let inputBuscarComedor = document.getElementById("input-buscar-comedor")
 
 // FUNCIONES
 
@@ -84,18 +86,39 @@ btnBuscarDonador.addEventListener('click', () => {
 
 inputBuscarDonador.addEventListener('input', () => {
 
-    let imgLupa = document.getElementById('img-buscar-donador')
+    let imgLupaDonador = document.getElementById('img-buscar-donador')
 
     if (inputBuscarDonador.value) {
         btnBuscarDonador.disabled = false; 
-        imgLupa.style.cursor = 'pointer';
-        imgLupa.style.transition = 'opacity 0.4s'
-        imgLupa.style.opacity = '1'
+        imgLupaDonador.style.cursor = 'pointer';
+        imgLupaDonador.style.transition = 'opacity 0.4s'
+        imgLupaDonador.style.opacity = '1'
     } else {
         btnBuscarDonador.disabled = true; 
-        imgLupa.style.cursor = 'default';
-        imgLupa.style.transition = 'opacity 0.6s'
-        imgLupa.style.opacity = '0.3'
+        imgLupaDonador.style.cursor = 'default';
+        imgLupaDonador.style.transition = 'opacity 0.6s'
+        imgLupaDonador.style.opacity = '0.3'
         
     }
 });
+
+//Manejador de eventos para buscar comedores
+
+inputBuscarComedor.addEventListener('input', () => {
+    let imgLupaComedor = document.getElementById('img-buscar-comedor')
+
+    if (inputBuscarComedor.value) {
+        btnBuscarComedor.disabled = false; 
+        imgLupaComedor.style.cursor = 'pointer';
+        imgLupaComedor.style.transition = 'opacity 0.3s'
+        imgLupaComedor.style.opacity = '1'
+    } else {
+        btnBuscarComedor.disabled = true; 
+        imgLupaComedor.style.cursor = 'default';
+        imgLupaComedor.style.transition = 'opacity 0.3s'
+        imgLupaComedor.style.opacity = '0.3'
+        
+    }
+    
+
+})
