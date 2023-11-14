@@ -5,6 +5,7 @@
   --segundo-color: #75cfe9;
   --dark-color: #434343;
   --light-color: #fff;
+  --azul-fuerte: #2661B9
 }
 
 * {
@@ -131,54 +132,60 @@ header nav a:hover {
 .banner--secundario__titulo {
   padding-bottom: 38px;
 }
-/*--------------- DONADORES --------------------*/
+
+/*--------------- BUSQUEDA DONADORES --------------------*/
 
 #buscar-donadores {
-  background-image: url(../imgs/bgi-contactar-donadores.png);
   height: 1074px;
   margin-top: 1px;
-  background-position: 0 94px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: block;
   text-align: center;
 }
 
 #buscar-donadores div {
+  background-repeat: no-repeat;
   height: 957px;
-  margin-top: 49px;
+  
+  
+}
+
+
+#ingresar-donacion {
+  background-position: 0 94px;  
+  margin-top: 55px;
   display: block;
   justify-content: space-around;
+  background-image: url(../imgs/bgi-contactar-donadores.png);
 }
 
-#buscar-donadores h3 {
+
+#buscar-donadores h3, #buscar-comedores h3 {
   font-size: 36px;
-  font-weight: bold;
+  font-weight: bold
 }
 
-#buscar-donadores h2 {
+#ingresar-donacion h2 {
   font-size: 62px;
   font-weight: bold;
-  margin: 80px 0 102px 0;
+  margin-bottom: 102px;
 }
 
-#buscar-donadores h4 {
+#ingresar-donacion h4 {
   font-size: 40px;
   margin: 52px 0 18px 0;
   font-weight: 400;
 }
 
-#buscar-donadores input {
+#ingresar-donacion input {
   width: 455px;
   height: 36px;
   font-size: 23px;
   font-weight: 500;
-  background-color: rgba(43, 43, 43, 0.17);
+  background-color: hsla(0, 0%, 17%, 0.169);
   border: black 1px solid;
   transition: background-color 0.3s ease;
 }
 
-#buscar-donadores input:focus {
+#ingresar-donacion input:focus {
   outline: none;
   background-color: hsla(0, 0%, 50%, 0.17);
 }
@@ -188,6 +195,21 @@ img[alt="Buscar-Donador"] {
   margin: 0 0 7.5px 0;
   padding: 8px;
   opacity: 0.3;
+}
+
+/*------------Resultados Donadores--------------------------------------------------------*/
+#resultados-donadores {
+  background-image: url(../imgs/bgi-resultados-donadores.png);
+  border: #43434300 solid 3px;
+  margin-top: 55px;
+
+}
+
+#resultados-donadores h2{
+ margin: 263px auto 91px auto;
+  width: 477px;
+  height: 76px;
+  font-size: 80px;
 }
 
 /* ------ GUÍA ------------------------------------*/
@@ -240,4 +262,41 @@ img[alt="Buscar-Donador"] {
 
 #container-guia h3 span{
   font-weight: 700;
+}
+
+/*---BUSCAR COMEDORES---------------------*/
+
+#buscar-comedores {
+  height: 957px;
+  background-image: url(../imgs/bgi-buscar-comedores.png);
+  color: white;
+  margin: 124px 0px 131px 0px;
+  
+}
+
+
+#ingresar-comedor input {
+  height: 36px;
+  width: 255px;
+  background-color: rgba(255, 255, 255, 0.49);
+  border: black 1px solid;
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(27, 27, 27);
+  transition: background-color 0.3s ease;
+}
+
+#ingresar-comedor input:focus {
+  outline: none;
+  background-color: hsla(0, 0%, 93%, 0.40);
+
+}
+
+img[alt="Buscar-Comedor"] {
+  vertical-align: middle;
+  margin: 0px 18px 7px 0px ;
+  padding: 8px;
+  width: 50px;
+  height: 50px;
+  
 }
