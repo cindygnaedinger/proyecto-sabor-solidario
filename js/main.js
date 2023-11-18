@@ -122,3 +122,21 @@ inputBuscarComedor.addEventListener('input', () => {
     
 
 })
+// pruebas modal
+const abrirModal = document.getElementById("abrir-modal");
+const modal = document.querySelector(".modal");
+
+abrirModal.addEventListener("click", () => {
+  modal.classList.add("modal--show");
+});
+
+const botonCerrar = document.getElementById("cancelar-registro");
+botonCerrar.addEventListener("click", () => {
+  console.log("hola");
+  modal.classList.remove("modal--show");
+});
+
+const botonRegistro = document.getElementById("boton-registrarse");
+botonRegistro.addEventListener("click", () => {
+  modal.classList.remove("modal--show");
+});

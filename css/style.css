@@ -5,7 +5,7 @@
   --segundo-color: #75cfe9;
   --dark-color: #434343;
   --light-color: #fff;
-  --azul-fuerte: #2661B9
+  --azul-fuerte: #2661b9;
 }
 
 * {
@@ -144,23 +144,20 @@ header nav a:hover {
 #buscar-donadores div {
   background-repeat: no-repeat;
   height: 957px;
-  
-  
 }
 
-
 #ingresar-donacion {
-  background-position: 0 94px;  
+  background-position: 0 94px;
   margin-top: 55px;
   display: block;
   justify-content: space-around;
   background-image: url(../imgs/bgi-contactar-donadores.png);
 }
 
-
-#buscar-donadores h3, #buscar-comedores h3 {
+#buscar-donadores h3,
+#buscar-comedores h3 {
   font-size: 36px;
-  font-weight: bold
+  font-weight: bold;
 }
 
 #ingresar-donacion h2 {
@@ -202,10 +199,9 @@ img[alt="Buscar-Donador"] {
   background-image: url(../imgs/bgi-resultados-donadores.png);
   border: #43434300 solid 3px;
   margin-top: 55px;
-
 }
 
-#resultados-donadores h2{
+#resultados-donadores h2 {
   margin: 263px auto 91px auto;
   width: 477px;
   height: 76px;
@@ -215,7 +211,7 @@ img[alt="Buscar-Donador"] {
 /* ------ GUÍA ------------------------------------*/
 
 .btn-guia {
-  background-color: #75CFE9;
+  background-color: #75cfe9;
   width: 390px;
   height: 82px;
   border-radius: 8px;
@@ -225,7 +221,6 @@ img[alt="Buscar-Donador"] {
   text-align: center;
   padding-top: 15px;
   margin: 0 auto 50px auto;
-
 }
 
 #container-guia {
@@ -260,7 +255,7 @@ img[alt="Buscar-Donador"] {
   text-align: center;
 }
 
-#container-guia h3 span{
+#container-guia h3 span {
   font-weight: 700;
 }
 
@@ -270,89 +265,204 @@ img[alt="Buscar-Donador"] {
   color: white;
   text-align: center;
   margin-bottom: 130px;
-  
 }
-  #buscar-comedores h3{
-    margin: 124px auto 55px auto;
-    color: var(--primer-color)
-  }
+#buscar-comedores h3 {
+  margin: 124px auto 55px auto;
+  color: var(--primer-color);
+}
 
-  
-  #ingresar-comedor{
-    height: 957px;
-    background-image: url(../imgs/bgi-buscar-comedores.png);   
-    position: relative;
-  }
-  
-  #suma-tu-ayuda{ 
-    position: absolute; 
-    height: 350px;
-    width: 333px;
-    top: 354px;
-    left: 51px;
-  }
-  
-      #suma-tu-ayuda h2{
-        font-size: 62px;
-        font-weight: bold;
-        height: 218px;
-        width: 262px;
-        margin: 0 auto 18px auto;
-        }
+#ingresar-comedor {
+  height: 957px;
+  background-image: url(../imgs/bgi-buscar-comedores.png);
+  position: relative;
+}
 
-      #suma-tu-ayuda h4{
-        width: 219px;
-        height: 28px;
-        font-size: 24px;
-        font-weight: normal;
-        margin:auto;        
-      }
+#suma-tu-ayuda {
+  position: absolute;
+  height: 350px;
+  width: 333px;
+  top: 354px;
+  left: 51px;
+}
 
-      #suma-tu-ayuda span{
-        display: flex;
-        margin: 25px auto 0 auto;
-      
+#suma-tu-ayuda h2 {
+  font-size: 62px;
+  font-weight: bold;
+  height: 218px;
+  width: 262px;
+  margin: 0 auto 18px auto;
+}
 
-      }
+#suma-tu-ayuda h4 {
+  width: 219px;
+  height: 28px;
+  font-size: 24px;
+  font-weight: normal;
+  margin: auto;
+}
 
-      #suma-tu-ayuda input {
-        height: 36px;
-        width: 255px;
-        background-color: rgba(255, 255, 255, 0.49);
-        font-size: 20px;
-        font-weight: 500;
-        color: rgb(27, 27, 27);
-        transition: background-color 0.3s ease;
-        border: none;        
-      }
+#suma-tu-ayuda span {
+  display: flex;
+  margin: 25px auto 0 auto;
+}
 
-      #suma-tu-ayuda input:focus {
-        outline: none;
-        background-color: hsla(0, 0%, 93%, 0.40);
+#suma-tu-ayuda input {
+  height: 36px;
+  width: 255px;
+  background-color: rgba(255, 255, 255, 0.49);
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(27, 27, 27);
+  transition: background-color 0.3s ease;
+  border: none;
+}
 
-      }
+#suma-tu-ayuda input:focus {
+  outline: none;
+  background-color: hsla(0, 0%, 93%, 0.4);
+}
 
-      #suma-tu-ayuda button{
-        width: 38px;
-        height: 38px;
-        margin-right: 8px; 
-      }
+#suma-tu-ayuda button {
+  width: 38px;
+  height: 38px;
+  margin-right: 8px;
+}
 
-      img[alt="Buscar-Comedor"] {
-        width: 38px;
-        height: 38px;   
-        opacity: 0.3;
-      }
+img[alt="Buscar-Comedor"] {
+  width: 38px;
+  height: 38px;
+  opacity: 0.3;
+}
 
-      #mapa {
-        position: absolute;
-        top: 253px;
-        left: 436px;
-        box-shadow: 61px 43px 1px hsl(193, 61%, 88%, 0.87);
-      }
+#mapa {
+  position: absolute;
+  top: 253px;
+  left: 436px;
+  box-shadow: 61px 43px 1px hsl(193, 61%, 88%, 0.87);
+}
 
-      
+/* FORMULARIOS */
 
-      
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #111111bd;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms 300ms;
+  --transform: translateY(-100vh);
+  --transition: transform 300ms;
+}
 
+.modal--show {
+  opacity: 1;
+  pointer-events: unset;
+  transition: opacity 300ms;
+  --transform: translateY(0);
+  --transition: transform 300ms 300ms;
+}
 
+.modal__container {
+  margin: auto;
+  max-height: 90%;
+  background-color: #fff;
+  border-radius: 6px;
+  transform: var(--transform);
+  transition: var(--transition);
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.panel-imagen {
+  width: 300px;
+}
+
+.panel-donar {
+  width: 400px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.imagen__quiero-donar {
+  width: 300px;
+  height: 100%;
+}
+
+.registro__seccion-titulos {
+  color: hsl(23, 100%, 68%);
+  text-align: center;
+}
+
+.h2-quiero-donar {
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.h3-quiero-donar {
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.registro__rectangulo {
+  width: 100%;
+  height: 20px;
+  background-color: hsla(23.1, 100%, 89.8%, 0.65);
+  border: 2px solid #ffba87;
+  border-radius: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  outline: none;
+  color: #333333;
+}
+
+.rectangulo-registro-donacion {
+  height: 100px;
+  resize: none;
+}
+
+.input-donar {
+  display: block;
+  width: 100%;
+  padding-bottom: 10px;
+  font-size: 15px;
+}
+
+.centrar-texto {
+  text-align: center;
+}
+
+.contenedor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.boton-registro {
+  width: 100px;
+  height: 30px;
+  background-color: #ffffffad;
+  border: none;
+  box-shadow: 0px 0px 10px rgba(195, 195, 195, 0.44);
+  color: #ff7a28;
+  cursor: pointer;
+  transition: all 300ms;
+  border-radius: 4px;
+}
+
+.boton-registro:hover {
+  filter: brightness(0.95);
+}
+
+.contenedor-botones--registro {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
