@@ -1,201 +1,218 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sabor Solidario</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="shortcut icon"
-      href="imgs/logo-msabor 1.png"
-      type="image/x-icon"
-    />
-  </head>
 
-  <body>
-    <!-- HEADER -->
-    <header>
-      <a id="header-logo" href="#index.html">
-        <img src="imgs/logo-nombre.png" alt="logo" />
-      </a>
-      <nav>
-        <a href="#inicio">INICIO</a>
-        <a href="#nosotros">NOSOTROS</a>
-        <a href="#donadores">DONADORES</a>
-        <a href="#comedores">COMEDORES</a>
-        <a href="guia.html">GUÍA</a>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sabor Solidario</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="shortcut icon" href="imgs/logo-msabor 1.png" type="image/x-icon" />
+</head>
 
-    <div id="hero-banner">
-      <h1>UNIDOS POR LA ALIMENTACIÓN</h1>
-      <h2>Conectando generosidad con necesidad</h2>
+<body>
+  <!-- HEADER -->
+  <header>
+    <a id="header-logo" href="#index.html">
+      <img src="imgs/logo-nombre.png" alt="logo" />
+    </a>
+    <nav>
+      <a href="#inicio">INICIO</a>
+      <a href="#nosotros">NOSOTROS</a>
+      <a href="#donadores">DONADORES</a>
+      <a href="#comedores">COMEDORES</a>
+      <a href="guia.html">GUÍA</a>
+    </nav>
+  </header>
+
+  <div id="hero-banner">
+    <h1>UNIDOS POR LA ALIMENTACIÓN</h1>
+    <h2>Conectando generosidad con necesidad</h2>
+    <div>
+      <a id="abrir-modal" href="#">UNIRSE</a>
+      <a href="#">INGRESAR</a>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <main>
+    <section class="banner--secundario">
+      <img class="banner--secundario__imagen" src="imgs/Chica-con-corazon-de-globo-flotante.png"
+        alt="Chica-con-corazon-de-globo-flotante" />
       <div>
-        <a id="abrir-modal" href="#">UNIRSE</a>
-        <a href="#">INGRESAR</a>
+        <h2 class="banner--secundario__titulo">NOSOTROS</h2>
+        <p>
+          En nuestro mundo, la comida no debería ser un lujo, sino un derecho.
+          Únete a nosotros en la misión de conectar a donantes generosos con
+          comedores necesitados. Juntos, podemos marcar la diferencia en la
+          lucha contra el hambre.
+        </p>
+      </div>
+    </section>
+
+    <section></section>
+
+    <!-- Buscar Comedores -->
+    <section id="buscar-comedores">
+      <h3>BUSCAR COMEDORES</h3>
+
+      <div id="ingresar-comedor">
+        <article id="suma-tu-ayuda">
+          <h2>SUMA TU AYUDA</h2>
+          <h4>Ingresa tu donación</h4>
+          <span>
+            <button id="btn-buscar-comedor" style="background: transparent; border: none" disabled="true">
+              <img id="img-buscar-comedor" src="imgs/Lupa-comedor.png" alt="Buscar-Comedor" />
+            </button>
+            <input id="input-buscar-comedor" autocomplete="off" />
+          </span>
+        </article>
+
+        <article id="mapa">
+          <iframe title="mapa"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d217955.00184971804!2d-64.35902632911242!3d-31.399054703829734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432985f478f5b69%3A0xb0a24f9a5366b092!2zQ8OzcmRvYmE!5e0!3m2!1ses!2sar!4v1699996593817!5m2!1ses!2sar"
+            width="454" height="514" style="border: 0" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </article>
+      </div>
+    </section>
+
+    <!-- Buscar Donadores -->
+    <section id="buscar-donadores">
+      <h3>BUSCAR DONADORES</h3>
+
+      <div id="ingresar-donacion">
+        <h2>CONTACTA CON UN DONADOR</h2>
+        <img src="imgs/imagen-central-donadores.png" alt="Persona donando un corazón" />
+        <h4>Ingresa la donación que necesitas</h4>
+        <input id="input-buscar-donador" autocomplete="off" />
+        <button id="btn-buscar-donar" style="background: transparent; border: none" disabled="true">
+          <img id="img-buscar-donador" src="imgs/Lupa.png" alt="Buscar-Donador" />
+        </button>
+      </div>
+
+      <div id="resultados-donadores" style="display: none">
+        <h2>DONADORES</h2>
+      </div>
+    </section>
+    <!-- FORMULARIOS-->
+    <div class="modal">
+      <div class="modal__container">
+        <div class="panel-imagen">
+          <img class="imagen__quiero-donar" src="./imgs/img-formulario-1.png" alt="imagen quiero donar" />
+        </div>
+        <div class="panel-donar">
+          <div class="registro__seccion-titulos">
+            <h2 class="h2-quiero-donar">¡QUIERO DONAR!</h2>
+            <h3 class="h3-quiero-donar">REGISTRATE DE FORMA GRATUITA</h3>
+          </div>
+          <div>
+            <div class="contenedor-grid">
+              <label class="input-donar centrar-texto">
+                NOMBRE
+                <input class="registro__rectangulo" />
+              </label>
+
+              <label class="input-donar centrar-texto">APELLIDO
+                <input class="registro__rectangulo" />
+              </label>
+            </div>
+
+            <label class="input-donar">
+              EMAIL
+              <input class="registro__rectangulo" /></label>
+            <div class="contenedor-grid">
+              <label class="input-donar centrar-texto">TELÉFONO <input class="registro__rectangulo" /></label>
+
+              <label class="input-donar centrar-texto">CONTRASEÑA <input class="registro__rectangulo" /></label>
+            </div>
+
+            <label class="input-donar centrar-texto">DONACIÓN
+              <textarea class="registro__rectangulo rectangulo-registro-donacion">
+                </textarea>
+            </label>
+          </div>
+          <div class="contenedor-botones--registro">
+            <div class="registro__botones">
+              <button id="cancelar-registro" class="boton-registro">
+                Cancelar
+              </button>
+            </div>
+            <div class="registro__botones">
+              <button id="boton-registrarse" class="boton-registro">
+                registrarse
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- FIN FORMULARIOS-->
+
+  <!-- FOOTER -->
+  <section id="footer-top">
+
+  </section>
+
+  <footer id="footer-container">
+
+    <div class="footer-columnas">
+
+      <div class="footer-box">
+        <a href="index.html">
+          <h3 id="footer-texto-logo">Sabor Solidario</h3>
+        </a>
+        <p>Desarrollado por [nombre del equipo] por un mundo mejor y para alimentar corazones.</p>
+        <a href="https://www.linkedin.com/" class="tooltip" target="_blank"><img src="imgs/footer-group-img.png"
+            alt="Imagen perfil"><span class="tooltiptext">Ana Lucía Ceballos</span></a>
+
+        <a href="https://www.linkedin.com/in/camila-carrizo/" class="tooltip" target="_blank"><img src="imgs/footer-img-perfil-2.jpeg"
+            alt="Imagen perfil"><span class="tooltiptext">Camila Carrizo</span></a>
+
+
+        <a href="https://www.linkedin.com/" class="tooltip" target="_blank"><img src="imgs/footer-group-img.png"
+            alt="Imagen perfil"><span class="tooltiptext">Loredana Lazzero</span></a>
+
+
+        <a href="https://www.linkedin.com/" class="tooltip" target="_blank"><img src="imgs/footer-group-img.png"
+            alt="Imagen perfil"><span class="tooltiptext">Victoria Torres</span></a>
+
+
+        <a href="https://www.linkedin.com/in/cindygnaedinger" class="tooltip" target="_blank"><img
+            src="imgs/footer-img-perfil-5.jpeg" alt="Imagen perfil"><span class="tooltiptext">Cindy Gnaedinger</span></a>
+      </div>
+
+      <div class="footer-box" id="footer-box-explorar">
+        <h3>EXPLORAR</h3>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#donaciones">Donaciones</a>
+        <a href="#comedores">Comedores</a>
+        <a href="guia.html">Guía</a>
+      </div>
+
+      <div class="footer-box">
+        <h3>SÍGUENOS</h3>
+        <a class="icono" href="https://www.facebook.com/" target="_blank"><img src="imgs/facebook-circle-logo-40.png"
+            alt="Logo de Facebook"></a>
+        <a class="icono" href="https://www.instagram.com/" target="_blank"><img src="imgs/instagram-logo-40.png"
+            alt="Logo de Instagram"></a>
+        <a class="icono" href="https://www.linkedin.com/" target="_blank"><img src="imgs/linkedin-square-logo-40.png"
+            alt="Logo de LinkedIn"></a>
+        <a class="icono" href="https://www.twitter.com/" target="_blank"><img src="imgs/twitter-logo-40.png"
+            alt="Logo de Twitter"></a>
       </div>
     </div>
 
-    <!-- MAIN -->
-    <main>
-      <section class="banner--secundario">
-        <img
-          class="banner--secundario__imagen"
-          src="imgs/Chica-con-corazon-de-globo-flotante.png"
-          alt="Chica-con-corazon-de-globo-flotante"
-        />
-        <div>
-          <h2 class="banner--secundario__titulo">NOSOTROS</h2>
-          <p>
-            En nuestro mundo, la comida no debería ser un lujo, sino un derecho.
-            Únete a nosotros en la misión de conectar a donantes generosos con
-            comedores necesitados. Juntos, podemos marcar la diferencia en la
-            lucha contra el hambre.
-          </p>
-        </div>
-      </section>
+    <div id="footer-linea"></div>
 
-      <section></section>
+    <div class="footer-copy">
+      <small>&copy; 2024 <b>Sabor Solidario</b> - Todos los derechos reservados</small>
+    </div>
 
-      <!-- Buscar Comedores -->
-      <section id="buscar-comedores">
-        <h3>BUSCAR COMEDORES</h3>
+  </footer>
 
-        <div id="ingresar-comedor">
-          <article id="suma-tu-ayuda">
-            <h2>SUMA TU AYUDA</h2>
-            <h4>Ingresa tu donación</h4>
-            <span>
-              <button
-                id="btn-buscar-comedor"
-                style="background: transparent; border: none"
-                disabled="true"
-              >
-                <img
-                  id="img-buscar-comedor"
-                  src="imgs/Lupa-comedor.png"
-                  alt="Buscar-Comedor"
-                />
-              </button>
-              <input id="input-buscar-comedor" autocomplete="off" />
-            </span>
-          </article>
+  <script src="js/main.js"></script>
+</body>
 
-          <article id="mapa">
-            <iframe
-              title="mapa"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d217955.00184971804!2d-64.35902632911242!3d-31.399054703829734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432985f478f5b69%3A0xb0a24f9a5366b092!2zQ8OzcmRvYmE!5e0!3m2!1ses!2sar!4v1699996593817!5m2!1ses!2sar"
-              width="454"
-              height="514"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            >
-            </iframe>
-          </article>
-        </div>
-      </section>
-
-      <!-- Buscar Donadores -->
-      <section id="buscar-donadores">
-        <h3>BUSCAR DONADORES</h3>
-
-        <div id="ingresar-donacion">
-          <h2>CONTACTA CON UN DONADOR</h2>
-          <img
-            src="imgs/imagen-central-donadores.png"
-            alt="Persona donando un corazón"
-          />
-          <h4>Ingresa la donación que necesitas</h4>
-          <input id="input-buscar-donador" autocomplete="off" />
-          <button
-            id="btn-buscar-donar"
-            style="background: transparent; border: none"
-            disabled="true"
-          >
-            <img
-              id="img-buscar-donador"
-              src="imgs/Lupa.png"
-              alt="Buscar-Donador"
-            />
-          </button>
-        </div>
-
-        <div id="resultados-donadores" style="display: none">
-          <h2>DONADORES</h2>
-        </div>
-      </section>
-      <!-- FORMULARIOS-->
-      <div class="modal">
-        <div class="modal__container">
-          <div class="panel-imagen">
-            <img
-              class="imagen__quiero-donar"
-              src="./imgs/img-formulario-1.png"
-              alt="imagen quiero donar"
-            />
-          </div>
-          <div class="panel-donar">
-            <div class="registro__seccion-titulos">
-              <h2 class="h2-quiero-donar">¡QUIERO DONAR!</h2>
-              <h3 class="h3-quiero-donar">REGISTRATE DE FORMA GRATUITA</h3>
-            </div>
-            <div>
-              <div class="contenedor-grid">
-                <label class="input-donar centrar-texto">
-                  NOMBRE
-                  <input class="registro__rectangulo" />
-                </label>
-
-                <label class="input-donar centrar-texto"
-                  >APELLIDO
-                  <input class="registro__rectangulo" />
-                </label>
-              </div>
-
-              <label class="input-donar">
-                EMAIL
-                <input class="registro__rectangulo"
-              /></label>
-              <div class="contenedor-grid">
-                <label class="input-donar centrar-texto"
-                  >TELÉFONO <input class="registro__rectangulo"
-                /></label>
-
-                <label class="input-donar centrar-texto"
-                  >CONTRASEÑA <input class="registro__rectangulo"
-                /></label>
-              </div>
-
-              <label class="input-donar centrar-texto"
-                >DONACIÓN
-                <textarea
-                  class="registro__rectangulo rectangulo-registro-donacion"
-                >
-                </textarea>
-              </label>
-            </div>
-            <div class="contenedor-botones--registro">
-              <div class="registro__botones">
-                <button id="cancelar-registro" class="boton-registro">
-                  Cancelar
-                </button>
-              </div>
-              <div class="registro__botones">
-                <button id="boton-registrarse" class="boton-registro">
-                  registrarse
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-    <!-- FIN FORMULARIOS-->
-    <!-- FOOTER -->
-    <footer></footer>
-
-    <script src="js/main.js"></script>
-  </body>
 </html>
