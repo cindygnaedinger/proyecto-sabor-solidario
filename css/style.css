@@ -234,9 +234,10 @@ img:hover {
 /*--------------- BUSQUEDA DONADORES --------------------*/
 
 #buscar-donadores {
-  height: 1074px;
+  height: 1057px;
   margin-top: 1px;
   text-align: center;
+  margin-bottom: 131px;
 }
 
 #buscar-donadores div {
@@ -245,11 +246,12 @@ img:hover {
 }
 
 #ingresar-donacion {
-  background-position: 0 94px;
   margin-top: 55px;
   display: block;
   justify-content: space-around;
   background-image: url(../imgs/bgi-contactar-donadores.png);
+  
+
 }
 
 #buscar-donadores h3,
