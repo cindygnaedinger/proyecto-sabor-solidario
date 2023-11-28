@@ -8,7 +8,7 @@ let btnBuscarDonador = document.getElementById("btn-buscar-donar")
 let divResultadosDonadores = document.getElementById("resultados-donadores")
 let btnBuscarComedor = document.getElementById("btn-buscar-comedor")
 let inputBuscarComedor = document.getElementById("input-buscar-comedor")
-
+let carruselDonadores = document.getElementById("carrusel-donadores")
 // FUNCIONES
 
 //Funcion filtrar donadores, esta funcion filtra los donadores que tengan la donacion
@@ -37,13 +37,13 @@ function mostrarDonadores(donadoresFiltrados){
         donadoresFiltrados.forEach(donador => {
             const nuevoDonadorArt = document.createElement('article')
             nuevoDonadorArt.textContent = `${donador.nombre} ---> ${donador.donaciones.join(", ")} `
-            divResultadosDonadores.appendChild(nuevoDonadorArt)
+            carruselDonadores.appendChild(nuevoDonadorArt)
         })
 
     }else{
         const noExistenDonadores = document.createElement('h2')
         noExistenDonadores.textContent = `No se encontraron donadores que tengan "${inputBuscarDonador.value}."`
-        divResultadosDonadores.appendChild(noExistenDonadores)
+        carruselDonadores.appendChild(noExistenDonadores)
     }
 
 }
@@ -84,6 +84,14 @@ btnBuscarDonador.addEventListener('click', () => {
 
 })
 
+inputBuscarDonador.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' && inputBuscarDonador.value !== '') {
+        divBuscarDonador.style.display = 'none'
+        divResultadosDonadores.style.display = 'block'
+        buscarDonadores(inputBuscarDonador.value.toLowerCase());
+    }
+});
+
 inputBuscarDonador.addEventListener('input', () => {
 
     let imgLupaDonador = document.getElementById('img-buscar-donador')
@@ -122,6 +130,8 @@ inputBuscarComedor.addEventListener('input', () => {
     
 
 })
+
+
 // pruebas modal
 const abrirModal = document.getElementById("abrir-modal");
 const modal = document.querySelector(".modal");
