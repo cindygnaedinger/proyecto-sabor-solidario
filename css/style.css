@@ -302,7 +302,7 @@ img[alt="Buscar-Donador"] {
 }
 
 #resultados-donadores h2 {
-  margin: 263px auto 91px auto;
+  margin: 208px auto 91px auto;
   width: 477px;
   height: 76px;
   font-size: 80px;
@@ -312,6 +312,7 @@ img[alt="Buscar-Donador"] {
   width: 954px;
   height: 402px;
   margin: auto;
+  display: flex;
 }
 
 /* articulos del carrusel donadores */
@@ -320,6 +321,7 @@ img[alt="Buscar-Donador"] {
   width: 255px;
   height: 398px;
   box-shadow: 5px 6px 6px rgba(0, 0, 0, 0.22);
+  margin-right: 24px;
 }
 
 .donador #parte-superior {
@@ -339,11 +341,21 @@ img[alt="Buscar-Donador"] {
     overflow-wrap: break-word
 
   }
-    #parte-superior span {
-      color: #1E1E1E;
-      font-size: 20px;
-      font-weight: bold;
+
+    #parte-superior p {
+      width: 220px;
+      overflow-wrap: break-word;
+      margin: auto;
+      color:#1E1E1E;
+      font-style: italic;
     }
+      #parte-superior span {
+        display: block;
+        color: #1E1E1E;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
 
 .donador #parte-inferior {
   width: 255px;
@@ -360,16 +372,17 @@ img[alt="Buscar-Donador"] {
   overflow: hidden;
 }
 
+
 .donador #parte-inferior h3 {
-  width: 210px;
+  width: 205px;
   height: 48px;
-  font-size: 20px;
+  font-size: 17px;
   font-style: italic;
   color: #fff;
   font-weight: normal;
   overflow-wrap: break-word;
   margin-left: 12px;  
-  padding-top: 8px;
+  padding-top: 17px;
 }
 
 .donador img {

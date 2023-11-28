@@ -8,7 +8,8 @@ let btnBuscarDonador = document.getElementById("btn-buscar-donar")
 let divResultadosDonadores = document.getElementById("resultados-donadores")
 let btnBuscarComedor = document.getElementById("btn-buscar-comedor")
 let inputBuscarComedor = document.getElementById("input-buscar-comedor")
-let carruselDonadores = document.getElementById("carrusel-donadores")
+let articleDonador = document.getElementById("article-donador")
+
 // FUNCIONES
 
 //Funcion filtrar donadores, esta funcion filtra los donadores que tengan la donacion
@@ -33,17 +34,38 @@ function filtrarDonadores(donadores, donacionBuscada){
 //Funcion para mostrar los donadores filtrados
 
 function mostrarDonadores(donadoresFiltrados){
+    const carruselDonadores = document.getElementById("carrusel-donadores")
+
+    carruselDonadores.innerHTML = ''
+
     if(donadoresFiltrados != 0){
         donadoresFiltrados.forEach(donador => {
-            const nuevoDonadorArt = document.createElement('article')
-            nuevoDonadorArt.textContent = `${donador.nombre} ---> ${donador.donaciones.join(", ")} `
-            carruselDonadores.appendChild(nuevoDonadorArt)
+            
+            const nuevoDonador = `
+            <article class="donador">
+                <div id="parte-superior">
+                    <h3>${donador.nombre}</h3>
+                    <p><span>Tengo para donar:</span>
+                       ${donador.donaciones}            
+                    </p>
+                </div>
+                <div id="parte-inferior">
+                    <img src="imgs/phone.png" alt="Icono teléfono">
+                    <h3>${donador.telefono}</h3>
+                    <img src="imgs/mail.png" alt="Icono mail">
+                    <h3>${donador.mail}</h3>
+                    <div id="boton-contenedor">
+                        <button>CONTACTAR</button>
+                    </div>
+                </div>
+            </article>
+        `;
+        
+        carruselDonadores.innerHTML += nuevoDonador
         })
 
     }else{
-        const noExistenDonadores = document.createElement('h2')
-        noExistenDonadores.textContent = `No se encontraron donadores que tengan "${inputBuscarDonador.value}."`
-        carruselDonadores.appendChild(noExistenDonadores)
+      
     }
 
 }
