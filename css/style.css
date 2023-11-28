@@ -402,8 +402,15 @@ img[alt="Buscar-Donador"] {
   border-radius: 8px;
   width: 163px;
   height: 57px;
+  box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.22);
+  transition: background-color 0.8s ease, color 0.8s ease;;
 }
 
+#parte-inferior button:hover {
+  cursor: pointer;
+  background-color: var(--primer-color);
+  color: #fff;
+}
 
 
 
