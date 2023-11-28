@@ -21,7 +21,7 @@ Para crear el sitio web estamos utilizando HTML, CSS Y JS y es completamente res
 sumando nuevas herramientas, frameworks y lenguajes hasta darla por finalizada. Queremos que nuestra web tenga como lema fundamental que sea ágil, accesible y de fácil uso para el usuario. 
 
 #### TIPOGRAFÍA
-Elegimos Karla la cual es una fuente sans-serif y algunas de sus caracteristicas es que puede transmitir al usuario son la sensación de amabilidad, legibilidad, modernidad, versatilidad y profesionalismo. 
+Elegimos Karla la cual es una fuente sans-serif y algunas de sus caracteristicas que puede transmitir al usuario son la sensación de amabilidad, legibilidad, modernidad, versatilidad y profesionalismo. 
 
 #### PALETA DE COLORES
 Decidimos que el naranja y el celeste sean los dos colores predominantes de la página. El naranja ya que brinda vitalidad, optimismo, acción y compromiso y el celeste solidaridad, confianza, comunicación clara
