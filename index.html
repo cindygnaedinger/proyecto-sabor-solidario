@@ -16,7 +16,7 @@
       <img src="imgs/logo-nombre.png" alt="logo" />
     </a>
     <nav>
-      <a href="#inicio">INICIO</a>
+      <a href="index.html">INICIO</a>
       <a href="#nosotros">NOSOTROS</a>
       <a href="#donadores">DONADORES</a>
       <a href="#comedores">COMEDORES</a>
@@ -35,7 +35,7 @@
 
   <!-- MAIN -->
   <main>
-    <section class="banner--secundario">
+    <section id="nosotros" class="banner--secundario">
       <img class="banner--secundario__imagen" src="imgs/Chica-con-corazon-de-globo-flotante.png"
         alt="Chica-con-corazon-de-globo-flotante" />
       <div>
@@ -102,7 +102,7 @@
 
       <div id="ingresar-donacion">
         <h2>CONTACTA CON UN DONADOR</h2>
-        <img src="imgs/imagen-central-donadores.png" alt="Persona donando un corazón" />
+        <img src="imgs/imagen-central-donadores.png " style="width: 585px; height: 541px" alt="Persona donando un corazón" />
         <h4>Ingresa la donación que necesitas</h4>
         <input id="input-buscar-donador" autocomplete="off" />
         <button id="btn-buscar-donar" style="background: transparent; border: none" disabled="true">
@@ -110,10 +110,13 @@
         </button>
       </div>
 
+      <!--RESULTADOS DONADORES-->
       <div id="resultados-donadores" style="display: none">
         <h2>DONADORES</h2>
+        <div id="carrusel-donadores"></div>
       </div>
     </section>
+
     <!-- FORMULARIOS-->
     <div class="modal">
       <div class="modal__container">
@@ -183,7 +186,7 @@
           <h3 id="footer-texto-logo">Sabor Solidario</h3>
         </a>
         <p>Desarrollado por [nombre del equipo] por un mundo mejor y para alimentar corazones.</p>
-        <a href="https://www.linkedin.com/" class="tooltip" target="_blank"><img src="imgs/footer-group-img.png"
+        <a href="https://www.linkedin.com/" class="tooltip" target="_blank"><img src="imgs/footer-img-perfil-1.jpeg"
             alt="Imagen perfil"><span class="tooltiptext">Ana Lucía Ceballos</span></a>
 
         <a href="https://www.linkedin.com/in/camila-carrizo/" class="tooltip" target="_blank"><img src="imgs/footer-img-perfil-2.jpeg"
