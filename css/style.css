@@ -473,7 +473,76 @@ img[alt="Buscar-Comedor"] {
   justify-content: center;
   gap: 10px;
 }
-
+/* FORMULARIO INGRESAR */
+.panel-ingresar {
+  width: 480px;
+  height: 451px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.panel-ingresar--contenido {
+  background-color: hsla(192.9, 73.4%, 69%, 0.56);
+  width: 400px;
+  height: 250px;
+  border-radius: 12px;
+  background-repeat: no-repeat;
+  margin-top: 50px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3),
+    -5px -5px 10px rgba(255, 255, 255, 0.3);
+}
+.ingresar__rectangulo {
+  border-radius: 5px;
+  border: none;
+  width: 247px;
+  height: 34px;
+  color: #333333;
+  outline: none;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.container-informacion-personal {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: min-content;
+  padding: 50px 0px 5px 83px;
+  position: relative;
+}
+.boton-ingresar-usuario {
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  width: 100px;
+  color: #ff6100;
+  margin: 0 auto;
+  height: 40px;
+}
+.boton-ingresar-usuario:hover {
+  filter: brightness(0.95);
+  cursor: pointer;
+}
+.imagen-formulario--ingresar {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 134px;
+}
+.cruz-salir-ingreso-usuario {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #fff;
+}
+.cruz-salir-ingreso-usuario:hover {
+  filter: brightness(0.95);
+}
+/* FIN DE FORMULARIOS */
 
 /* FOOTER */
 #footer-top {
@@ -514,7 +583,7 @@ img[alt="Buscar-Comedor"] {
   color: var(--light-color);
 }
 #footer-texto-logo {
-  transition: .5s;
+  transition: 0.5s;
 }
 #footer-texto-logo:hover {
   color: var(--primer-color);
@@ -531,32 +600,32 @@ img[alt="Buscar-Comedor"] {
   display: flex;
   flex-direction: column;
 }
-#footer-box-explorar a{
+#footer-box-explorar a {
   line-height: 2;
   font-size: 18px;
-  transition: .5s;
+  transition: 0.5s;
 }
-#footer-box-explorar a:hover{
+#footer-box-explorar a:hover {
   color: var(--primer-color);
 }
 
 .footer-box img {
   margin: 20px 25px 0 0;
   border-radius: 50%;
-  transition: .5s;
+  transition: 0.5s;
 }
 .footer-box img:hover {
   box-shadow: 1px 1px 30px hsla(0, 0%, 100%, 0.158);
 }
-.icono:hover img{
-  animation: icono .5s ease;
+.icono:hover img {
+  animation: icono 0.5s ease;
 }
 @keyframes icono {
-  from{
-      transform: rotate3d(0,0,0,0);
+  from {
+    transform: rotate3d(0, 0, 0, 0);
   }
-  to{
-      transform: rotate3d(0,1,0,360deg);
+  to {
+    transform: rotate3d(0, 1, 0, 360deg);
   }
 }
 #footer-linea {
@@ -566,7 +635,7 @@ img[alt="Buscar-Comedor"] {
   margin: auto;
   margin-bottom: 50px;
 }
-.footer-copy small{
+.footer-copy small {
   display: block;
   width: 1024px;
   text-align: center;
@@ -602,7 +671,7 @@ img[alt="Buscar-Comedor"] {
 .tooltip .tooltiptext::after {
   content: " ";
   position: absolute;
-  bottom: 100%;  /* At the top of the tooltip */
+  bottom: 100%; /* At the top of the tooltip */
   left: 50%;
   margin-left: -5px;
   border-width: 5px;
