@@ -12,20 +12,20 @@
     />
   </head>
 
-<body>
-  <!-- HEADER -->
-  <header>
-    <a id="header-logo" href="#index.html">
-      <img src="imgs/logo-nombre.png" alt="logo" />
-    </a>
-    <nav>
-      <a href="index.html">INICIO</a>
-      <a href="#nosotros">NOSOTROS</a>
-      <a href="#donadores">DONADORES</a>
-      <a href="#comedores">COMEDORES</a>
-      <a href="guia.html">GUÍA</a>
-    </nav>
-  </header>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <a id="header-logo" href="#index.html">
+        <img src="imgs/logo-nombre.png" alt="logo" />
+      </a>
+      <nav>
+        <a href="index.html">INICIO</a>
+        <a href="#nosotros">NOSOTROS</a>
+        <a href="#donadores">DONADORES</a>
+        <a href="#comedores">COMEDORES</a>
+        <a href="guia.html">GUÍA</a>
+      </nav>
+    </header>
 
     <div id="hero-banner">
       <h1>UNIDOS POR LA ALIMENTACIÓN</h1>
@@ -36,42 +36,45 @@
       </div>
     </div>
 
-  <!-- MAIN -->
-  <main>
-    <section id="nosotros" class="banner--secundario">
-      <img class="banner--secundario__imagen" src="imgs/Chica-con-corazon-de-globo-flotante.png"
-        alt="Chica-con-corazon-de-globo-flotante" />
-      <div>
-        <h2 class="banner--secundario__titulo">NOSOTROS</h2>
-        <p>
-          En nuestro mundo, la comida no debería ser un lujo, sino un derecho.
-          Únete a nosotros en la misión de conectar a donantes generosos con
-          comedores necesitados. Juntos, podemos marcar la diferencia en la
-          lucha contra el hambre.
-        </p>
-      </div>
-    </section>
+    <!-- MAIN -->
+    <main>
+      <section id="nosotros" class="banner--secundario">
+        <img
+          class="banner--secundario__imagen"
+          src="imgs/Chica-con-corazon-de-globo-flotante.png"
+          alt="Chica-con-corazon-de-globo-flotante"
+        />
+        <div>
+          <h2 class="banner--secundario__titulo">NOSOTROS</h2>
+          <p>
+            En nuestro mundo, la comida no debería ser un lujo, sino un derecho.
+            Únete a nosotros en la misión de conectar a donantes generosos con
+            comedores necesitados. Juntos, podemos marcar la diferencia en la
+            lucha contra el hambre.
+          </p>
+        </div>
+      </section>
 
-    <!-- Testimonios + slider -->
+      <!-- Testimonios + slider -->
 
-    <section id="testimonios">
-      <h2>TESTIMONIOS</h2>
-      <div class="slide-track">
-        <!-- 4 slides -->
-        <div class="slide">
-          <img src="imgs/testimonio-1.png"/>
+      <section id="testimonios">
+        <h2>TESTIMONIOS</h2>
+        <div class="slide-track">
+          <!-- 4 slides -->
+          <div class="slide">
+            <img src="imgs/testimonio-1.png" />
+          </div>
+          <div class="slide">
+            <img src="imgs/testimonio-2.png" />
+          </div>
+          <div class="slide">
+            <img src="imgs/testimonio-3.png" />
+          </div>
+          <div class="slide">
+            <img src="imgs/testimonio-2.png" />
+          </div>
         </div>
-        <div class="slide">
-          <img src="imgs/testimonio-2.png"/>
-        </div>
-        <div class="slide">
-          <img src="imgs/testimonio-3.png"/>
-        </div>
-        <div class="slide">
-          <img src="imgs/testimonio-2.png"/>
-        </div>
-      </div>
-    </section>
+      </section>
 
       <!-- Buscar Comedores -->
       <section id="buscar-comedores">
@@ -117,40 +120,56 @@
       <section id="buscar-donadores">
         <h3>BUSCAR DONADORES</h3>
 
-      <div id="ingresar-donacion">
-        <h2>CONTACTA CON UN DONADOR</h2>
-        <img src="imgs/imagen-central-donadores.png " style="width: 585px; height: 541px" alt="Persona donando un corazón" />
-        <h4>Ingresa la donación que necesitas</h4>
-        <input id="input-buscar-donador" autocomplete="off" />
-        <button id="btn-buscar-donar" style="background: transparent; border: none" disabled="true">
-          <img id="img-buscar-donador" src="imgs/Lupa.png" alt="Buscar-Donador" />
-        </button>
-      </div>
-
-      <!--RESULTADOS DONADORES-->
-      <div id="resultados-donadores" style="display: none">
-        <h2>DONADORES</h2>
-        <div id="carrusel-donadores"></div>
-      </div>
-    </section>
-
-    <!-- FORMULARIOS-->
-    <div class="modal">
-      <div class="modal__container">
-        <div class="panel-imagen">
-          <img class="imagen__quiero-donar" src="./imgs/img-formulario-1.png" alt="imagen quiero donar" />
+        <div id="ingresar-donacion">
+          <h2>CONTACTA CON UN DONADOR</h2>
+          <img
+            src="imgs/imagen-central-donadores.png "
+            style="width: 585px; height: 541px"
+            alt="Persona donando un corazón"
+          />
+          <h4>Ingresa la donación que necesitas</h4>
+          <input id="input-buscar-donador" autocomplete="off" />
+          <button
+            id="btn-buscar-donar"
+            style="background: transparent; border: none"
+            disabled="true"
+          >
+            <img
+              id="img-buscar-donador"
+              src="imgs/Lupa.png"
+              alt="Buscar-Donador"
+            />
+          </button>
         </div>
-        <div class="panel-donar">
-          <div class="registro__seccion-titulos">
-            <h2 class="h2-quiero-donar">¡QUIERO DONAR!</h2>
-            <h3 class="h3-quiero-donar">REGISTRATE DE FORMA GRATUITA</h3>
+
+        <!--RESULTADOS DONADORES-->
+        <div id="resultados-donadores" style="display: none">
+          <h2>DONADORES</h2>
+          <div id="carrusel-donadores"></div>
+        </div>
+      </section>
+
+      <!-- FORMULARIOS-->
+      <div class="modal">
+        <div class="modal__container">
+          <div class="panel-imagen">
+            <img
+              class="imagen__quiero-donar"
+              src="./imgs/img-formulario-1.png"
+              alt="imagen quiero donar"
+            />
           </div>
-          <div>
-            <div class="contenedor-grid">
-              <label class="input-donar centrar-texto">
-                NOMBRE
-                <input class="registro__rectangulo" />
-              </label>
+          <div class="panel-donar">
+            <div class="registro__seccion-titulos">
+              <h2 class="h2-quiero-donar">¡QUIERO DONAR!</h2>
+              <h3 class="h3-quiero-donar">REGISTRATE DE FORMA GRATUITA</h3>
+            </div>
+            <div>
+              <div class="contenedor-grid">
+                <label class="input-donar centrar-texto">
+                  NOMBRE
+                  <input class="registro__rectangulo" />
+                </label>
 
                 <label class="input-donar centrar-texto"
                   >APELLIDO
@@ -229,33 +248,72 @@
     <!-- FOOTER -->
     <section id="footer-top"></section>
 
-  <footer id="footer-container">
+    <footer id="footer-container">
+      <div class="footer-columnas">
+        <div class="footer-box">
+          <a href="index.html">
+            <h3 id="footer-texto-logo">Sabor Solidario</h3>
+          </a>
+          <p>
+            Desarrollado por [nombre del equipo] por un mundo mejor y para
+            alimentar corazones.
+          </p>
+          <a
+            href="https://www.linkedin.com/in/analucia-ceballos/"
+            class="tooltip"
+            target="_blank"
+            ><img
+              src="imgs/footer-img-perfil-1.jpeg"
+              alt="Imagen perfil"
+              width="40px"
+              height="37px"
+            /><span class="tooltiptext">Ana Lucía Ceballos</span></a
+          >
 
-    <div class="footer-columnas">
+          <a
+            href="https://www.linkedin.com/in/camila-carrizo/"
+            class="tooltip"
+            target="_blank"
+            ><img
+              src="imgs/footer-img-perfil-2.jpeg"
+              alt="Imagen perfil"
+              width="40px"
+              height="37px"
+            /><span class="tooltiptext">Camila Carrizo</span></a
+          >
 
-      <div class="footer-box">
-        <a href="index.html">
-          <h3 id="footer-texto-logo">Sabor Solidario</h3>
-        </a>
-        <p>Desarrollado por [nombre del equipo] por un mundo mejor y para alimentar corazones.</p>
-        <a href="https://www.linkedin.com/in/analucia-ceballos/" class="tooltip" target="_blank"><img src="imgs/footer-img-perfil-1.jpeg"
-            alt="Imagen perfil" width="40px" height="37px"><span class="tooltiptext">Ana Lucía Ceballos</span></a>
+          <a
+            href="https://www.linkedin.com/in/loredana-in%C3%A9s-lazzero-a8899026b/"
+            class="tooltip"
+            target="_blank"
+            ><img src="imgs/footer-group-img.png" alt="Imagen perfil" /><span
+              class="tooltiptext"
+              >Loredana Lazzero</span
+            ></a
+          >
 
-        <a href="https://www.linkedin.com/in/camila-carrizo/" class="tooltip" target="_blank"><img src="imgs/footer-img-perfil-2.jpeg"
-            alt="Imagen perfil" width="40px" height="37px"><span class="tooltiptext">Camila Carrizo</span></a>
+          <a
+            href="https://www.linkedin.com/in/victoria-torres-396251287/"
+            class="tooltip"
+            target="_blank"
+            ><img src="imgs/footer-group-img.png" alt="Imagen perfil" /><span
+              class="tooltiptext"
+              >Victoria Torres</span
+            ></a
+          >
 
-
-        <a href="https://www.linkedin.com/in/loredana-in%C3%A9s-lazzero-a8899026b/" class="tooltip" target="_blank"><img src="imgs/footer-group-img.png"
-            alt="Imagen perfil"><span class="tooltiptext">Loredana Lazzero</span></a>
-
-
-        <a href="https://www.linkedin.com/in/victoria-torres-396251287/" class="tooltip" target="_blank"><img src="imgs/footer-group-img.png"
-            alt="Imagen perfil"><span class="tooltiptext">Victoria Torres</span></a>
-
-
-        <a href="https://www.linkedin.com/in/cindygnaedinger" class="tooltip" target="_blank"><img
-            src="imgs/footer-img-perfil-5.jpeg" alt="Imagen perfil" width="40px" height="37px"><span class="tooltiptext">Cindy Gnaedinger</span></a>
-      </div>
+          <a
+            href="https://www.linkedin.com/in/cindygnaedinger"
+            class="tooltip"
+            target="_blank"
+            ><img
+              src="imgs/footer-img-perfil-5.jpeg"
+              alt="Imagen perfil"
+              width="40px"
+              height="37px"
+            /><span class="tooltiptext">Cindy Gnaedinger</span></a
+          >
+        </div>
 
         <div class="footer-box" id="footer-box-explorar">
           <h3>EXPLORAR</h3>
