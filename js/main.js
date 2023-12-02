@@ -8,6 +8,7 @@ let btnBuscarDonador = document.getElementById("btn-buscar-donar");
 let divResultadosDonadores = document.getElementById("resultados-donadores");
 let btnBuscarComedor = document.getElementById("btn-buscar-comedor");
 let inputBuscarComedor = document.getElementById("input-buscar-comedor");
+let articleDonador = document.getElementById("article-donador");
 
 // FUNCIONES
 
@@ -31,18 +32,35 @@ function filtrarDonadores(donadores, donacionBuscada) {
 //Funcion para mostrar los donadores filtrados
 
 function mostrarDonadores(donadoresFiltrados) {
+  const carruselDonadores = document.getElementById("carrusel-donadores");
+
+  carruselDonadores.innerHTML = "";
+
   if (donadoresFiltrados != 0) {
     donadoresFiltrados.forEach((donador) => {
-      const nuevoDonadorArt = document.createElement("article");
-      nuevoDonadorArt.textContent = `${
-        donador.nombre
-      } ---> ${donador.donaciones.join(", ")} `;
-      divResultadosDonadores.appendChild(nuevoDonadorArt);
+      const nuevoDonador = `
+            <article class="donador">
+                <div id="parte-superior">
+                    <h3>${donador.nombre}</h3>
+                    <p><span>Tengo para donar:</span>
+                       ${donador.donaciones}            
+                    </p>
+                </div>
+                <div id="parte-inferior">
+                    <img src="imgs/phone.png" alt="Icono teléfono">
+                    <h3>${donador.telefono}</h3>
+                    <img src="imgs/mail.png" alt="Icono mail">
+                    <h3>${donador.mail}</h3>
+                    <div id="boton-contenedor">
+                        <button>CONTACTAR</button>
+                    </div>
+                </div>
+            </article>
+        `;
+
+      carruselDonadores.innerHTML += nuevoDonador;
     });
   } else {
-    const noExistenDonadores = document.createElement("h2");
-    noExistenDonadores.textContent = `No se encontraron donadores que tengan "${inputBuscarDonador.value}."`;
-    divResultadosDonadores.appendChild(noExistenDonadores);
   }
 }
 
@@ -75,6 +93,14 @@ btnBuscarDonador.addEventListener("click", () => {
   divBuscarDonador.style.display = "none";
   divResultadosDonadores.style.display = "block";
   buscarDonadores(inputBuscarDonador.value.toLowerCase());
+});
+
+inputBuscarDonador.addEventListener("keydown", (event) => {
+  if (event.key === "Enter" && inputBuscarDonador.value !== "") {
+    divBuscarDonador.style.display = "none";
+    divResultadosDonadores.style.display = "block";
+    buscarDonadores(inputBuscarDonador.value.toLowerCase());
+  }
 });
 
 inputBuscarDonador.addEventListener("input", () => {
@@ -110,6 +136,7 @@ inputBuscarComedor.addEventListener("input", () => {
     imgLupaComedor.style.opacity = "0.3";
   }
 });
+
 // pruebas modal
 const abrirModal = document.getElementById("abrir-modal");
 const modal = document.getElementById("modal-unirse");

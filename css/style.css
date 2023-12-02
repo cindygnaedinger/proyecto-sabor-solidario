@@ -144,12 +144,99 @@ header nav a:hover {
   padding-bottom: 38px;
 }
 
+/*--------------- TESTIMONIOS --------------------*/
+
+/* Titulo */
+
+#testimonios h2{
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/* Sliders */
+
+.slider {
+  height: 322px;
+  width: 255px;
+  margin: auto;
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(149px * 9);
+}
+
+.slide-track:hover{
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0%{
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(calc(-250px * 8));
+  }
+}
+
+.slide {
+  height: 322px;
+  width: 255px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  perspective: 100px;
+}
+
+.slide img {
+  width: 100%;
+  transition: transform 1s;
+}
+
+.slide img:hover {
+  transform: translateZ(20px);
+}
+
+
+/* Sombras y gradientes */
+
+.slider::before,
+.slider::after{
+  background: linear-gradient(to right, rgba(255,255,255,1) 0%,
+  rgba(255,255,255,0) 100%);
+  content: '';
+  height: 100%;
+  position: absolute;
+  width: 15%;
+  z-index: 2;
+}
+
+.slider::before{
+  left: 0;
+  top: 0;
+}
+
+.slider::after{
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+
 /*--------------- BUSQUEDA DONADORES --------------------*/
 
 #buscar-donadores {
-  height: 1074px;
+  height: 1057px;
   margin-top: 1px;
   text-align: center;
+  margin-bottom: 131px;
 }
 
 #buscar-donadores div {
@@ -158,11 +245,12 @@ header nav a:hover {
 }
 
 #ingresar-donacion {
-  background-position: 0 94px;
   margin-top: 55px;
   display: block;
   justify-content: space-around;
   background-image: url(../imgs/bgi-contactar-donadores.png);
+  
+
 }
 
 #buscar-donadores h3,
@@ -213,11 +301,118 @@ img[alt="Buscar-Donador"] {
 }
 
 #resultados-donadores h2 {
-  margin: 263px auto 91px auto;
+  margin: 208px auto 91px auto;
   width: 477px;
   height: 76px;
   font-size: 80px;
 }
+
+#resultados-donadores #carrusel-donadores {
+  width: 954px;
+  height: 402px;
+  margin: auto;
+  display: flex;
+}
+
+/* articulos del carrusel donadores */
+
+.donador{
+  width: 255px;
+  height: 398px;
+  box-shadow: 5px 6px 6px rgba(0, 0, 0, 0.22);
+  margin-right: 24px;
+}
+
+.donador #parte-superior {
+  height: 176px;
+  width: 255px;
+  background-color: white;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  padding-top: 12px;
+  overflow: hidden;
+
+}
+
+  #parte-superior h3 {
+    font-size: 30px;
+    margin-bottom: 33px;
+    overflow-wrap: break-word
+
+  }
+
+    #parte-superior p {
+      width: 220px;
+      overflow-wrap: break-word;
+      margin: auto;
+      color:#1E1E1E;
+      font-style: italic;
+    }
+      #parte-superior span {
+        display: block;
+        color: #1E1E1E;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+.donador #parte-inferior {
+  width: 255px;
+  height: 222px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  background-color: #434343;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  display: grid;
+  grid-template-columns: repeat(2, 0fr);
+  align-items: center;
+  text-align: left;
+  overflow: hidden;
+}
+
+
+.donador #parte-inferior h3 {
+  width: 205px;
+  height: 48px;
+  font-size: 17px;
+  font-style: italic;
+  color: #fff;
+  font-weight: normal;
+  overflow-wrap: break-word;
+  margin-left: 12px;  
+  padding-top: 17px;
+}
+
+.donador img {
+  margin-left: 17px;
+}
+
+#parte-inferior #boton-contenedor {
+  grid-column: span 2;
+  margin: 22px auto;
+}
+
+#parte-inferior button {
+  color: var(--primer-color);
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  width: 163px;
+  height: 57px;
+  box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.22);
+  transition: background-color 0.8s ease, color 0.8s ease;;
+}
+
+#parte-inferior button:hover {
+  cursor: pointer;
+  background-color: var(--primer-color);
+  color: #fff;
+}
+
+
+
 
 /* ------ GUÍA ------------------------------------*/
 
