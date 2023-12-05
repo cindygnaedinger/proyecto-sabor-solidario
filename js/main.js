@@ -32,9 +32,9 @@ function filtrarDonadores(donadores, donacionBuscada) {
 //Funcion para mostrar los donadores filtrados
 
 function mostrarDonadores(donadoresFiltrados) {
-  const carruselDonadores = document.getElementById("carrusel-donadores");
+  const Donadores = document.getElementById("donadores");
 
-  carruselDonadores.innerHTML = "";
+  Donadores.innerHTML = "";
 
   if (donadoresFiltrados != 0) {
     donadoresFiltrados.forEach((donador) => {
@@ -58,7 +58,7 @@ function mostrarDonadores(donadoresFiltrados) {
             </article>
         `;
 
-      carruselDonadores.innerHTML += nuevoDonador;
+      Donadores.innerHTML += nuevoDonador;
     });
   } else {
   }
@@ -91,14 +91,14 @@ function buscarDonadores(donacionBuscada) {
 
 btnBuscarDonador.addEventListener("click", () => {
   divBuscarDonador.style.display = "none";
-  divResultadosDonadores.style.display = "flex";
+  divResultadosDonadores.style.display = "block";
   buscarDonadores(inputBuscarDonador.value.toLowerCase());
 });
 
 inputBuscarDonador.addEventListener("keydown", (event) => {
   if (event.key === "Enter" && inputBuscarDonador.value !== "") {
     divBuscarDonador.style.display = "none";
-    divResultadosDonadores.style.display = "flex";
+    divResultadosDonadores.style.display = "block";
     buscarDonadores(inputBuscarDonador.value.toLowerCase());
   }
 });
