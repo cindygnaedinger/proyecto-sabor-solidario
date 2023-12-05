@@ -91,14 +91,14 @@ function buscarDonadores(donacionBuscada) {
 
 btnBuscarDonador.addEventListener("click", () => {
   divBuscarDonador.style.display = "none";
-  divResultadosDonadores.style.display = "block";
+  divResultadosDonadores.style.display = "flex";
   buscarDonadores(inputBuscarDonador.value.toLowerCase());
 });
 
 inputBuscarDonador.addEventListener("keydown", (event) => {
   if (event.key === "Enter" && inputBuscarDonador.value !== "") {
     divBuscarDonador.style.display = "none";
-    divResultadosDonadores.style.display = "block";
+    divResultadosDonadores.style.display = "flex";
     buscarDonadores(inputBuscarDonador.value.toLowerCase());
   }
 });
