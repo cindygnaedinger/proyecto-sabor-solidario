@@ -299,6 +299,7 @@ img[alt="Buscar-Donador"] {
   background-image: url(../imgs/bgi-resultados-donadores.png);
   border: #43434300 solid 3px;
   margin-top: 55px;
+  position: relative;
 }
 
 #resultados-donadores h2 {
@@ -313,6 +314,8 @@ img[alt="Buscar-Donador"] {
   height: 402px;
   margin: auto;
   display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
 }
 
 /* articulos del carrusel donadores */
