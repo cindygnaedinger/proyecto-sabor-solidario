@@ -314,6 +314,13 @@ img[alt="Buscar-Donador"] {
   height: 402px;
   margin: auto;
   display: flex;
+}
+
+#carrusel-donadores #donadores {
+  width: 800px;
+  height: 402px;
+  margin: auto;
+  display: flex;
   overflow: hidden;
   scroll-behavior: smooth;
 }
