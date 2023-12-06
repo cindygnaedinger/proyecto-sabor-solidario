@@ -302,6 +302,7 @@ img[alt="Buscar-Donador"] {
   background-image: url(../imgs/bgi-resultados-donadores.png);
   border: #43434300 solid 3px;
   margin-top: 55px;
+  position: relative;
 }
 
 #resultados-donadores h2 {
@@ -312,12 +313,34 @@ img[alt="Buscar-Donador"] {
 }
 
 #resultados-donadores #carrusel-donadores {
-  width: 954px;
+  width: 1010px;
   height: 402px;
   margin: auto;
   display: flex;
+  align-items: center;
+  gap: 10px;
+
 }
 
+#carrusel-donadores #donadores {
+  width: 840px;
+  height: 402px;
+  margin: auto auto auto 4px;
+  padding-left: 10px;
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+#btn-back-resultado-donador, #btn-next-resultado-donador{
+  height: 68px;
+  background-color: transparent;
+  border: none;
+}
+
+#btn-back-resultado-donador, #btn-next-resultado-donador:hover{
+  cursor: pointer;
+}
 /* articulos del carrusel donadores */
 
 .donador {

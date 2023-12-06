@@ -9,6 +9,9 @@ let divResultadosDonadores = document.getElementById("resultados-donadores");
 let btnBuscarComedor = document.getElementById("btn-buscar-comedor");
 let inputBuscarComedor = document.getElementById("input-buscar-comedor");
 let articleDonador = document.getElementById("article-donador");
+let btnBack = document.getElementById('btn-back-resultado-donador')
+let btnNext = document.getElementById('btn-next-resultado-donador')
+Donadores = document.getElementById("donadores");
 
 // FUNCIONES
 
@@ -32,9 +35,8 @@ function filtrarDonadores(donadores, donacionBuscada) {
 //Funcion para mostrar los donadores filtrados
 
 function mostrarDonadores(donadoresFiltrados) {
-  const carruselDonadores = document.getElementById("carrusel-donadores");
 
-  carruselDonadores.innerHTML = "";
+  Donadores.innerHTML = "";
 
   if (donadoresFiltrados != 0) {
     donadoresFiltrados.forEach((donador) => {
@@ -58,7 +60,7 @@ function mostrarDonadores(donadoresFiltrados) {
             </article>
         `;
 
-      carruselDonadores.innerHTML += nuevoDonador;
+      Donadores.innerHTML += nuevoDonador;
     });
   } else {
   }
@@ -118,6 +120,14 @@ inputBuscarDonador.addEventListener("input", () => {
     imgLupaDonador.style.opacity = "0.3";
   }
 });
+
+btnBack.addEventListener('click', () => {
+  Donadores.scrollLeft -= 280
+})
+
+btnNext.addEventListener('click', () => {
+  Donadores.scrollLeft += 280
+})
 
 //Manejador de eventos para buscar comedores
 

@@ -29,7 +29,7 @@
         <h1>UNIDOS POR LA ALIMENTACIÓN</h1>
         <h2>Conectando generosidad con necesidad</h2>
         <div>
-          <a id="abrir-modal" href="#">UNIRSE</a>
+          <a id="abrir-modal">UNIRSE</a>
           <a id="abrir-modal-ingresar" href="#">INGRESAR</a>
         </div>
       </div>
@@ -116,7 +116,7 @@
       </section>
 
       <!-- Buscar Donadores -->
-      <section id="buscar-donadores">
+      <section id="buscar-donadores" style="display: block">
         <h3>BUSCAR DONADORES</h3>
 
         <div id="ingresar-donacion">
@@ -144,12 +144,16 @@
         <!--RESULTADOS DONADORES-->
         <div id="resultados-donadores" style="display: none">
           <h2>DONADORES</h2>
-          <div id="carrusel-donadores"></div>
+          <div id="carrusel-donadores">
+            <button title="Back" id="btn-back-resultado-donador"><img src="imgs/btnBack.png" alt=""></button>
+            <div id="donadores"></div>
+            <button title="Next" id="btn-next-resultado-donador"><img src="imgs/btnNext.png" alt=""></button>
+          </div>
         </div>
       </section>
 
       <!-- FORMULARIOS-->
-      <div class="modal">
+      <div id="modal-unirse" class="modal">
         <div class="modal__container">
           <div class="panel-imagen">
             <img
