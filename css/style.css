@@ -706,6 +706,7 @@ img[alt="Buscar-Comedor"] {
 
 .registro__seccion-titulos {
   text-align: center;
+  margin-bottom: 15px;
 }
 
 .h2-quiero-donar {
@@ -720,7 +721,7 @@ img[alt="Buscar-Comedor"] {
 
 .registro__rectangulo {
   width: 100%;
-  height: 20px;
+  height: 25px;
   background-color: #fff9;
   border: 2px solid #ffffff7a;
   border-radius: 2px;
@@ -762,6 +763,7 @@ img[alt="Buscar-Comedor"] {
   cursor: pointer;
   transition: all 300ms;
   border-radius: 4px;
+  font-weight: 400;
 }
 
 .boton-registro:hover {
@@ -813,7 +815,7 @@ img[alt="Buscar-Comedor"] {
   height: 100%;
   display: grid;
   grid-template-columns: min-content;
-  padding: 50px 0px 5px 83px;
+  padding: 42px 0px 5px 83px;
   position: relative;
 }
 
@@ -826,7 +828,6 @@ img[alt="Buscar-Comedor"] {
   margin: 0 auto;
   height: 40px;
   font-weight: bold;
-  font-family: "Karla";
 }
 
 .boton-ingresar-usuario:hover {
@@ -839,7 +840,7 @@ img[alt="Buscar-Comedor"] {
   top: -100px;
   left: 50%;
   transform: translateX(-50%);
-  width: 134px;
+  width: 141px;
 }
 
 .cruz-salir-ingreso-usuario {
