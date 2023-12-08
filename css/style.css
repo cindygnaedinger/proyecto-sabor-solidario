@@ -796,7 +796,6 @@ img[alt="Buscar-Comedor"] {
   margin-top: 86px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3),
     -5px -5px 10px rgba(255, 255, 255, 0.3);
-  font-weight: bold;
 }
 
 .ingresar__rectangulo {
@@ -815,19 +814,19 @@ img[alt="Buscar-Comedor"] {
   height: 100%;
   display: grid;
   grid-template-columns: min-content;
-  padding: 42px 0px 5px 83px;
+  padding: 53px 0px 0px 80px;
   position: relative;
+  font-size: 15px;
 }
 
 .boton-ingresar-usuario {
   background-color: #fff;
   border: none;
   border-radius: 5px;
-  width: 100px;
+  width: 86px;
   color: #ff6100;
   margin: 0 auto;
-  height: 40px;
-  font-weight: bold;
+  height: 31px;
 }
 
 .boton-ingresar-usuario:hover {
