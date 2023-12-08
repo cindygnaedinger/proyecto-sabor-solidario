@@ -14,6 +14,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Karla", sans-serif;
   color: var(--primer-color);
@@ -26,7 +30,12 @@ a {
   color: var(--primer-color);
 }
 
-header {
+li {
+  list-style: none;
+}
+
+.header {
+  position: relative;
   height: 557px;
   display: flex;
   justify-content: space-between;
@@ -35,9 +44,7 @@ header {
   background-image: url(../imgs/hero-banner.png);
   background-repeat: no-repeat;
 }
-.header {
-  position: relative;
-}
+
 #header-logo {
   display: block;
   width: 289px;
@@ -184,6 +191,7 @@ header nav a:hover {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(calc(-250px * 8));
   }
@@ -211,11 +219,9 @@ header nav a:hover {
 
 .slider::before,
 .slider::after {
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(to right,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 100%);
   content: "";
   height: 100%;
   position: absolute;
@@ -300,6 +306,7 @@ img[alt="Buscar-Donador"] {
   background-image: url(../imgs/bgi-resultados-donadores.png);
   border: #43434300 solid 3px;
   margin-top: 55px;
+  position: relative;
 }
 
 #resultados-donadores h2 {
@@ -310,10 +317,35 @@ img[alt="Buscar-Donador"] {
 }
 
 #resultados-donadores #carrusel-donadores {
-  width: 954px;
+  width: 1010px;
   height: 402px;
   margin: auto;
   display: flex;
+  align-items: center;
+  gap: 10px;
+
+}
+
+#carrusel-donadores #donadores {
+  width: 840px;
+  height: 402px;
+  margin: auto auto auto 4px;
+  padding-left: 10px;
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+#btn-back-resultado-donador,
+#btn-next-resultado-donador {
+  height: 68px;
+  background-color: transparent;
+  border: none;
+}
+
+#btn-back-resultado-donador,
+#btn-next-resultado-donador:hover {
+  cursor: pointer;
 }
 
 /* articulos del carrusel donadores */
@@ -348,6 +380,7 @@ img[alt="Buscar-Donador"] {
   color: #1e1e1e;
   font-style: italic;
 }
+
 #parte-superior span {
   display: block;
   color: #1e1e1e;
@@ -413,47 +446,124 @@ img[alt="Buscar-Donador"] {
 /* ------ GUÍA ------------------------------------*/
 
 .btn-guia {
-  background-color: #75cfe9;
-  width: 290px;
-  height: 82px;
-  border-radius: 8px;
-  font-size: 26px;
-  color: #fff;
+  width: 100%;
+  font-size: 56px;
+  letter-spacing: 5px;
+  color: #3d3d3d;
   font-weight: 600;
-  text-align: center;
   padding-top: 20px;
-  margin: 50px auto 50px auto;
+  margin: 20px auto 100px auto;
+}
+
+.btn-guia span {
+  display: block;
+  width: 450px;
+  height: 3px;
+  background-color: #3d3d3d;
+  border-radius: 38px;
 }
 
 #container-guia {
-  width: 600px;
+  width: 100%;
   color: #434343;
   font-size: 20px;
   line-height: 1.5;
-  text-align: justify;
-  margin: auto;
+  text-align: center;
+
 }
 
 .container-texto {
-  margin-bottom: 50px;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 150px;
 }
 
-#container-guia p {
-  font-size: 26px;
-  font-weight: bold;
-  margin: 30px 0 30px 0;
+.container-texto-last {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.img-card {
+  width: 80px;
+  height: 80px;
+  padding-top: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: solid 2px #3d3d3d;
+  margin: auto;
+}
+
+.container-texto h2 {
+  font-size: 24px;
+}
+
+.container-texto p {
+  font-size: 20px;
+}
+
+.guia-article {
+  padding: 40px;
+  border-radius: 8px;
+  background-color: hsl(25, 100%, 80%);
+  box-shadow: 6px 6px 0px hsl(0, 0%, 24%);
+  border: 1px solid #3d3d3d;
+}
+
+.guia-article a {
+  font-weight: 700;
+  color: #3d3d3d;
+  transition: .5s;
+}
+
+.guia-article a:hover {
+  font-weight: 700;
+  color: #ff7a28;
+}
+
+.guia-article img {
+  border-radius: 8px;
+  transition: .5s;
+}
+
+.guia-article img:hover {
+  box-shadow: 2px 1px 6px #fff;
+}
+
+.guia-article img:active {
+  box-shadow: 0 0 0 #fff;
+}
+
+.first-section:last-child {
+  grid-column: 2 / 3;
+}
+
+.art-blue {
+  background-color: hsl(204, 100%, 80%);
+
 }
 
 #container-guia h3 {
   font-weight: normal;
   font-size: 36px;
-  color: #ff6100;
+  color: #3d3d3d;
   text-align: center;
   margin: 80px 0;
+  padding: 40px;
 }
 
 #container-guia h3 span {
   font-weight: 700;
+  color: #ff6100;
 }
 
 /*---BUSCAR COMEDORES---------------------*/
@@ -664,6 +774,7 @@ img[alt="Buscar-Comedor"] {
   justify-content: center;
   gap: 10px;
 }
+
 /* FORMULARIO INGRESAR */
 .panel-ingresar {
   width: 480px;
@@ -674,6 +785,7 @@ img[alt="Buscar-Comedor"] {
   align-items: center;
   position: relative;
 }
+
 .panel-ingresar--contenido {
   background-color: hsla(192.9, 73.4%, 69%, 0.56);
   width: 400px;
@@ -684,6 +796,7 @@ img[alt="Buscar-Comedor"] {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3),
     -5px -5px 10px rgba(255, 255, 255, 0.3);
 }
+
 .ingresar__rectangulo {
   border-radius: 5px;
   border: none;
@@ -694,6 +807,7 @@ img[alt="Buscar-Comedor"] {
   padding-left: 5px;
   padding-right: 5px;
 }
+
 .container-informacion-personal {
   width: 100%;
   height: 100%;
@@ -702,6 +816,7 @@ img[alt="Buscar-Comedor"] {
   padding: 50px 0px 5px 83px;
   position: relative;
 }
+
 .boton-ingresar-usuario {
   background-color: #fff;
   border: none;
@@ -711,10 +826,12 @@ img[alt="Buscar-Comedor"] {
   margin: 0 auto;
   height: 40px;
 }
+
 .boton-ingresar-usuario:hover {
   filter: brightness(0.95);
   cursor: pointer;
 }
+
 .imagen-formulario--ingresar {
   position: absolute;
   top: -100px;
@@ -722,6 +839,7 @@ img[alt="Buscar-Comedor"] {
   transform: translateX(-50%);
   width: 134px;
 }
+
 .cruz-salir-ingreso-usuario {
   position: absolute;
   top: 10px;
@@ -730,9 +848,11 @@ img[alt="Buscar-Comedor"] {
   cursor: pointer;
   background-color: #fff;
 }
+
 .cruz-salir-ingreso-usuario:hover {
   filter: brightness(0.95);
 }
+
 /* FIN DE FORMULARIOS */
 
 /* FOOTER */
@@ -742,6 +862,7 @@ img[alt="Buscar-Comedor"] {
   background-image: url(../imgs/footer-top.png);
   background-repeat: no-repeat;
   background-position: center;
+  margin-top: 50px;
 }
 
 #footer-container {
@@ -773,29 +894,36 @@ img[alt="Buscar-Comedor"] {
 .footer-box a {
   color: var(--light-color);
 }
+
 #footer-texto-logo {
   transition: 0.5s;
 }
+
 #footer-texto-logo:hover {
   color: var(--primer-color);
 }
+
 .footer-box h3 {
   margin-bottom: 20px;
   font-size: 22px;
 }
+
 .footer-box p {
   line-height: 1.8;
   margin-bottom: 10px;
 }
+
 #footer-box-explorar {
   display: flex;
   flex-direction: column;
 }
+
 #footer-box-explorar a {
   line-height: 2;
   font-size: 18px;
   transition: 0.5s;
 }
+
 #footer-box-explorar a:hover {
   color: var(--primer-color);
 }
@@ -805,20 +933,25 @@ img[alt="Buscar-Comedor"] {
   border-radius: 50%;
   transition: 0.5s;
 }
+
 .footer-box img:hover {
   box-shadow: 1px 1px 30px hsla(0, 0%, 100%, 0.158);
 }
+
 .icono:hover img {
   animation: icono 0.5s ease;
 }
+
 @keyframes icono {
   from {
     transform: rotate3d(0, 0, 0, 0);
   }
+
   to {
     transform: rotate3d(0, 1, 0, 360deg);
   }
 }
+
 #footer-linea {
   width: 830px;
   height: 2px;
@@ -826,6 +959,7 @@ img[alt="Buscar-Comedor"] {
   margin: auto;
   margin-bottom: 50px;
 }
+
 .footer-copy small {
   display: block;
   width: 1024px;
@@ -859,13 +993,107 @@ img[alt="Buscar-Comedor"] {
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
+
 .tooltip .tooltiptext::after {
   content: " ";
   position: absolute;
-  bottom: 100%; /* At the top of the tooltip */
+  bottom: 100%;
+  /* At the top of the tooltip */
   left: 50%;
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
   border-color: transparent transparent hsla(0, 1%, 13%, 0.349) transparent;
+}
+
+/*-----------PERFIL COMEDORES---------------------*/
+.perfil-comedor {
+  width: 900px;
+  height: 900px;
+  margin: auto;
+}
+
+.header-perfil {
+  height: 128px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  font-weight: 500;
+}
+
+.perfil-comedor__container {
+  width: 95%;
+  height: auto;
+  margin: auto;
+  border: 3px solid hsl(193, 73%, 69%, 0.1);
+  border-radius: 8px;
+  box-shadow: 10px 6px 10px hsl(193, 73%, 69%, 0.1);
+  color: #3d3d3d;
+}
+
+.perfil-comedor__header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 3px solid hsl(193, 73%, 69%, 0.1);
+  border-radius: 8px;
+  padding: 30px;
+  background-color: hsl(193, 73%, 69%, 0.1);
+}
+
+#perfil-comedor__img-logo {
+  width: 130px;
+  border: 3px solid hsl(193, 73%, 69%, 0.2);
+  border-radius: 50%;
+  box-shadow: 2px 1px 1px hsl(193, 73%, 69%, 0.2);
+  margin: 26px;
+
+}
+
+.perfil-comedor__header h2 {
+  font-size: 32px;
+}
+
+.perfil-comedor__header p {
+  margin-left: 40px;
+}
+
+.perfil-comedor__info-add {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100px;
+  font-weight: 500;
+}
+
+#info-add__num-urg {
+  height: 21px;
+}
+
+#perfil__star-container {
+  width: 80px;
+}
+
+.perfil-comedor__body {
+  margin-left: 50px;
+  padding-bottom: 50px;
+  line-height: 1.5;
+}
+
+.perfil-comedor__body ul {
+  list-style-type: none;
+}
+
+.perfil-comedor__body li {
+  width: 100px;
+  border-bottom: 3px solid hsl(193, 73%, 69%, 0.1);
+  border-radius: 8px;
+  padding: 5px;
+  background-color: hsl(193, 73%, 69%, 0.1);
+}
+
+.perfil-comedor__body p,
+.perfil-comedor__body ul,
+.perfil-comedor__body h3 {
+  margin-bottom: 30px;
 }
