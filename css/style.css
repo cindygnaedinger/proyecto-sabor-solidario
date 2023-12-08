@@ -105,6 +105,7 @@ header nav a:hover {
   background-color: var(--light-color);
   transition: 0.5s;
   margin-top: 90px;
+  cursor: pointer;
 }
 
 #hero-banner #abrir-modal {
@@ -581,11 +582,12 @@ img[alt="Buscar-Comedor"] {
 
 .panel-donar {
   width: 400px;
-  background-color: #fff;
+  background-color: #75cfe9;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 20px;
+  color: #fff;
 }
 
 .imagen__quiero-donar {
@@ -594,7 +596,6 @@ img[alt="Buscar-Comedor"] {
 }
 
 .registro__seccion-titulos {
-  color: hsl(23, 100%, 68%);
   text-align: center;
 }
 
@@ -611,8 +612,8 @@ img[alt="Buscar-Comedor"] {
 .registro__rectangulo {
   width: 100%;
   height: 20px;
-  background-color: hsla(23.1, 100%, 89.8%, 0.65);
-  border: 2px solid #ffba87;
+  background-color: #fff9;
+  border: 2px solid #ffffff7a;
   border-radius: 2px;
   padding-left: 5px;
   padding-right: 5px;
@@ -643,12 +644,12 @@ img[alt="Buscar-Comedor"] {
 }
 
 .boton-registro {
-  width: 100px;
+  background-color: #ffffffcf;
+  width: 80px;
   height: 30px;
-  background-color: #ffffffad;
   border: none;
   box-shadow: 0px 0px 10px rgba(195, 195, 195, 0.44);
-  color: #ff7a28;
+  color: #325762;
   cursor: pointer;
   transition: all 300ms;
   border-radius: 4px;
