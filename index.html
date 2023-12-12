@@ -118,12 +118,10 @@
       <!-- Buscar Donadores -->
       <section id="buscar-donadores" style="display: block">
         <h3>BUSCAR DONADORES</h3>
-
         <div id="ingresar-donacion">
           <h2>CONTACTA CON UN DONADOR</h2>
           <img
             src="imgs/imagen-central-donadores.png "
-            style="width: 585px; height: 541px"
             alt="Persona donando un corazón"
           />
           <h4>Ingresa la donación que necesitas</h4>
@@ -145,9 +143,13 @@
         <div id="resultados-donadores" style="display: none">
           <h2>DONADORES</h2>
           <div id="carrusel-donadores">
-            <button title="Back" id="btn-back-resultado-donador"><img src="imgs/btnBack.png" alt=""></button>
+            <button title="Back" id="btn-back-resultado-donador">
+              <img src="imgs/btnBack.png" alt="" />
+            </button>
             <div id="donadores"></div>
-            <button title="Next" id="btn-next-resultado-donador"><img src="imgs/btnNext.png" alt=""></button>
+            <button title="Next" id="btn-next-resultado-donador">
+              <img src="imgs/btnNext.png" alt="" />
+            </button>
           </div>
         </div>
       </section>
@@ -220,7 +222,7 @@
       <div id="modal-ingresar" class="modal">
         <div class="modal__container">
           <div class="panel-ingresar">
-            <button class="cruz-salir-ingreso-usuario">
+            <button id="boton--cruz" class="cruz-salir-ingreso-usuario">
               <img src="./imgs/cruz-salir-ingreso-usuario.png" alt="" />
             </button>
             <div class="panel-ingresar--contenido">
@@ -239,7 +241,7 @@
                   >CONTRASEÑA
                   <input class="ingresar__rectangulo" />
                 </label>
-                <button class="boton-ingresar-usuario">INGESAR</button>
+                <button class="boton-ingresar-usuario">INGRESAR</button>
               </div>
             </div>
           </div>

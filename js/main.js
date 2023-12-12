@@ -9,8 +9,8 @@ let divResultadosDonadores = document.getElementById("resultados-donadores");
 let btnBuscarComedor = document.getElementById("btn-buscar-comedor");
 let inputBuscarComedor = document.getElementById("input-buscar-comedor");
 let articleDonador = document.getElementById("article-donador");
-let btnBack = document.getElementById('btn-back-resultado-donador')
-let btnNext = document.getElementById('btn-next-resultado-donador')
+let btnBack = document.getElementById("btn-back-resultado-donador");
+let btnNext = document.getElementById("btn-next-resultado-donador");
 Donadores = document.getElementById("donadores");
 
 // FUNCIONES
@@ -35,7 +35,6 @@ function filtrarDonadores(donadores, donacionBuscada) {
 //Funcion para mostrar los donadores filtrados
 
 function mostrarDonadores(donadoresFiltrados) {
-
   Donadores.innerHTML = "";
 
   if (donadoresFiltrados != 0) {
@@ -121,13 +120,13 @@ inputBuscarDonador.addEventListener("input", () => {
   }
 });
 
-btnBack.addEventListener('click', () => {
-  Donadores.scrollLeft -= 280
-})
+btnBack.addEventListener("click", () => {
+  Donadores.scrollLeft -= 280;
+});
 
-btnNext.addEventListener('click', () => {
-  Donadores.scrollLeft += 280
-})
+btnNext.addEventListener("click", () => {
+  Donadores.scrollLeft += 280;
+});
 
 //Manejador de eventos para buscar comedores
 
@@ -170,4 +169,9 @@ const modalIngresar = document.getElementById("modal-ingresar");
 
 botonIngresar.addEventListener("click", () => {
   modalIngresar.classList.add("modal--show");
+});
+
+const botonCruz = document.getElementById("boton--cruz");
+botonCruz.addEventListener("click", () => {
+  modalIngresar.classList.remove("modal--show");
 });
