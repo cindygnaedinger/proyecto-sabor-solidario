@@ -105,7 +105,7 @@ header nav a:hover {
   height: 58px;
   font-size: 22px;
   font-weight: bold;
-  border: solid 3px var(--primer-color);
+  border: solid 2px var(--primer-color);
   border-radius: 8px;
   text-align: center;
   padding-top: 12px;
@@ -127,7 +127,7 @@ header nav a:hover {
 #hero-banner #abrir-modal:hover {
   background-color: var(--light-color);
   color: var(--primer-color);
-  border: solid 3px var(--primer-color);
+  border: solid 2px var(--primer-color);
 }
 
 /* BANNER SECUNDARIO - "NOSOTROS" */
