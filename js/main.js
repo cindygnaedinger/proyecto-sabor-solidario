@@ -148,20 +148,33 @@ inputBuscarComedor.addEventListener("input", () => {
 
 // pruebas modal
 const abrirModal = document.getElementById("abrir-modal");
-const modal = document.getElementById("modal-unirse");
+const modalDonar = document.getElementById("modal-donar");
+const modalUnirse = document.getElementById("modal-unirse");
+/**
+ * modal--show -> clase que hace que el modal se muestre. (le agrega opacidad: 1)
+ */
 
-abrirModal.addEventListener("click", () => {
-  modal.classList.add("modal--show");
-});
+function abrirModalUnirse() {
+  modalDonar.classList.add("modal--show");
+}
 
-const botonCerrar = document.getElementById("cancelar-registro");
+function abrirFormUnirse() {
+  modalUnirse.classList.add("modal--show");
+  modalDonar.classList.remove("modal--show");
+}
+
+function cerrarModalRegistro() {
+  modalUnirse.classList.remove("modal--show");
+}
+
+const botonCerrar = document.getElementById("cerrar-modal-donar");
 botonCerrar.addEventListener("click", () => {
-  modal.classList.remove("modal--show");
+  modalDonar.classList.remove("modal--show");
 });
 
 const botonRegistro = document.getElementById("boton-registrarse");
 botonRegistro.addEventListener("click", () => {
-  modal.classList.remove("modal--show");
+  modalDonar.classList.remove("modal--show");
 });
 
 const botonIngresar = document.getElementById("abrir-modal-ingresar");
