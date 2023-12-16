@@ -680,13 +680,15 @@ img[alt="Buscar-Comedor"] {
   transition: opacity 300ms;
   --transform: translateY(0);
   --transition: transform 300ms 300ms;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal__container {
   margin: auto;
   max-height: 90%;
   background-color: #fff;
-  border-radius: 6px;
+  border-radius: 20px;
   transform: var(--transform);
   transition: var(--transition);
   display: flex;
@@ -862,6 +864,59 @@ img[alt="Buscar-Comedor"] {
 
 .cruz-salir-ingreso-usuario:hover {
   filter: brightness(0.95);
+}
+.container-quierodonar--quierorecibir {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.quierodonar--quierorecibir {
+  width: 380px;
+  height: 327px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: #fff;
+}
+.quiero-donar {
+  width: 160px;
+  height: 200px;
+  border-radius: 20px;
+  background-color: #75cfe9;
+  text-align: center;
+  padding-top: 35px;
+  box-shadow: 2px 4px 8px rgba(114, 114, 114, 0.44);
+  line-height: 25px;
+}
+
+.input-quiero--donar {
+  width: 160px;
+  height: 200px;
+}
+
+.quiero-recibir {
+  width: 160px;
+  height: 200px;
+  border-radius: 20px;
+  border: 1px solid #ff6100;
+  text-align: center;
+  padding-top: 35px;
+  box-shadow: 2px 4px 8px rgba(114, 114, 114, 0.44);
+  line-height: 25px;
+}
+.cruz-salir--quierodonar_quierorecibir {
+  position: absolute;
+  top: 165px;
+  right: 363px;
+  border: none;
+  cursor: pointer;
+  background: white;
+}
+.imagen-quierodonar--quierorecibir {
+  width: 80px;
 }
 
 /* FIN DE FORMULARIOS */
