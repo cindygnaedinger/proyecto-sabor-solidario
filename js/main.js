@@ -175,3 +175,11 @@ const botonCruz = document.getElementById("boton--cruz");
 botonCruz.addEventListener("click", () => {
   modalIngresar.classList.remove("modal--show");
 });
+
+/*=============== GSAP ANIMATION ===============*/
+gsap.from("#header-logo", 1.5, {opacity: 0, y: -40, delay: .2})
+gsap.from("nav", 1.5, {opacity: 0, y: -40, delay: .3})
+gsap.from("#hero-banner", 1.5, {opacity: 0, y: -100, delay: .4})
+
+
+
