@@ -29,7 +29,7 @@
         <h1>UNIDOS POR LA ALIMENTACIÓN</h1>
         <h2>Conectando generosidad con necesidad</h2>
         <div>
-          <a id="abrir-modal">UNIRSE</a>
+          <a onclick="abrirModalUnirse()">UNIRSE</a>
           <a id="abrir-modal-ingresar" href="#">INGRESAR</a>
         </div>
       </div>
@@ -206,12 +206,16 @@
             </div>
             <div class="contenedor-botones--registro">
               <div class="registro__botones">
-                <button id="cancelar-registro" class="boton-registro">
+                <button onclick="cerrarModalRegistro()" class="boton-registro">
                   Cancelar
                 </button>
               </div>
               <div class="registro__botones">
-                <button id="boton-registrarse" class="boton-registro">
+                <button
+                  onclick="cerrarModalRegistro()"
+                  id="boton-registrarse"
+                  class="boton-registro"
+                >
                   registrarse
                 </button>
               </div>
@@ -248,6 +252,37 @@
         </div>
       </div>
     </main>
+    <div
+      id="modal-donar"
+      class="modal"
+      class="container-quierodonar--quierorecibir"
+    >
+      <div class="quierodonar--quierorecibir">
+        <button
+          id="cerrar-modal-donar"
+          class="cruz-salir--quierodonar_quierorecibir"
+        >
+          <img class="" src="imgs/cruz-salir-ingreso-usuario.png" alt="" />
+        </button>
+        <button onclick="abrirFormUnirse()" class="quiero-donar">
+          <img
+            class="imagen-quierodonar--quierorecibir"
+            src="imgs/img-manoconcorazón.png"
+            alt=""
+          />
+          <h3>QUIERO DONAR</h3>
+        </button>
+        <button class="quiero-recibir">
+          <img
+            class="imagen-quierodonar--quierorecibir"
+            src="imgs/img-café.png"
+            alt=""
+          />
+          <h3>QUIERO RECIBIR</h3>
+        </button>
+      </div>
+    </div>
+
     <!-- FIN FORMULARIOS-->
 
     <!-- FOOTER -->
