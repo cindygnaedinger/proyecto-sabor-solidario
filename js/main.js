@@ -159,8 +159,8 @@ function abrirModalUnirse() {
 }
 
 function abrirFormUnirse() {
-  modalUnirse.classList.add("modal--show");
   modalDonar.classList.remove("modal--show");
+  modalUnirse.classList.add("modal--show");
 }
 
 function cerrarModalRegistro() {
@@ -190,9 +190,6 @@ botonCruz.addEventListener("click", () => {
 });
 
 /*=============== GSAP ANIMATION ===============*/
-gsap.from("#header-logo", 1.5, {opacity: 0, y: -40, delay: .2})
-gsap.from("nav", 1.5, {opacity: 0, y: -40, delay: .3})
-gsap.from("#hero-banner", 1.5, {opacity: 0, y: -100, delay: .4})
-
-
-
+gsap.from("#header-logo", 1.5, { opacity: 0, y: -40, delay: 0.2 });
+gsap.from("nav", 1.5, { opacity: 0, y: -40, delay: 0.3 });
+gsap.from("#hero-banner", 1.5, { opacity: 0, y: -100, delay: 0.4 });
