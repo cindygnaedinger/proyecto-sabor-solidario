@@ -2,7 +2,9 @@
 
 :root {
   --primer-color: #ff6100;
+  --primer-color-alt: hsl(23, 100%, 48%);
   --segundo-color: #75cfe9;
+  --segundo-color-alt: hsl(193, 33%, 49%, .5);
   --dark-color: #3d3d3d;
   --light-color: #fff;
   --azul-fuerte: #2661b9;
@@ -20,7 +22,7 @@ html {
 
 body {
   font-family: "Karla", sans-serif;
-  color: var(--primer-color);
+  color: var(--primer-color-alt);
   margin: auto;
   width: 1024px;
 }
@@ -96,23 +98,25 @@ header nav a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 32px;
+  margin-top: 22px;
 }
 
 #hero-banner div a {
   display: block;
-  width: 148px;
+  width: 168px;
   height: 58px;
   font-size: 22px;
   font-weight: bold;
   border: solid 2px var(--primer-color);
-  border-radius: 8px;
-  text-align: center;
-  padding-top: 12px;
   background-color: var(--light-color);
-  transition: 0.5s;
+  transition: 0.6s ease-in-out;
   margin-top: 90px;
   cursor: pointer;
+  padding: 1rem 0;
+  text-align: center;
+  border-radius: 4rem;
+  box-shadow: 0 8px 22px var(--segundo-color-alt),
+              inset 0 4px 8px hsla(0, 0%, 100%, .4);
 }
 
 #hero-banner #abrir-modal {
