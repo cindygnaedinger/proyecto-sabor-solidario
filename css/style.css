@@ -2,7 +2,7 @@
 
 :root {
   --primer-color: #ff6100;
-  --primer-color-alt: hsl(23, 100%, 48%);
+  --primer-color-alt: hsl(23, 100%, 68%);
   --segundo-color: #75cfe9;
   --segundo-color-alt: hsl(193, 33%, 49%, .5);
   --dark-color: #3d3d3d;
@@ -22,14 +22,14 @@ html {
 
 body {
   font-family: "Karla", sans-serif;
-  color: var(--primer-color-alt);
+  color: var(--dark-color);
   margin: auto;
   width: 1024px;
 }
 
 a {
   text-decoration: none;
-  color: var(--primer-color);
+  color: var(--dark-color);
 }
 
 li {
@@ -107,32 +107,28 @@ header nav a:hover {
   height: 58px;
   font-size: 22px;
   font-weight: bold;
-  border: solid 2px var(--primer-color);
-  background-color: var(--light-color);
   transition: 0.6s ease-in-out;
   margin-top: 90px;
   cursor: pointer;
   padding: 1rem 0;
   text-align: center;
   border-radius: 4rem;
-  box-shadow: 0 8px 22px var(--segundo-color-alt),
+  box-shadow: 0 8px 22px hsl(0, 0%, 24%, .3),
               inset 0 4px 8px hsla(0, 0%, 100%, .4);
 }
 
-#hero-banner #abrir-modal {
+#abrir-modal {
   background-color: var(--primer-color);
   color: var(--light-color);
 }
 
 #hero-banner div a:hover {
-  background-color: var(--primer-color);
-  color: var(--light-color);
+  background-color: var(--primer-color-alt);
 }
 
-#hero-banner #abrir-modal:hover {
-  background-color: var(--light-color);
-  color: var(--primer-color);
-  border: solid 2px var(--primer-color);
+#abrir-modal:hover {
+  background-color: var(--primer-color-alt);
+  color: var(--dark-color);
 }
 
 /* BANNER SECUNDARIO - "NOSOTROS" */
@@ -584,7 +580,7 @@ img[alt="Buscar-Donador"] {
 
 #buscar-comedores h3 {
   margin: 124px auto 55px auto;
-  color: var(--primer-color);
+  color: var(--dark-color);
 }
 
 #ingresar-comedor {
