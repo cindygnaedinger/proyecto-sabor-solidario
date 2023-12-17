@@ -1206,9 +1206,81 @@ img[alt="Buscar-Comedor"] {
 }
 
 #main-comedores{
+  padding: 35px 122px;
+
  
 }
-/* DISEÑO RESPONSIVE */
+
+.comedor{
+  border: rgba(61, 61, 61, 0.3) 3px solid;
+  width: 780px ;
+  height: 304px;
+  position: relative;
+  display: flex;
+  padding: 75px 41px;
+  color: var(--primer-color);
+  box-shadow: 10px 6px 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 35px;
+}
+
+.datos-comedor{
+  margin-left: 25px;
+}
+
+.datos-comedor h3 {
+  font-size: 32px;
+  font-weight: bold;
+ 
+}
+
+
+.datos-comedor h4 {
+  margin: 2px 0px 18px 0px;
+}
+
+.comedor img{
+  width: 155px;
+  height: 155px;
+}
+
+.comedor button {
+  width: 136.52px;
+  height: 57.3px;
+  background-color: white;
+  color: var(--primer-color);
+  font-weight: bold;
+  border-radius: 8px;
+  border: 3px solid rgba(61, 61, 61, 0.3)
+}
+
+.comedor:hover{
+  background-color: var(--primer-color);
+  color: white;
+  cursor: pointer;
+}
+
+.urgencia{
+  display: flex;
+  margin-left: 123px;
+  padding-top: 12px;
+  
+}
+
+.urgencia h4{
+  width: 142px;
+  height: 20px;
+}
+
+.urgencia h5{
+  width: 21px;
+  height: 21px;
+  background-color: var(--primer-color);
+  color: white;
+  border-radius: 10px;
+  padding: 1px 1px 1.8px 4.7px;
+}
+
+/* DISEÑO RESPONSIVE */ 
 
 @media (max-width: 600px) {
   .menu-header {
