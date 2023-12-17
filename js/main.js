@@ -11,7 +11,6 @@ let inputBuscarComedor = document.getElementById("input-buscar-comedor");
 let articleDonador = document.getElementById("article-donador");
 let btnBack = document.getElementById("btn-back-resultado-donador");
 let btnNext = document.getElementById("btn-next-resultado-donador");
-Donadores = document.getElementById("donadores");
 
 // FUNCIONES
 
@@ -35,7 +34,7 @@ function filtrarDonadores(donadores, donacionBuscada) {
 //Funcion para mostrar los donadores filtrados
 
 function mostrarDonadores(donadoresFiltrados) {
-  Donadores.innerHTML = "";
+  donadores.innerHTML = "";
 
   if (donadoresFiltrados != 0) {
     donadoresFiltrados.forEach((donador) => {
@@ -59,7 +58,7 @@ function mostrarDonadores(donadoresFiltrados) {
             </article>
         `;
 
-      Donadores.innerHTML += nuevoDonador;
+      donadores.innerHTML += nuevoDonador;
     });
   } else {
   }
@@ -121,11 +120,11 @@ inputBuscarDonador.addEventListener("input", () => {
 });
 
 btnBack.addEventListener("click", () => {
-  Donadores.scrollLeft -= 280;
+  donadores.scrollLeft -= 280;
 });
 
 btnNext.addEventListener("click", () => {
-  Donadores.scrollLeft += 280;
+  donadores.scrollLeft += 280;
 });
 
 //Manejador de eventos para buscar comedores
@@ -150,6 +149,7 @@ inputBuscarComedor.addEventListener("input", () => {
 const abrirModal = document.getElementById("abrir-modal");
 const modalDonar = document.getElementById("modal-donar");
 const modalUnirse = document.getElementById("modal-unirse");
+const modalRecibir = document.getElementById("modal-recibir");
 /**
  * modal--show -> clase que hace que el modal se muestre. (le agrega opacidad: 1)
  */
@@ -184,10 +184,30 @@ botonIngresar.addEventListener("click", () => {
   modalIngresar.classList.add("modal--show");
 });
 
+function cerrarModalIngresar(){
+  modalIngresar.classList.remove("modal--show");
+}
+
+function cerrarModalDonar(){
+  modalDonar.classList.remove("modal--show");
+}
+
 const botonCruz = document.getElementById("boton--cruz");
 botonCruz.addEventListener("click", () => {
   modalIngresar.classList.remove("modal--show");
+  modalRecibir.classList.remove("modal--show");
+  modalDonar.classList.remove("modal--show");
 });
+
+/*------------ FORM QUIERO RECIBIR ---------------------*/
+function abrirFormRecibir() {
+  modalDonar.classList.remove("modal--show");
+  modalRecibir.classList.add("modal--show");
+}
+
+function cerrarModalRecibir() {
+  modalRecibir.classList.remove("modal--show");
+}
 
 /*=============== GSAP ANIMATION ===============*/
 gsap.from("#header-logo", 1.5, { opacity: 0, y: -40, delay: 0.2 });
