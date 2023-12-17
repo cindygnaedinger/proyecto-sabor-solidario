@@ -603,15 +603,13 @@ img[alt="Buscar-Donador"] {
 #suma-tu-ayuda h2 {
   font-size: 62px;
   font-weight: bold;
-  height: 218px;
-  width: 262px;
+  width: 100%;
   margin: 0 auto 18px auto;
 }
 
 #suma-tu-ayuda h4 {
-  width: 219px;
-  height: 28px;
-  font-size: 24px;
+  width: 100%;
+  font-size: 20px;
   font-weight: normal;
   margin: auto;
 }
@@ -1046,7 +1044,6 @@ img[alt="Buscar-Comedor"] {
 
 .footer-copy small {
   display: block;
-  width: 1024px;
   text-align: center;
   padding-bottom: 20px;
 }
@@ -1211,7 +1208,7 @@ img[alt="Buscar-Comedor"] {
     font-weight: bold;
   }
   #hero-banner h2 {
-    width: 264px;
+    width: 190px;
     font-size: 15px;
     font-weight: normal;
   }
@@ -1231,6 +1228,7 @@ img[alt="Buscar-Comedor"] {
   #abrir-modal-ingresar {
     font-size: 15px !important;
     font-weight: bold;
+    background-color: #ffffffd5;
   }
 
   #hero-banner div a {
@@ -1239,18 +1237,155 @@ img[alt="Buscar-Comedor"] {
     margin-top: 0;
   }
   .banner--secundario__imagen {
-    width: 500px;
-    height: 370px;
+    height: 290px;
   }
   .banner--secundario__titulo {
-    padding-bottom: 38px;
-    font-size: 30px;
+    font-size: 23px;
+    padding: 0px;
+    line-height: 35px;
   }
   .banner--secundario {
-    text-align: center;
     font-size: 15px;
+    padding: 32px;
   }
   #testimonios h2 {
+    font-size: 25px;
+  }
+  .slide-track {
+    width: 100%;
+  }
+  .slide {
+    justify-content: center;
+    padding: 75px 14px 0px 14px;
+    height: 0px;
+  }
+  .slide img {
+    width: 100%;
+  }
+  #buscar-comedores h3 {
+    font-size: 25px;
+  }
+  #ingresar-comedor {
+    height: 420px;
+    background-size: cover;
+  }
+  #suma-tu-ayuda > h2 {
+    font-size: 30px !important;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+  #suma-tu-ayuda > h4 {
+    font-size: 15px !important;
+    line-height: 30px;
+  }
+  #suma-tu-ayuda > span {
+    margin: 0px;
+  }
+  #suma-tu-ayuda {
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #suma-tu-ayuda input {
+    height: 0px;
+    width: 235px;
+  }
+  #img-buscar-comedor {
+    width: 25px;
+    height: 25px;
+  }
+  #btn-buscar-comedor {
+    margin-right: 0px;
+  }
+
+  #mapa > iframe {
+    width: 220px;
+    height: 220px;
+  }
+
+  #mapa {
+    top: 145px;
+    left: 45%;
+    transform: translateX(-50%);
+  }
+
+  #buscar-comedores {
+    margin-bottom: 50px;
+  }
+  #buscar-donadores {
+    height: fit-content;
+    margin-bottom: 50px;
+  }
+  #buscar-donadores h3 {
+    font-size: 25px;
+  }
+  #ingresar-donacion {
+    width: 100%;
+    height: 47%;
+    padding-bottom: 24px;
+  }
+  #ingresar-donacion > h2 {
     font-size: 30px;
+    line-height: 80px;
+  }
+  #ingresar-donacion > h4 {
+    font-size: 25px;
+    line-height: 40px;
+  }
+  #ingresar-donacion > img {
+    width: 80%;
+  }
+  #ingresar-donacion > input {
+    width: 50%;
+  }
+  #btn-buscar-donar > img {
+    width: 80% !important;
+  }
+
+  #footer-top {
+    background-size: 100% !important;
+    width: 100%;
+  }
+  #footer-container {
+    width: 100%;
+    height: 300px;
+  }
+  .footer-columnas {
+    width: 100%;
+    padding: 5% 5% 4% 10%;
+  }
+  #footer-texto-logo {
+    font-size: 17px !important;
+    margin: 0;
+    line-height: 30px;
+  }
+  .footer-box {
+    text-align: center;
+  }
+  .footer-box > h3 {
+    font-size: 17px !important;
+    margin: 0;
+    line-height: 30px;
+  }
+  .footer-box p {
+    font-size: 13px;
+  }
+  #footer-box-explorar a {
+    font-size: 17px;
+    line-height: 30px;
+  }
+  .icono-red-social {
+    width: 25px;
+    margin: 0px !important;
+  }
+  #footer-container .footer-columnas {
+    padding: 20px 20px;
+    gap: 0px;
+  }
+  .footer-box img {
+    margin-right: 0px;
+  }
+  #footer-top {
+    height: 189px;
   }
 }
