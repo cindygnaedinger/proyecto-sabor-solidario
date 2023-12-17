@@ -24,7 +24,7 @@ body {
   font-family: "Karla", sans-serif;
   color: var(--dark-color);
   margin: auto;
-  width: 1024px;
+  max-width: 1024px;
 }
 
 a {
@@ -45,8 +45,11 @@ li {
   font-weight: 500;
   background-image: url(../imgs/hero-banner.png);
   background-repeat: no-repeat;
+  background-size: 100%;
 }
-
+.img-menu-header {
+  display: none;
+}
 #header-logo {
   display: block;
   width: 289px;
@@ -1177,4 +1180,77 @@ img[alt="Buscar-Comedor"] {
 .perfil-comedor__body ul,
 .perfil-comedor__body h3 {
   margin-bottom: 30px;
+}
+
+/* DISEÑO RESPONSIVE */
+
+@media (max-width: 600px) {
+  .menu-header {
+    display: none;
+  }
+  .img-menu-header {
+    display: block;
+    position: absolute;
+    top: 32px;
+    right: 20px;
+    width: 40px;
+  }
+  .header {
+    position: relative;
+    height: 326px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    font-weight: 500;
+    background-image: url(../imgs/hero-banner.png);
+    background-repeat: no-repeat;
+  }
+  #hero-banner h1 {
+    width: 183px;
+    font-size: 23px;
+    font-weight: bold;
+  }
+  #hero-banner h2 {
+    width: 264px;
+    font-size: 15px;
+    font-weight: normal;
+  }
+  #hero-banner div {
+    width: 230px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 22px;
+  }
+  #abrir-modal {
+    font-size: 15px !important;
+    font-weight: bold;
+  }
+
+  #abrir-modal-ingresar {
+    font-size: 15px !important;
+    font-weight: bold;
+  }
+
+  #hero-banner div a {
+    height: 50px;
+    width: 110px;
+    margin-top: 0;
+  }
+  .banner--secundario__imagen {
+    width: 500px;
+    height: 370px;
+  }
+  .banner--secundario__titulo {
+    padding-bottom: 38px;
+    font-size: 30px;
+  }
+  .banner--secundario {
+    text-align: center;
+    font-size: 15px;
+  }
+  #testimonios h2 {
+    font-size: 30px;
+  }
 }
