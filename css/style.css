@@ -1282,7 +1282,7 @@ img[alt="Buscar-Comedor"] {
   border: 3px solid rgba(61, 61, 61, 0.3)
 }
 
-.comedor:hover{
+.comedor button:hover{
   background-color: var(--primer-color);
   color: white;
   cursor: pointer;
@@ -1306,7 +1306,8 @@ img[alt="Buscar-Comedor"] {
   background-color: var(--primer-color);
   color: white;
   border-radius: 10px;
-  padding: 1px 1px 1.8px 4.7px;
+  text-align: center;
+  padding-top: 3px;
 }
 
 /* DISEÑO RESPONSIVE */ 

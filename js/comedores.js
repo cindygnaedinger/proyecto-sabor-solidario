@@ -36,7 +36,7 @@ function obtenerComedores() {
         </div>  
         <div class="urgencia">
           <h4>Nivel de urgencia: </h4>
-          <h5>4</h5>
+          <h5>${com.urgencia}</h5>
         </div>        
       </article>`
 
