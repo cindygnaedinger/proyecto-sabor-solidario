@@ -1098,11 +1098,16 @@ img[alt="Buscar-Comedor"] {
 }
 
 .header-perfil {
-  height: 128px;
+  height: 557px;
   display: flex;
   justify-content: space-between;
   padding-top: 20px;
   font-weight: 500;
+  position: relative;
+  justify-content: space-between;
+  background-image: url(../imgs/perfil-bg.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .perfil-comedor__container {
@@ -1182,6 +1187,27 @@ img[alt="Buscar-Comedor"] {
   margin-bottom: 30px;
 }
 
+#hero-banner-comedores {
+  position: absolute;
+  top: 150px;
+  margin-left: 143px;
+}
+
+#hero-banner-comedores h1{
+  width: 669px;
+  font-size: 48px;
+}
+
+#hero-banner-comedores h2{
+  width: 531px;
+  font-size: 24px;
+  font-weight: lighter;
+
+}
+
+#main-comedores{
+ 
+}
 /* DISEÑO RESPONSIVE */
 
 @media (max-width: 600px) {
