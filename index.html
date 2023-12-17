@@ -156,16 +156,19 @@
       </section>
 
       <!-- FORMULARIOS-->
+      <!--- MODAL QUIERO DONAR --->
       <div id="modal-unirse" class="modal">
         <div class="modal__container">
           <div class="panel-imagen">
             <img
               class="imagen__quiero-donar"
-              src="./imgs/img-formulario-1.png"
+              src="./imgs/img-form-larger.png"
               alt="imagen quiero donar"
             />
           </div>
           <div class="panel-donar">
+            <box-icon name='x' color='#ffffff' class="img__close" animation='tada-hover' size="md" onclick="cerrarModalRegistro()"></box-icon>
+            <div></div>
             <div class="registro__seccion-titulos">
               <h2 class="h2-quiero-donar">¡QUIERO DONAR!</h2>
               <h3 class="h3-quiero-donar">REGISTRATE DE FORMA GRATUITA</h3>
@@ -217,18 +220,90 @@
                   id="boton-registrarse"
                   class="boton-registro"
                 >
-                  registrarse
+                  Registrarse
                 </button>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div id="modal-ingresar" class="modal">
+
+      <!--- MODAL QUIERO RECIBIR --->
+      <div id="modal-recibir" class="modal">
         <div class="modal__container">
+          <div class="panel-imagen">
+            <img
+              class="imagen__quiero-donar"
+              src="./imgs/img-form-larger.png"
+              alt="imagen quiero donar"
+            />
+          </div>
+          <div class="panel-donar">
+            <box-icon color='#ffffff' id="boton--cruz" class="img__close" name='x' animation='tada-hover' size="md" onclick="cerrarModalRecibir()"></box-icon>
+            <div class="registro__seccion-titulos">
+              <h2 class="h2-quiero-recibir">¡QUIERO RECIBIR!</h2>
+            </div>
+            <div>
+              <div class="contenedor-grid">
+                <label class="input-donar centrar-texto">
+                  NOMBRE DEL COMEDOR
+                  <input class="registro__rectangulo" />
+                </label>
+
+                <label class="input-donar centrar-texto"
+                  >DIRECCIÓN
+                  <input class="registro__rectangulo" />
+                </label>
+              </div>
+
+              <label class="input-donar">
+                EMAIL
+                <input class="registro__rectangulo"
+              /></label>
+              <div class="contenedor-grid">
+                <label class="input-donar centrar-texto"
+                  >TELÉFONO <input class="registro__rectangulo"
+                /></label>
+
+                <label class="input-donar centrar-texto"
+                  >CONTRASEÑA <input class="registro__rectangulo"
+                /></label>
+              </div>
+
+              <label class="input-donar centrar-texto"
+                >¿QUÉ NECESITO?
+                <textarea
+                  class="registro__rectangulo rectangulo-registro-donacion"
+                >
+                </textarea>
+              </label>
+            </div>
+            <div class="contenedor-botones--registro">
+              <div class="registro__botones">
+                <button onclick="cerrarModalRecibir()" class="boton-registro">
+                  Cancelar
+                </button>
+              </div>
+              <div class="registro__botones">
+                <button
+                  onclick="cerrarModalRecibir()"
+                  id="boton-registrarse"
+                  class="boton-registro"
+                >
+                  Registrarse
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--- MODAL INGRESAR --->
+      <div id="modal-ingresar" class="modal">
+        <div class="modal__container white-modal">
           <div class="panel-ingresar">
             <button id="boton--cruz" class="cruz-salir-ingreso-usuario">
-              <img src="./imgs/cruz-salir-ingreso-usuario.png" alt="" />
+              <box-icon color='#ff6100' id="boton--cruz" class="img__close" name='x' animation='tada-hover' size="md" onclick="cerrarModalIngresar()"></box-icon>
             </button>
             <div class="panel-ingresar--contenido">
               <div class="container-informacion-personal">
@@ -253,13 +328,13 @@
         </div>
       </div>
       <div id="modal-donar" class="modal">
-        <div class="modal__container">
+        <div class="modal__container white-modal">
           <div class="quierodonar--quierorecibir">
             <button
               id="cerrar-modal-donar"
               class="cruz-salir--quierodonar_quierorecibir"
             >
-              <img class="" src="imgs/cruz-salir-ingreso-usuario.png" alt="" />
+            <box-icon color='#ff6100' id="boton--cruz" class="img__close" name='x' animation='tada-hover' size="md" onclick="cerrarModalDonar()"></box-icon>
             </button>
             <button onclick="abrirFormUnirse()" class="quiero-donar">
               <img
@@ -269,7 +344,7 @@
               />
               <h3>QUIERO DONAR</h3>
             </button>
-            <button class="quiero-recibir">
+            <button onclick="abrirFormRecibir()" class="quiero-recibir">
               <img
                 class="imagen-quierodonar--quierorecibir"
                 src="imgs/img-café.png"
@@ -394,6 +469,10 @@
     <!--=============== GSAP ===============-->
     <script src="js/gsap.min.js"></script>
 
+    <!--=============== BOXICONS ===============-->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <!--=============== MAIN.JS ===============-->
     <script src="js/main.js"></script>
   </body>
 </html>
