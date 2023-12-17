@@ -723,6 +723,14 @@ img[alt="Buscar-Comedor"] {
 .h2-quiero-donar {
   font-weight: 700;
   font-size: 40px;
+  margin-top: 25px;
+
+}
+
+.h2-quiero-recibir {
+  font-weight: 700;
+  font-size: 40px;
+  margin-top: 25px;
 }
 
 .h3-quiero-donar {
@@ -871,6 +879,14 @@ img[alt="Buscar-Comedor"] {
   align-items: center;
   position: relative;
 }
+
+.img__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+}
+
 .quierodonar--quierorecibir {
   width: 380px;
   height: 327px;
