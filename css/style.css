@@ -2,7 +2,9 @@
 
 :root {
   --primer-color: #ff6100;
+  --primer-color-alt: hsl(23, 100%, 55%);
   --segundo-color: #75cfe9;
+  --segundo-color-alt: hsl(193, 33%, 49%, 0.5);
   --dark-color: #3d3d3d;
   --light-color: #fff;
   --azul-fuerte: #2661b9;
@@ -20,14 +22,14 @@ html {
 
 body {
   font-family: "Karla", sans-serif;
-  color: var(--primer-color);
+  color: var(--dark-color);
   margin: auto;
-  width: 1024px;
+  max-width: 1024px;
 }
 
 a {
   text-decoration: none;
-  color: var(--primer-color);
+  color: var(--dark-color);
 }
 
 li {
@@ -43,8 +45,11 @@ li {
   font-weight: 500;
   background-image: url(../imgs/hero-banner.png);
   background-repeat: no-repeat;
+  background-size: 100%;
 }
-
+.img-menu-header {
+  display: none;
+}
 #header-logo {
   display: block;
   width: 289px;
@@ -96,39 +101,37 @@ header nav a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 32px;
+  margin-top: 22px;
 }
 
 #hero-banner div a {
   display: block;
-  width: 148px;
+  width: 168px;
   height: 58px;
   font-size: 22px;
   font-weight: bold;
-  border: solid 3px var(--primer-color);
-  border-radius: 8px;
-  text-align: center;
-  padding-top: 12px;
-  background-color: var(--light-color);
-  transition: 0.5s;
+  transition: 0.6s ease-in-out;
   margin-top: 90px;
   cursor: pointer;
+  padding: 1rem 0;
+  text-align: center;
+  border-radius: 4rem;
+  box-shadow: 0 8px 22px hsl(0, 0%, 24%, 0.3),
+    inset 0 4px 8px hsla(0, 0%, 100%, 0.4);
 }
 
-#hero-banner #abrir-modal {
+#abrir-modal {
   background-color: var(--primer-color);
   color: var(--light-color);
 }
 
 #hero-banner div a:hover {
-  background-color: var(--primer-color);
-  color: var(--light-color);
+  background-color: var(--primer-color-alt);
 }
 
-#hero-banner #abrir-modal:hover {
-  background-color: var(--light-color);
-  color: var(--primer-color);
-  border: solid 3px var(--primer-color);
+#abrir-modal:hover {
+  background-color: var(--primer-color-alt);
+  color: var(--dark-color);
 }
 
 /* BANNER SECUNDARIO - "NOSOTROS" */
@@ -270,7 +273,7 @@ header nav a:hover {
 }
 
 #ingresar-donacion h2 {
-  font-size: 62px;
+  font-size: 42px;
   font-weight: bold;
   line-height: 210px;
 }
@@ -283,17 +286,22 @@ header nav a:hover {
 
 #ingresar-donacion input {
   width: 455px;
-  height: 36px;
+  height: 40px;
   font-size: 23px;
   font-weight: 500;
-  background-color: hsla(0, 0%, 100%, 0.4);
-  border: #878787 1px solid;
-  transition: background-color 0.3s ease;
+  background-color: #fff;
+  border: none;
+  transition: 0.3s ease;
+  border-radius: 16px;
+  padding: 15px;
+  color: var(--dark-color);
 }
 
 #ingresar-donacion input:focus {
   outline: none;
-  background-color: hsla(0, 0%, 50%, 0.17);
+  border: 2px solid var(--light-color);
+  box-shadow: 2px 0px 15px var(--light-color);
+  color: var(--dark-color);
 }
 
 img[alt="Buscar-Donador"] {
@@ -663,7 +671,7 @@ img[alt="Buscar-Donador"] {
 
 #buscar-comedores h3 {
   margin: 124px auto 55px auto;
-  color: var(--primer-color);
+  color: var(--dark-color);
 }
 
 #ingresar-comedor {
@@ -683,15 +691,13 @@ img[alt="Buscar-Donador"] {
 #suma-tu-ayuda h2 {
   font-size: 62px;
   font-weight: bold;
-  height: 218px;
-  width: 262px;
+  width: 100%;
   margin: 0 auto 18px auto;
 }
 
 #suma-tu-ayuda h4 {
-  width: 219px;
-  height: 28px;
-  font-size: 24px;
+  width: 100%;
+  font-size: 20px;
   font-weight: normal;
   margin: auto;
 }
@@ -702,19 +708,23 @@ img[alt="Buscar-Donador"] {
 }
 
 #suma-tu-ayuda input {
-  height: 36px;
+  height: 40px;
   width: 255px;
-  background-color: rgba(255, 255, 255, 0.49);
+  background-color: #fff;
+  border-radius: 16px;
   font-size: 20px;
   font-weight: 500;
-  color: rgb(27, 27, 27);
-  transition: background-color 0.3s ease;
+  color: var(--dark-color);
+  transition: 0.3s ease;
   border: none;
+  padding: 15px;
 }
 
 #suma-tu-ayuda input:focus {
   outline: none;
-  background-color: hsla(0, 0%, 93%, 0.4);
+  border: 2px solid var(--light-color);
+  box-shadow: 2px 0px 15px var(--light-color);
+  color: var(--dark-color);
 }
 
 #suma-tu-ayuda button {
@@ -759,18 +769,24 @@ img[alt="Buscar-Comedor"] {
   transition: opacity 300ms;
   --transform: translateY(0);
   --transition: transform 300ms 300ms;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal__container {
   margin: auto;
   max-height: 90%;
   background-color: #fff;
-  border-radius: 6px;
+  border-radius: 20px;
   transform: var(--transform);
   transition: var(--transition);
   display: flex;
   justify-content: center;
   overflow: hidden;
+}
+
+.white-modal {
+  padding: 80px;
 }
 
 .panel-imagen {
@@ -800,6 +816,14 @@ img[alt="Buscar-Comedor"] {
 .h2-quiero-donar {
   font-weight: 700;
   font-size: 40px;
+  margin-top: 25px;
+
+}
+
+.h2-quiero-recibir {
+  font-weight: 700;
+  font-size: 40px;
+  margin-top: 25px;
 }
 
 .h3-quiero-donar {
@@ -812,11 +836,10 @@ img[alt="Buscar-Comedor"] {
   height: 25px;
   background-color: #fff9;
   border: 2px solid #ffffff7a;
-  border-radius: 2px;
-  padding-left: 5px;
-  padding-right: 5px;
+  border-radius: 4px;
+  padding: 5px;
   outline: none;
-  color: #333333;
+  color: var(--dark-color);
 }
 
 .rectangulo-registro-donacion {
@@ -842,22 +865,32 @@ img[alt="Buscar-Comedor"] {
 }
 
 .boton-registro {
-  background-color: #ffffffcf;
-  width: 80px;
-  height: 30px;
-  border: none;
-  box-shadow: 0px 0px 10px rgba(195, 195, 195, 0.44);
-  color: #325762;
+  background-color: #75cfe9;
+  width: 140px;
+  height: 40px;
+  color: var(--light-color);
   cursor: pointer;
   transition: all 300ms;
-  border-radius: 4px;
-  font-weight: 400;
+  border-radius: 2em;
+  letter-spacing: 0.6px;
+  box-shadow: 0 8px 12px hsl(0, 0%, 24%, 0.3);
+  font-size: 17px;
+  font-weight: 600;
+  border: none;
 }
 
 .boton-registro:hover {
   filter: brightness(0.95);
 }
 
+#boton-registrarse {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+
+#boton-registrarse:hover {
+  color: hsl(193, 73%, 59%);
+}
 .contenedor-botones--registro {
   display: flex;
   justify-content: center;
@@ -941,6 +974,82 @@ img[alt="Buscar-Comedor"] {
 
 .cruz-salir-ingreso-usuario:hover {
   filter: brightness(0.95);
+}
+.container-quierodonar--quierorecibir {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.img__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+}
+
+.quierodonar--quierorecibir {
+  width: 380px;
+  height: 327px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: #fff;
+  padding-top: 35px;
+}
+.quiero-donar {
+  width: 160px;
+  height: 200px;
+  border-radius: 20px;
+  background-color: #75cfe9;
+  text-align: center;
+  box-shadow: 2px 4px 8px rgba(49, 49, 49, 0.44);
+  line-height: 25px;
+  border: none;
+  cursor: pointer;
+  color: var(--dark-color);
+  font-family: "Karla", sans-serif;
+}
+.quiero-donar:hover {
+  background-color: var(--primer-color-alt);
+  transition: 400ms;
+}
+
+.input-quiero--donar {
+  width: 160px;
+  height: 200px;
+}
+.quiero-recibir:hover {
+  background-color: hsla(193, 73%, 69%, 0.59);
+  transition: 400ms;
+}
+.quiero-recibir {
+  width: 160px;
+  height: 200px;
+  border-radius: 20px;
+  border: 1px solid #ff6100;
+  text-align: center;
+  box-shadow: 2px 4px 8px rgba(49, 49, 49, 0.44);
+  line-height: 25px;
+  background-color: #fff;
+  cursor: pointer;
+  color: var(--dark-color);
+  font-family: "Karla", sans-serif;
+}
+
+.cruz-salir--quierodonar_quierorecibir {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #fff;
+}
+.imagen-quierodonar--quierorecibir {
+  width: 80px;
 }
 
 /* FIN DE FORMULARIOS */
@@ -1052,7 +1161,6 @@ img[alt="Buscar-Comedor"] {
 
 .footer-copy small {
   display: block;
-  width: 1024px;
   text-align: center;
   padding-bottom: 20px;
 }
@@ -1104,11 +1212,16 @@ img[alt="Buscar-Comedor"] {
 }
 
 .header-perfil {
-  height: 128px;
+  height: 557px;
   display: flex;
   justify-content: space-between;
   padding-top: 20px;
   font-weight: 500;
+  position: relative;
+  justify-content: space-between;
+  background-image: url(../imgs/perfil-bg.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .perfil-comedor__container {
@@ -1132,7 +1245,8 @@ img[alt="Buscar-Comedor"] {
 }
 
 #perfil-comedor__img-logo {
-  width: 130px;
+  width: 80px;
+  padding: 10px;
   border: 3px solid hsl(193, 73%, 69%, 0.2);
   border-radius: 50%;
   box-shadow: 2px 1px 1px hsl(193, 73%, 69%, 0.2);
@@ -1185,4 +1299,309 @@ img[alt="Buscar-Comedor"] {
 .perfil-comedor__body ul,
 .perfil-comedor__body h3 {
   margin-bottom: 30px;
+}
+
+#hero-banner-comedores {
+  position: absolute;
+  top: 150px;
+  margin-left: 143px;
+}
+
+#hero-banner-comedores h1{
+  width: 669px;
+  font-size: 48px;
+}
+
+#hero-banner-comedores h2{
+  width: 531px;
+  font-size: 24px;
+  font-weight: lighter;
+
+}
+
+#main-comedores{
+  padding: 35px 122px;
+
+ 
+}
+
+.comedor{
+  border: rgba(61, 61, 61, 0.3) 3px solid;
+  width: 780px ;
+  height: 304px;
+  position: relative;
+  display: flex;
+  padding: 75px 41px;
+  color: var(--primer-color);
+  box-shadow: 10px 6px 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 35px;
+}
+
+.datos-comedor{
+  margin-left: 25px;
+}
+
+.datos-comedor h3 {
+  font-size: 32px;
+  font-weight: bold;
+ 
+}
+
+
+.datos-comedor h4 {
+  margin: 2px 0px 18px 0px;
+}
+
+.comedor img{
+  width: 155px;
+  height: 155px;
+}
+
+.comedor button {
+  width: 136.52px;
+  height: 57.3px;
+  background-color: white;
+  color: var(--primer-color);
+  font-weight: bold;
+  border-radius: 8px;
+  border: 3px solid rgba(61, 61, 61, 0.3)
+}
+
+.comedor button:hover{
+  background-color: var(--primer-color);
+  color: white;
+  cursor: pointer;
+}
+
+.urgencia{
+  display: flex;
+  margin-left: 123px;
+  padding-top: 12px;
+  
+}
+
+.urgencia h4{
+  width: 142px;
+  height: 20px;
+}
+
+.urgencia h5{
+  width: 21px;
+  height: 21px;
+  background-color: var(--primer-color);
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 3px;
+}
+
+/* DISEÑO RESPONSIVE */ 
+
+@media (max-width: 600px) {
+  .menu-header {
+    display: none;
+  }
+  .img-menu-header {
+    display: block;
+    position: absolute;
+    top: 32px;
+    right: 20px;
+    width: 40px;
+  }
+  .header {
+    position: relative;
+    height: 326px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    font-weight: 500;
+    background-image: url(../imgs/hero-banner.png);
+    background-repeat: no-repeat;
+  }
+  #hero-banner h1 {
+    width: 183px;
+    font-size: 23px;
+    font-weight: bold;
+  }
+  #hero-banner h2 {
+    width: 190px;
+    font-size: 15px;
+    font-weight: normal;
+  }
+  #hero-banner div {
+    width: 230px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 22px;
+  }
+  #abrir-modal {
+    font-size: 15px !important;
+    font-weight: bold;
+  }
+
+  #abrir-modal-ingresar {
+    font-size: 15px !important;
+    font-weight: bold;
+    background-color: #ffffffd5;
+  }
+
+  #hero-banner div a {
+    height: 50px;
+    width: 110px;
+    margin-top: 0;
+  }
+  .banner--secundario__imagen {
+    height: 290px;
+  }
+  .banner--secundario__titulo {
+    font-size: 23px;
+    padding: 0px;
+    line-height: 35px;
+  }
+  .banner--secundario {
+    font-size: 15px;
+    padding: 32px;
+  }
+  #testimonios h2 {
+    font-size: 25px;
+  }
+  .slide-track {
+    width: 100%;
+  }
+  .slide {
+    justify-content: center;
+    padding: 75px 14px 0px 14px;
+    height: 0px;
+  }
+  .slide img {
+    width: 100%;
+  }
+  #buscar-comedores h3 {
+    font-size: 25px;
+  }
+  #ingresar-comedor {
+    height: 420px;
+    background-size: cover;
+  }
+  #suma-tu-ayuda > h2 {
+    font-size: 30px !important;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+  #suma-tu-ayuda > h4 {
+    font-size: 15px !important;
+    line-height: 30px;
+  }
+  #suma-tu-ayuda > span {
+    margin: 0px;
+  }
+  #suma-tu-ayuda {
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #suma-tu-ayuda input {
+    height: 0px;
+    width: 235px;
+  }
+  #img-buscar-comedor {
+    width: 25px;
+    height: 25px;
+  }
+  #btn-buscar-comedor {
+    margin-right: 0px;
+  }
+
+  #mapa > iframe {
+    width: 220px;
+    height: 220px;
+  }
+
+  #mapa {
+    top: 145px;
+    left: 45%;
+    transform: translateX(-50%);
+  }
+
+  #buscar-comedores {
+    margin-bottom: 50px;
+  }
+  #buscar-donadores {
+    height: fit-content;
+    margin-bottom: 50px;
+  }
+  #buscar-donadores h3 {
+    font-size: 25px;
+  }
+  #ingresar-donacion {
+    width: 100%;
+    height: 47%;
+    padding-bottom: 24px;
+  }
+  #ingresar-donacion > h2 {
+    font-size: 30px;
+    line-height: 80px;
+  }
+  #ingresar-donacion > h4 {
+    font-size: 25px;
+    line-height: 40px;
+  }
+  #ingresar-donacion > img {
+    width: 80%;
+  }
+  #ingresar-donacion > input {
+    width: 50%;
+  }
+  #btn-buscar-donar > img {
+    width: 80% !important;
+  }
+
+  #footer-top {
+    background-size: 100% !important;
+    width: 100%;
+  }
+  #footer-container {
+    width: 100%;
+    height: 300px;
+  }
+  .footer-columnas {
+    width: 100%;
+    padding: 5% 5% 4% 10%;
+  }
+  #footer-texto-logo {
+    font-size: 17px !important;
+    margin: 0;
+    line-height: 30px;
+  }
+  .footer-box {
+    text-align: center;
+  }
+  .footer-box > h3 {
+    font-size: 17px !important;
+    margin: 0;
+    line-height: 30px;
+  }
+  .footer-box p {
+    font-size: 13px;
+  }
+  #footer-box-explorar a {
+    font-size: 17px;
+    line-height: 30px;
+  }
+  .icono-red-social {
+    width: 25px;
+    margin: 0px !important;
+  }
+  #footer-container .footer-columnas {
+    padding: 20px 20px;
+    gap: 0px;
+  }
+  .footer-box img {
+    margin-right: 0px;
+  }
+  #footer-top {
+    height: 189px;
+  }
 }

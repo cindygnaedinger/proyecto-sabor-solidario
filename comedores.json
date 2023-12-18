@@ -1,0 +1,75 @@
+{
+    "comedores": [
+      {
+        "nombre": "Santo Tomás",
+        "calle": "Calle de la Esperanza",
+        "altura": 456,
+        "barrio": "Solidaridad",
+        "telefono": "555-5678",
+        "representante": "Juan Pérez",
+        "horario_atencion": "Lunes a sábado de 11:00 a 15:00",
+        "sitioweb": "http://www.comedorsolidario.org",
+        "breve_descripcion": "Brindamos comidas nutritivas a personas en situación de vulnerabilidad.",
+        "necesidades": "Alimentos no perecederos, utensilios de cocina",
+        "urgencia": "5",
+        "email": "info@comedorsolidario.org"
+      },
+      {
+        "nombre": "Esperanza y Amor",
+        "calle": "Av. de la Solidaridad",
+        "altura": 789,
+        "barrio": "Esperanza",
+        "telefono": "555-9876",
+        "representante": "María Rodríguez",
+        "horario_atencion": "Martes a domingo de 12:00 a 16:00",
+        "sitioweb": "http://www.esperanzayamor.org",
+        "breve_descripcion": "Proporcionamos alimentos y esperanza a quienes más lo necesitan.",
+        "necesidades": "Donaciones de ropa, alimentos frescos",
+        "urgencia": "3",
+        "email": "contacto@esperanzayamor.org"
+      },
+      {
+        "nombre": "Ángeles de la Bondad",
+        "calle": "Calle de la Generosidad",
+        "altura": 234,
+        "barrio": "Bondad",
+        "telefono": "555-4321",
+        "representante": "Carlos Sánchez",
+        "horario_atencion": "Miércoles a sábado de 10:30 a 14:30",
+        "sitioweb": "http://www.angelesbondad.org",
+        "breve_descripcion": "Servimos comidas con amor y compasión a quienes más lo necesitan.",
+        "necesidades": "Voluntarios para cocinar, productos de limpieza",
+        "urgencia": "1",
+        "email": "info@angelesbondad.org"
+      },
+      {
+        "nombre": "Renacer",
+        "calle": "Av. de la Renovación",
+        "altura": 567,
+        "barrio": "Renacer",
+        "telefono": "555-3456",
+        "representante": "Laura Martínez",
+        "horario_atencion": "Jueves a domingo de 11:30 a 15:30",
+        "sitioweb": "http://www.renacercomunitario.org",
+        "breve_descripcion": "Fomentamos la unión y el renacer a través de comidas comunitarias.",
+        "necesidades": "Donaciones de alimentos frescos, servicios médicos voluntarios",
+        "urgencia": "4",
+        "email": "contacto@renacercomunitario.org"
+      },
+      {
+        "nombre": "Nuevo Amanecer",
+        "calle": "Calle de la Solidaridad",
+        "altura": 876,
+        "barrio": "Amanecer",
+        "telefono": "555-8765",
+        "representante": "Pedro López",
+        "horario_atencion": "Viernes a domingo de 12:30 a 16:30",
+        "sitioweb": "http://www.nuevoamanecer.org",
+        "breve_descripcion": "Ofrecemos comidas y apoyo emocional para un nuevo amanecer.",
+        "necesidades": "Productos de higiene personal, financiamiento para mejoras en la infraestructura",
+        "urgencia": "3",
+        "email": "info@nuevoamanecer.org"
+      }
+    ]
+  }
+  
