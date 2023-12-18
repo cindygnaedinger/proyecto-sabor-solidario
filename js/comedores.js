@@ -15,7 +15,6 @@ function obtenerComedores() {
         let respuesta = JSON.parse(xhr.response);
         let comedores = respuesta.comedores
         mostrarComedores(comedores)
-        console.log(comedores)
       } else {
         window.alert("Hubo un error");
       }
@@ -31,7 +30,7 @@ function obtenerComedores() {
         <img src="./imgs/Imagen-Comedor.png" alt="">
         <div class="datos-comedor">
           <h3>${com.nombre}</h3>
-          <h4>${com.calle}${com.altura}</h4>
+          <h4>${com.calle} ${com.altura}</h4>
           <button>CONTACTAR</button>
         </div>  
         <div class="urgencia">
