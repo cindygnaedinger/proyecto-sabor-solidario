@@ -565,6 +565,94 @@ img[alt="Buscar-Donador"] {
   color: #ff6100;
 }
 
+/*---PREGUNTAS FRECUENTES FAQS ---*/
+
+.btn-faq {
+  width: 100%;
+  font-size: 56px;
+  letter-spacing: 5px;
+  color: #3d3d3d;
+  font-weight: 600;
+  padding-top: 20px;
+  margin: 20px auto 100px auto;
+}
+
+.btn-faq span {
+  display: block;
+  width: 450px;
+  height: 3px;
+  background-color: #3d3d3d;
+  border-radius: 38px;
+  margin-top: 5px;
+}
+
+#container-faq {
+  width: 100%;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.acordeon {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  height: 100%;
+  --title-size: 20px;
+  --title-padding: 10px;
+  border-radius: 2px;
+}
+
+.acordeon > li {
+  --item-height: calc(var(--title-size) + (var(--title-padding) * 2));
+  border-radius: 2px;
+  height: var(--item-height);
+  overflow: hidden;
+  transition: height 0.25s;
+  display: flex;
+  flex-direction: column;
+}
+
+.acordeon > li div {
+  flex: 1;
+  overflow-y: auto;
+  color: #1e1e1e;
+}
+
+.acordeon > li.open {
+  height: calc(100% - ((var(--item-height) + 2px) * var(--items-qtty, 1)));
+}
+
+.acordeon > li:not(:last-child) {
+  border-bottom-color: white;
+}
+
+.acordeon > li > h2 {
+  margin: 0;
+  background: url(../imgs/arrow.svg) calc(100% - 20px) center/auto
+    var(--title-size) no-repeat;
+  color: white;
+  font-size: var(--title-size);
+  line-height: var(--title-size);
+  padding: var(--title-padding);
+  color: #ff6100;
+  cursor: pointer;
+}
+
+.acordeon > li.open > h2 {
+  background-image: url(../imgs/arrow2.svg);
+}
+
+.acordeon > li > div {
+  padding: 2em;
+}
+
+.acordeon h2:hover {
+  background-color: #ff6100;
+  color: white;
+}
+
 /*---BUSCAR COMEDORES---------------------*/
 
 #buscar-comedores {
