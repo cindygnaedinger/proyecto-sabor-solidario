@@ -254,7 +254,7 @@ header nav a:hover {
   margin-bottom: 131px;
 }
 
-#buscar-donadores div {
+#ingresar-donacion {
   background-color: #75d0e962;
 }
 
@@ -335,7 +335,7 @@ img[alt="Buscar-Donador"] {
   gap: 10px;
 }
 
-#carrusel-donadores #donadores {
+#carrusel-donadores #donadores-filtrados {
   width: 840px;
   height: 402px;
   margin: auto auto auto 4px;
@@ -359,14 +359,14 @@ img[alt="Buscar-Donador"] {
 
 /* articulos del carrusel donadores */
 
-.donador {
+.donador-buscado {
   width: 255px;
   height: 398px;
   box-shadow: 5px 6px 6px rgba(0, 0, 0, 0.22);
   margin-right: 24px;
 }
 
-.donador #parte-superior {
+.donador-buscado #parte-superior {
   height: 176px;
   width: 255px;
   background-color: white;
@@ -398,7 +398,7 @@ img[alt="Buscar-Donador"] {
   margin-bottom: 5px;
 }
 
-.donador #parte-inferior {
+.donador-buscado #parte-inferior {
   width: 255px;
   height: 222px;
   padding-top: 22px;
@@ -413,7 +413,7 @@ img[alt="Buscar-Donador"] {
   overflow: hidden;
 }
 
-.donador #parte-inferior h3 {
+.donador-buscado #parte-inferior h3 {
   width: 205px;
   height: 48px;
   font-size: 17px;
@@ -425,7 +425,7 @@ img[alt="Buscar-Donador"] {
   padding-top: 17px;
 }
 
-.donador img {
+.donador-buscado img {
   margin-left: 17px;
 }
 

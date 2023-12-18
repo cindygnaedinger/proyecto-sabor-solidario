@@ -400,6 +400,14 @@
             "mail": "donador50@example.com",
             "donaciones": ["aceite", "frijoles", "pasta", "leche"],
             "cantidadDonaciones": 6
+          },
+          {
+            "nombre": "Donador51",
+            "apellido": "apellido51",
+            "telefono": "123-456-51",
+            "mail": "donador51@example.com",
+            "donaciones": ["asado"],
+            "cantidadDonaciones": 0
           }
       
 ]
