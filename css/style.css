@@ -1211,7 +1211,7 @@ img[alt="Buscar-Comedor"] {
   margin: auto;
 }
 
-.header-perfil {
+.header-comedores, .header-donadores {
   height: 557px;
   display: flex;
   justify-content: space-between;
