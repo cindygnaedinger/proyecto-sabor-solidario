@@ -729,7 +729,6 @@ img[alt="Buscar-Comedor"] {
   font-weight: 700;
   font-size: 40px;
   margin-top: 25px;
-
 }
 
 .h2-quiero-recibir {
@@ -967,13 +966,8 @@ img[alt="Buscar-Comedor"] {
 /* FIN DE FORMULARIOS */
 
 /* FOOTER */
-#footer-top {
-  width: 1024px;
-  height: 320px;
-  background-image: url(../imgs/footer-top.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-top: 50px;
+.img-footer-top {
+  width: 100%;
 }
 
 #footer-container {
@@ -1219,27 +1213,24 @@ img[alt="Buscar-Comedor"] {
   margin-left: 143px;
 }
 
-#hero-banner-comedores h1{
+#hero-banner-comedores h1 {
   width: 669px;
   font-size: 48px;
 }
 
-#hero-banner-comedores h2{
+#hero-banner-comedores h2 {
   width: 531px;
   font-size: 24px;
   font-weight: lighter;
-
 }
 
-#main-comedores{
+#main-comedores {
   padding: 35px 122px;
-
- 
 }
 
-.comedor{
+.comedor {
   border: rgba(61, 61, 61, 0.3) 3px solid;
-  width: 780px ;
+  width: 780px;
   height: 304px;
   position: relative;
   display: flex;
@@ -1249,22 +1240,20 @@ img[alt="Buscar-Comedor"] {
   margin-bottom: 35px;
 }
 
-.datos-comedor{
+.datos-comedor {
   margin-left: 25px;
 }
 
 .datos-comedor h3 {
   font-size: 32px;
   font-weight: bold;
- 
 }
-
 
 .datos-comedor h4 {
   margin: 2px 0px 18px 0px;
 }
 
-.comedor img{
+.comedor img {
   width: 155px;
   height: 155px;
 }
@@ -1276,28 +1265,27 @@ img[alt="Buscar-Comedor"] {
   color: var(--primer-color);
   font-weight: bold;
   border-radius: 8px;
-  border: 3px solid rgba(61, 61, 61, 0.3)
+  border: 3px solid rgba(61, 61, 61, 0.3);
 }
 
-.comedor button:hover{
+.comedor button:hover {
   background-color: var(--primer-color);
   color: white;
   cursor: pointer;
 }
 
-.urgencia{
+.urgencia {
   display: flex;
   margin-left: 123px;
   padding-top: 12px;
-  
 }
 
-.urgencia h4{
+.urgencia h4 {
   width: 142px;
   height: 20px;
 }
 
-.urgencia h5{
+.urgencia h5 {
   width: 21px;
   height: 21px;
   background-color: var(--primer-color);
@@ -1307,7 +1295,7 @@ img[alt="Buscar-Comedor"] {
   padding-top: 3px;
 }
 
-/* DISEÑO RESPONSIVE */ 
+/* DISEÑO RESPONSIVE */
 
 @media (max-width: 600px) {
   .menu-header {
@@ -1512,8 +1500,5 @@ img[alt="Buscar-Comedor"] {
   }
   .footer-box img {
     margin-right: 0px;
-  }
-  #footer-top {
-    height: 189px;
   }
 }
