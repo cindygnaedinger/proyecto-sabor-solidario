@@ -47,6 +47,15 @@ li {
   background-repeat: no-repeat;
   background-size: 100%;
 }
+
+.header-sin-img {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  font-weight: 500;
+}
+
 .img-menu-header {
   display: none;
 }
@@ -254,7 +263,7 @@ header nav a:hover {
   margin-bottom: 131px;
 }
 
-#buscar-donadores div {
+#ingresar-donacion {
   background-color: #75d0e962;
 }
 
@@ -335,7 +344,7 @@ img[alt="Buscar-Donador"] {
   gap: 10px;
 }
 
-#carrusel-donadores #donadores {
+#carrusel-donadores #donadores-filtrados {
   width: 840px;
   height: 402px;
   margin: auto auto auto 4px;
@@ -359,14 +368,14 @@ img[alt="Buscar-Donador"] {
 
 /* articulos del carrusel donadores */
 
-.donador {
+.donador-buscado {
   width: 255px;
   height: 398px;
   box-shadow: 5px 6px 6px rgba(0, 0, 0, 0.22);
   margin-right: 24px;
 }
 
-.donador #parte-superior {
+.donador-buscado #parte-superior {
   height: 176px;
   width: 255px;
   background-color: white;
@@ -398,7 +407,7 @@ img[alt="Buscar-Donador"] {
   margin-bottom: 5px;
 }
 
-.donador #parte-inferior {
+.donador-buscado #parte-inferior {
   width: 255px;
   height: 222px;
   padding-top: 22px;
@@ -413,7 +422,7 @@ img[alt="Buscar-Donador"] {
   overflow: hidden;
 }
 
-.donador #parte-inferior h3 {
+.donador-buscado #parte-inferior h3 {
   width: 205px;
   height: 48px;
   font-size: 17px;
@@ -425,7 +434,7 @@ img[alt="Buscar-Donador"] {
   padding-top: 17px;
 }
 
-.donador img {
+.donador-buscado img {
   margin-left: 17px;
 }
 
@@ -571,6 +580,94 @@ img[alt="Buscar-Donador"] {
 #container-guia h3 span {
   font-weight: 700;
   color: #ff6100;
+}
+
+/*---PREGUNTAS FRECUENTES FAQS ---*/
+
+.btn-faq {
+  width: 100%;
+  font-size: 56px;
+  letter-spacing: 5px;
+  color: #3d3d3d;
+  font-weight: 600;
+  padding-top: 20px;
+  margin: 20px auto 100px auto;
+}
+
+.btn-faq span {
+  display: block;
+  width: 450px;
+  height: 3px;
+  background-color: #3d3d3d;
+  border-radius: 38px;
+  margin-top: 5px;
+}
+
+#container-faq {
+  width: 100%;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.acordeon {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  height: 100%;
+  --title-size: 20px;
+  --title-padding: 10px;
+  border-radius: 2px;
+}
+
+.acordeon > li {
+  --item-height: calc(var(--title-size) + (var(--title-padding) * 2));
+  border-radius: 2px;
+  height: var(--item-height);
+  overflow: hidden;
+  transition: height 0.25s;
+  display: flex;
+  flex-direction: column;
+}
+
+.acordeon > li div {
+  flex: 1;
+  overflow-y: auto;
+  color: #1e1e1e;
+}
+
+.acordeon > li.open {
+  height: calc(100% - ((var(--item-height) + 2px) * var(--items-qtty, 1)));
+}
+
+.acordeon > li:not(:last-child) {
+  border-bottom-color: white;
+}
+
+.acordeon > li > h2 {
+  margin: 0;
+  background: url(../imgs/arrow.svg) calc(100% - 20px) center/auto
+    var(--title-size) no-repeat;
+  color: white;
+  font-size: var(--title-size);
+  line-height: var(--title-size);
+  padding: var(--title-padding);
+  color: #ff6100;
+  cursor: pointer;
+}
+
+.acordeon > li.open > h2 {
+  background-image: url(../imgs/arrow2.svg);
+}
+
+.acordeon > li > div {
+  padding: 2em;
+}
+
+.acordeon h2:hover {
+  background-color: #ff6100;
+  color: white;
 }
 
 /*---BUSCAR COMEDORES---------------------*/
@@ -1117,7 +1214,7 @@ img[alt="Buscar-Comedor"] {
   margin: auto;
 }
 
-.header-perfil {
+.header-comedores, .header-donadores {
   height: 557px;
   display: flex;
   justify-content: space-between;
@@ -1207,28 +1304,28 @@ img[alt="Buscar-Comedor"] {
   margin-bottom: 30px;
 }
 
-#hero-banner-comedores {
+#hero-banner-comedores, #hero-banner-donadores {
   position: absolute;
   top: 150px;
   margin-left: 143px;
 }
 
-#hero-banner-comedores h1 {
+#hero-banner-comedores h1, #hero-banner-donadores h1{
   width: 669px;
   font-size: 48px;
 }
 
-#hero-banner-comedores h2 {
+#hero-banner-comedores h2{
   width: 531px;
   font-size: 24px;
   font-weight: lighter;
 }
 
-#main-comedores {
+#main-comedores{
   padding: 35px 122px;
 }
 
-.comedor {
+.comedor{
   border: rgba(61, 61, 61, 0.3) 3px solid;
   width: 780px;
   height: 304px;
@@ -1240,25 +1337,26 @@ img[alt="Buscar-Comedor"] {
   margin-bottom: 35px;
 }
 
-.datos-comedor {
+.datos-comedor{
   margin-left: 25px;
 }
 
-.datos-comedor h3 {
+.datos-comedor h3, .datos-donador h3 {
   font-size: 32px;
   font-weight: bold;
 }
 
-.datos-comedor h4 {
+.datos-comedor h4, .datos-donador h4 {
   margin: 2px 0px 18px 0px;
+  display: flex;
 }
 
-.comedor img {
+.comedor img{
   width: 155px;
   height: 155px;
 }
 
-.comedor button {
+.comedor button, .donador button {
   width: 136.52px;
   height: 57.3px;
   background-color: white;
@@ -1268,7 +1366,7 @@ img[alt="Buscar-Comedor"] {
   border: 3px solid rgba(61, 61, 61, 0.3);
 }
 
-.comedor button:hover {
+.comedor button:hover{
   background-color: var(--primer-color);
   color: white;
   cursor: pointer;
@@ -1293,6 +1391,17 @@ img[alt="Buscar-Comedor"] {
   border-radius: 10px;
   text-align: center;
   padding-top: 3px;
+}
+
+.datos-donador span{
+  width: 22px;
+  height: 22px;
+  margin-left: 10px;
+  background-color: var(--segundo-color);
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 1px;
 }
 
 /* DISEÑO RESPONSIVE */

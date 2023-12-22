@@ -12,7 +12,10 @@ let articleDonador = document.getElementById("article-donador");
 let btnBack = document.getElementById("btn-back-resultado-donador");
 let btnNext = document.getElementById("btn-next-resultado-donador");
 
+
+
 // FUNCIONES
+
 
 //Funcion filtrar donadores, esta funcion filtra los donadores que tengan la donacion
 
@@ -33,13 +36,15 @@ function filtrarDonadores(donadores, donacionBuscada) {
 
 //Funcion para mostrar los donadores filtrados
 
+
 function mostrarDonadores(donadoresFiltrados) {
-  donadores.innerHTML = "";
+  const donadores = document.getElementById('donadores-filtrados')  
 
   if (donadoresFiltrados != 0) {
+    console.log(donadoresFiltrados)
     donadoresFiltrados.forEach((donador) => {
       const nuevoDonador = `
-            <article class="donador">
+            <article class="donador-buscado">
                 <div id="parte-superior">
                     <h3>${donador.nombre}</h3>
                     <p><span>Tengo para donar:</span>
@@ -57,10 +62,14 @@ function mostrarDonadores(donadoresFiltrados) {
                 </div>
             </article>
         `;
-
-      donadores.innerHTML += nuevoDonador;
+    
+      donadores.innerHTML += nuevoDonador
+      
+      
+      
     });
   } else {
+    donadores.innerHTML = 'No se encontró ningun donador que tenga el producto ingresado'
   }
 }
 
@@ -73,7 +82,8 @@ function buscarDonadores(donacionBuscada) {
 
   xhr.onload = () => {
     if (xhr.status === 200) {
-      let donadores = JSON.parse(xhr.responseText);
+      let respuesta = JSON.parse(xhr.response);
+      donadores = respuesta.donadores
       let donadoresFiltrados = filtrarDonadores(donadores, donacionBuscada);
       mostrarDonadores(donadoresFiltrados);
     } else {
@@ -120,10 +130,12 @@ inputBuscarDonador.addEventListener("input", () => {
 });
 
 btnBack.addEventListener("click", () => {
+  const donadores = document.getElementById('donadores-filtrados')  
   donadores.scrollLeft -= 280;
 });
 
 btnNext.addEventListener("click", () => {
+  const donadores = document.getElementById('donadores-filtrados')  
   donadores.scrollLeft += 280;
 });
 

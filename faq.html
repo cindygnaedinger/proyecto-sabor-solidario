@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sabor Solidario</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/faq.css" />
     <link
       rel="shortcut icon"
       href="imgs/logo-msabor 1.png"
@@ -14,11 +14,11 @@
 
   <body>
     <!-- HEADER -->
-    <header class="header-sin-img">
+    <header class="header-perfil">
       <a id="header-logo" href="index.html">
         <img src="imgs/logo-nombre.png" alt="logo" />
       </a>
-      <nav class="nav-perfil">
+      <nav>
         <a href="index.html">INICIO</a>
         <a href="index.html">NOSOTROS</a>
         <a href="donadores.html">DONADORES</a>
@@ -26,44 +26,54 @@
         <a href="guia.html">GUÍA</a>
       </nav>
     </header>
-    <!-- MAIN PERFIL COMEDOR-->
-    <section class="perfil-comedor">
-      <div class="perfil-comedor__container">
-        <div class="perfil-comedor__header">
-          <img
-            id="perfil-comedor__img-logo"
-            src="imgs/user-solid-84.png"
-            alt="Imagen de perfil del comedor"
-          />
-          <h2>Nombre del comedor</h2>
-          <p>
-            Información: Lorem ipsum dolor, sit amet consectetur adipisicing
-            elit. Aut, nam maxime incidunt animi minus repellat consequuntur
-            expedita dicta ex doloremque.
-          </p>
-        </div>
-        <div class="perfil-comedor__info-add">
-          <span>Urgencia:  
-            <img id="info-add__num-urg" src="imgs/num-urg-4.png" alt=""></span>
-          
-          <span>Calificaciones: <img src="imgs/star-solid-24.png" alt="" />
-            <img src="imgs/star-half-solid-24.png" alt="" /></span>
-          
-          <span>Contacto:</span>
-        </div>
-        <div class="perfil-comedor__body">
-          <h3>¿Qué necesitamos?</h3>
-          <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
-          </ul>
-          <h3>Voluntariado</h3>
-          <p>Lorem, ipsum dolor.</p>
-        </div>
-      </div>
-    </section>
+
+    <!-- MAIN -->
+    <main>
+      <section id="container-faq">
+        <div class="btn-faq">Preguntas Frecuentes<span></span></div>
+      </section>
+      <section>
+        <ul class="acordeon">
+          <li class="open">
+            <h2>¿CÓMO SE DONA?</h2>
+            <div>
+              En el apartado Inicio, se encuentran dos opciones Unirse e
+              Ingresar. Si es la primera vez que quiere donar, haga click en la
+              opción Unirse. Podrá crear su cuenta, llenar sus datos
+              correspondientes y estará listo/a para realizar una donación.
+              Luego, en el apartado Buscar Comedores podrá ingresar la donación
+              que quiere realizar y el mapa le mostrará los comedores de su zona
+              más cercana para que pueda contactarse con el mismo.
+            </div>
+          </li>
+          <li>
+            <h2>CÓMO ME REGISTRO COMO COMEDOR?</h2>
+            <div>
+              En el apartado Inicio, en la sección Unirse le van a salir dos
+              opciones la de crearse una cuenta como Donante y otro como
+              Comedor. Elija la opción de comedor y llene los datos
+              correspondientes.
+            </div>
+          </li>
+          <li>
+            <h2>¿CÓMO ME REGISTRO COMO DONADOR?</h2>
+            <div>
+              En el apartado Inicio, en la sección Unirse le van a salir dos
+              opciones la de crearse una cuenta como Donante y otro como
+              Comedor. Elija la opción de donante y llene los datos
+              correspondientes.
+            </div>
+          </li>
+          <li>
+            <h2>¿EN QUE SECCIÓN ENCUENTRO LA UBICACIÓN DE LOS COMEDORES?</h2>
+            <div>
+              Se encuentra en la sección Comedores donde podrá visualizar los
+              comedores de su zona correspondiente y de todo Córdoba Capital.
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
 
     <!-- FOOTER -->
     <section id="footer-top"></section>
@@ -172,6 +182,6 @@
       </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/acordeon.js"></script>
   </body>
 </html>

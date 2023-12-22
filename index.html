@@ -22,7 +22,7 @@
       <nav class="menu-header">
         <a href="index.html">INICIO</a>
         <a href="#nosotros">NOSOTROS</a>
-        <a href="donadores.html">DONADORES</a>
+        <a href="donadores.html" id="pestaña-donadores">DONADORES</a>
         <a href="comedores.html" id="pestaña-comedores">COMEDORES</a>
         <a href="guia.html">GUÍA</a>
       </nav>
@@ -163,7 +163,7 @@
             <button title="Back" id="btn-back-resultado-donador">
               <img src="imgs/btnBack.png" alt="" />
             </button>
-            <div id="donadores"></div>
+            <div id="donadores-filtrados"></div>
             <button title="Next" id="btn-next-resultado-donador">
               <img src="imgs/btnNext.png" alt="" />
             </button>
@@ -316,11 +316,7 @@
                 </button>
               </div>
               <div class="registro__botones">
-                <button
-                  onclick="cerrarModalRecibir()"
-                  id="boton-registrarse"
-                  class="boton-registro"
-                >
+                <button id="boton-registrarse" class="boton-registro">
                   Registrarse
                 </button>
               </div>
@@ -486,6 +482,7 @@
           <a href="#donaciones">Donaciones</a>
           <a href="#comedores">Comedores</a>
           <a href="guia.html">Guía</a>
+          <a href="faq.html">FAQ</a>
         </div>
 
         <div class="footer-box">
