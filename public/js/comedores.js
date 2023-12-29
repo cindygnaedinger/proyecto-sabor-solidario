@@ -1,28 +1,22 @@
+import http from '../client/http.js'
+
+
 //obtener elementos
 
 let mainComedores = document.getElementById('main-comedores')
 let pestañaComedores = document.getElementById('pestaña-comedores')
 
+ //Obtener comedores
 
-//peticion para comedores
+ const getComedores = async () => {
+  const comedores = await http.get('http://127.0.0.1:8080/api/products/');
+  comedores.forEach(comedores => {
+      console.log(comedores);
+      mostrarComedores(comedores);
+  });
+};
 
-function obtenerComedores() {
-    let xhr = new XMLHttpRequest();
-    xhr.open("get", "comedores.json");
-  
-    xhr.onload = () => {
-      if (xhr.status === 200) {
-        let respuesta = JSON.parse(xhr.response);
-        let comedores = respuesta.comedores
-        mostrarComedores(comedores)
-      } else {
-        window.alert("Hubo un error");
-      }
-    };
-    xhr.send();
-  }
-
-  //muestra los comedores
+//muestra los comedores
 
   function mostrarComedores(comedores){
     comedores.forEach(com => {
@@ -44,9 +38,3 @@ function obtenerComedores() {
     })
 
   }
-
-  
-
-  document.addEventListener('DOMContentLoaded', function() {
-    obtenerComedores();
-  });
