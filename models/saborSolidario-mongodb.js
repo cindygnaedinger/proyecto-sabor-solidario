@@ -30,7 +30,17 @@ const comedoresSchema = mongoose.Schema({
     email: String
 });
 
+const donadoresSchema = mongoose.Schema({
+    nombre: String,
+    apellido: String,
+    telefono: Number,
+    email: String,
+    donaciones: Array,
+    cantidadDonaciones: Number
+});
+
 const comedoresModel = mongoose.model('comedores', comedoresSchema);
+const donadoresModel = mongoose.model('donadores', donadoresSchema);
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -52,6 +62,20 @@ const createComedor = async comedor => {
     }
 };
 
+const createDonador = async donador => {
+    if (!connected) {
+        console.error('Conexión no establecida');
+        return {};
+    }
+    try {
+        const newDonador = new donadoresModel(donador);
+        await newDonador.save();
+        return newDonador;
+    } catch (error) {
+        console.error(`Se produjo un error al intentar dar de alta el comedor: ${error.message}`);
+        return {};
+    }
+};
 
 ///////////////////////////////////////////////////////////////////////////////
 //                               CRUD: R: Read                               //
@@ -85,6 +109,34 @@ const readComedor = async id => {
     }
 }
 
+const readDonadores = async () => {
+    if (!connected) {
+        console.error('Conexión no establecida');
+        return [];
+    }
+    try {
+        const donadores = await donadoresModel.find({});
+        return donadores;
+    } catch (error) {
+        console.error(`Se produjo un error al intentar obtener los comedores: ${error.message}`);
+        return [];
+    }
+};
+
+const readDonador = async id => {
+    if (!connected) {
+        console.error('Conexión no establecida');
+        return {};
+    }
+    try {
+        const donador = await donadoresModel.findById(id) || {};
+        return donador;        
+    } catch (error) {
+        console.error(`Se produjo un error al intentar obtener el comedor especificado: ${error.message}`);
+        return {};
+    }
+}
+
 
 ////////////////////////////////////////////////////////////////////////////////
 //                              CRUD - U: Update                              //
@@ -100,6 +152,22 @@ const updateComedor = async (id, comedor) => {
             returnDocument: 'after'
         });
         return updatedComedor;
+    } catch (error) {
+        console.error(`Se produjo un error al intentar modificar el comedor especificado: ${error.message}`);
+        return {};
+    }
+};
+
+const updateDonador = async (id, donador) => {
+    if (!connected) {
+        console.error('Conexión no establecida');
+        return {};
+    }
+    try {
+        const updatedDonador = await donadoresModel.findByIdAndUpdate(id, { $set: donador }, {
+            returnDocument: 'after'
+        });
+        return updatedDonador;
     } catch (error) {
         console.error(`Se produjo un error al intentar modificar el comedor especificado: ${error.message}`);
         return {};
@@ -125,6 +193,20 @@ const deleteComedor = async id => {
     }
 };
 
+const deleteDonador = async id => {
+    if (!connected) {
+        console.error('Conexión no establecida');
+        return {};
+    }
+
+    try {
+        const removedDonador = await donadoresModel.findByIdAndDelete(id) || {};
+        return removedDonador;
+    } catch (error) {
+        console.error(`Se produjo un error al intentar eliminar el comedor especificado: ${error.message}`);
+    }
+};
+
 
 export default {
     createComedor,
@@ -132,5 +214,10 @@ export default {
     readComedor,
     updateComedor,
     deleteComedor,
+    createDonador,
+    readDonadores,
+    readDonador,
+    deleteDonador,
+    updateDonador,
     connectDB
 };

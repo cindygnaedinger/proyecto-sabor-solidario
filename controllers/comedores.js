@@ -1,4 +1,4 @@
-//import api from '../api/comedores.js';
+import api from '../API/comedores.js';
 
 ////////////////////////////////////////////////////////////////////////////////
 //                               GET Controller                               //

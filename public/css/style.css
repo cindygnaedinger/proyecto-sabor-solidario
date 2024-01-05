@@ -1207,7 +1207,7 @@ img[alt="Buscar-Comedor"] {
   border-color: transparent transparent hsla(0, 1%, 13%, 0.349) transparent;
 }
 
-/*-----------PERFIL COMEDORES---------------------*/
+/*-----------PERFILES---------------------*/
 .perfil-comedor {
   width: 900px;
   height: 900px;
@@ -1321,11 +1321,11 @@ img[alt="Buscar-Comedor"] {
   font-weight: lighter;
 }
 
-#main-comedores{
+#main-comedores, #main-donadores{
   padding: 35px 122px;
 }
 
-.comedor{
+.comedor, .donador{
   border: rgba(61, 61, 61, 0.3) 3px solid;
   width: 780px;
   height: 304px;

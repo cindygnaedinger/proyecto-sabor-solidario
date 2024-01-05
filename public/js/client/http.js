@@ -1,4 +1,3 @@
-
 class Http {
 
     async get(url, id) {
@@ -6,7 +5,9 @@ class Http {
             // const response = await fetch(url + (id || ''), { method: 'get' });
             const response = await fetch(url + (id || ''));
             return await response.json();
+            console.log('si')
         } catch (error) {
+            console.log('LLEGO ACA')
             console.error('ERROR GET', error.message);
         }
     }

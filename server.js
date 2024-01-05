@@ -1,7 +1,9 @@
 import express from 'express';
 import routerComedores from './routers/comedores.js';
-import DB from './models/comedores-mongodb.js';
+import routerDonadores from './routers/donadores.js';
+import DB from './models/saborSolidario-mongodb.js';
 import config from './config.js';
+
 
 // await DB.connectDB();
 DB.connectDB();
@@ -13,9 +15,10 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(express.static('public', { extensions: ['html', 'htm'] }));
+app.use(express.static('public', { extensions: ['html', 'htm', 'js'] }));
 
 app.use('/api/comedores', routerComedores);
+app.use('/api/donadores', routerDonadores)
 
 const server = app.listen(PORT, () => console.log(`Servidor Express escuchando en el puerto ${PORT}`));
 server.on('error', error => console.log(`Se produjo un error al intentar iniciar el servidor Express: ${error.message}`));

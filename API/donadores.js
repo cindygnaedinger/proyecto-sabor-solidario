@@ -5,16 +5,16 @@ import model from '../models/saborSolidario-mongodb.js';
 //                                API Get All                                //
 ///////////////////////////////////////////////////////////////////////////////
 
-const getComedores = async () => await model.readComedores();
+const getDonadores = async () => await model.readDonadores();
 
 
 ///////////////////////////////////////////////////////////////////////////////
 //                                API Get One                                //
 ///////////////////////////////////////////////////////////////////////////////
 
-const getComedor = async id => {
-    const Comedor = await model.readComedor(id);
-    return Comedor;
+const getDonador = async id => {
+    const Donador = await model.readDonador(id);
+    return Donador;
 };
 
 
@@ -22,9 +22,9 @@ const getComedor = async id => {
 //                                 API Create                                 //
 ////////////////////////////////////////////////////////////////////////////////
 
-const createComedor = async comedor => {
-    const createdComedor = await model.createComedor(comedor);
-    return createdComedor;
+const createDonador = async donador => {
+    const createdDonador = await model.createDonador(donador);
+    return createdDonador;
 };
 
 
@@ -32,9 +32,9 @@ const createComedor = async comedor => {
 //                                 API Update                                 //
 ////////////////////////////////////////////////////////////////////////////////
 
-const updateComedor = async (id, comedor) => {
-    const updatedComedor = await model.updateComedor(id, comedor);
-    return updatedComedor;
+const updateDonador = async (id, donador) => {
+    const updatedDonador = await model.updateDonador(id, donador);
+    return updatedDonador;
 };
 
 
@@ -42,14 +42,15 @@ const updateComedor = async (id, comedor) => {
 //                                 API Delete                                 //
 ////////////////////////////////////////////////////////////////////////////////`
 
-const deleteComedor = async id => {
-    const removedComedor = await model.deleteComedor(id);
-    return removedComedor;
+const deleteDonador = async id => {
+    const removedDonador = await model.deleteDonador(id);
+    return removedDonador;
 };
+
 export default {
-    getComedores,
-    getComedor,
-    createComedor,
-    updateComedor,
-    deleteComedor
+    getDonadores,
+    getDonador,
+    createDonador,
+    updateDonador,
+    deleteDonador
 };

@@ -1,48 +1,43 @@
+import http from './client/http.js'
+
+
 //obtener elementos
 
 let mainDonadores = document.getElementById('main-donadores')
-let pestañaDonadores = document.getElementById('pestaña-donadores')
 
 
-//peticion para comedores
+//peticion para donadores
 
-function obtenerDonadores() {
-    let xhr = new XMLHttpRequest();
-    xhr.open("get", "donadores.json");
-  
-    xhr.onload = () => {
-      if (xhr.status === 200) {
-        let respuesta = JSON.parse(xhr.response);
-        let donadores = respuesta.donadores
-        mostrarDonadores(donadores)
-      } else {
-        window.alert("Hubo un error");
-      }
-    };
-    xhr.send();
-  }
+
+const getDonadores = async () => {
+
+  const donadores = await http.get('http://127.0.0.1:8080/api/donadores/');
+    donadores.forEach(donador => {
+      mostrarDonador(donador)
+        
+    });
+};
+
 
   //muestra los comedores
 
-  function mostrarDonadores(donadores){
-    donadores.forEach(don => {
-        let donador = `<article class="donador">
+  function mostrarDonador(donador){
+
+        let donadorHTML = `<article class="donador">
         <img src="./imgs/imagen-donador.png" alt="">
         <div class="datos-donador">
-          <h3>${don.nombre}</h3>
-          <h4>Cantidad de donaciones <span>${don.cantidadDonaciones}</span></h4>
+          <h3>${donador.nombre}</h3>
+          <h4>Cantidad de donaciones <span>${donador.cantidadDonaciones}</span></h4>
           <button>CONTACTAR</button>
         </div>       
       </article>`
 
-      mainDonadores.innerHTML += donador
-
-    })
+      mainDonadores.innerHTML += donadorHTML
 
   }
 
   
 
-  document.addEventListener('DOMContentLoaded', function() {
-    obtenerDonadores();
+  document.addEventListener('DOMContentLoaded', async () => {
+    await getDonadores();
   });
