@@ -684,11 +684,13 @@ img[alt="Buscar-Donador"] {
   color: var(--dark-color);
 }
 
-#ingresar-comedor {
+#ingresar-comedor, #ubicaciones-comedores {
   height: 957px;
   background-image: url(../imgs/bgi-buscar-comedores.png);
+  background-size: cover;
   position: relative;
 }
+
 
 #suma-tu-ayuda {
   position: absolute;
@@ -1499,10 +1501,7 @@ img[alt="Buscar-Comedor"] {
   #buscar-comedores h3 {
     font-size: 25px;
   }
-  #ingresar-comedor {
-    height: 420px;
-    background-size: cover;
-  }
+ 
   #suma-tu-ayuda > h2 {
     font-size: 30px !important;
     text-align: center;
@@ -1542,6 +1541,9 @@ img[alt="Buscar-Comedor"] {
     left: 45%;
     transform: translateX(-50%);
   }
+
+
+ 
 
   #buscar-comedores {
     margin-bottom: 50px;
@@ -1620,3 +1622,29 @@ img[alt="Buscar-Comedor"] {
     margin-right: 0px;
   }
 }
+
+/* MAPAS COMEDORES */
+
+#ubicaciones-comedores{
+  border: 3px solid black;
+  padding-top: 31px
+}
+
+#ubicaciones-comedores h2{
+  width: 621px;
+  height: 110px;
+  font-size: 48px;
+  font-weight: bold;  
+  margin: auto;
+}
+
+#mapa-puntos  {
+  width: 759px;
+  height: 784px;
+  margin: 10px auto;
+  padding-top: 41px;
+  background-color: rgba(234, 247, 250, 0.55);
+
+} 
+
+
