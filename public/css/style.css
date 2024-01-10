@@ -1638,13 +1638,21 @@ img[alt="Buscar-Comedor"] {
   margin: auto;
 }
 
-#mapa-puntos  {
+#contenedor-mapa {
   width: 759px;
   height: 784px;
   margin: 10px auto;
   padding-top: 41px;
   background-color: rgba(234, 247, 250, 0.55);
 
-} 
+}
+
+#mapa-puntos {
+  width: 621px;
+  height: 712px;
+  margin: auto;
+}
+
+
 
 

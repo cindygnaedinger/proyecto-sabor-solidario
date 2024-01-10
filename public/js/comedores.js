@@ -43,8 +43,3 @@ document.addEventListener('DOMContentLoaded', async () =>{
   mostrarComedores(comedores)
 
 })
-
-// Filtar Comedores por donación
-
-
-
