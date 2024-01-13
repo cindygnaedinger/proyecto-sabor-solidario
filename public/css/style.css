@@ -152,8 +152,6 @@ header nav a:hover {
   text-align: center;
   font-size: 24px;
   padding-right: 109px;
-  padding-top: 80px;
-  max-width: 1024px;
   margin: 0 auto;
 }
 
@@ -257,22 +255,16 @@ header nav a:hover {
 /*--------------- BUSQUEDA DONADORES --------------------*/
 
 #buscar-donadores {
-  height: 1057px;
   margin-top: 1px;
   text-align: center;
-  margin-bottom: 131px;
-}
-
-#ingresar-donacion {
-  background-color: #75d0e962;
 }
 
 #ingresar-donacion {
   margin-top: 55px;
   display: block;
   justify-content: space-around;
-  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.199);
   height: 950px;
+  background-color: #75d0e962;
 }
 
 #buscar-donadores h3,
@@ -1214,7 +1206,8 @@ img[alt="Buscar-Comedor"] {
   margin: auto;
 }
 
-.header-comedores, .header-donadores {
+.header-comedores,
+.header-donadores {
   height: 557px;
   display: flex;
   justify-content: space-between;
@@ -1304,28 +1297,32 @@ img[alt="Buscar-Comedor"] {
   margin-bottom: 30px;
 }
 
-#hero-banner-comedores, #hero-banner-donadores {
+#hero-banner-comedores,
+#hero-banner-donadores {
   position: absolute;
   top: 150px;
   margin-left: 143px;
 }
 
-#hero-banner-comedores h1, #hero-banner-donadores h1{
+#hero-banner-comedores h1,
+#hero-banner-donadores h1 {
   width: 669px;
   font-size: 48px;
 }
 
-#hero-banner-comedores h2{
+#hero-banner-comedores h2 {
   width: 531px;
   font-size: 24px;
   font-weight: lighter;
 }
 
-#main-comedores, #main-donadores{
+#main-comedores,
+#main-donadores {
   padding: 35px 122px;
 }
 
-.comedor, .donador{
+.comedor,
+.donador {
   border: rgba(61, 61, 61, 0.3) 3px solid;
   width: 780px;
   height: 304px;
@@ -1337,26 +1334,29 @@ img[alt="Buscar-Comedor"] {
   margin-bottom: 35px;
 }
 
-.datos-comedor{
+.datos-comedor {
   margin-left: 25px;
 }
 
-.datos-comedor h3, .datos-donador h3 {
+.datos-comedor h3,
+.datos-donador h3 {
   font-size: 32px;
   font-weight: bold;
 }
 
-.datos-comedor h4, .datos-donador h4 {
+.datos-comedor h4,
+.datos-donador h4 {
   margin: 2px 0px 18px 0px;
   display: flex;
 }
 
-.comedor img{
+.comedor img {
   width: 155px;
   height: 155px;
 }
 
-.comedor button, .donador button {
+.comedor button,
+.donador button {
   width: 136.52px;
   height: 57.3px;
   background-color: white;
@@ -1366,7 +1366,7 @@ img[alt="Buscar-Comedor"] {
   border: 3px solid rgba(61, 61, 61, 0.3);
 }
 
-.comedor button:hover{
+.comedor button:hover {
   background-color: var(--primer-color);
   color: white;
   cursor: pointer;
@@ -1393,7 +1393,7 @@ img[alt="Buscar-Comedor"] {
   padding-top: 3px;
 }
 
-.datos-donador span{
+.datos-donador span {
   width: 22px;
   height: 22px;
   margin-left: 10px;
