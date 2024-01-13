@@ -521,6 +521,7 @@ img[alt="Buscar-Donador"] {
 }
 
 .guia-article {
+  margin-top: 25px;
   padding: 40px;
   border-radius: 8px;
   background-color: hsl(25, 100%, 80%);
@@ -583,7 +584,7 @@ img[alt="Buscar-Donador"] {
   color: #3d3d3d;
   font-weight: 600;
   padding-top: 20px;
-  margin: 20px auto 100px auto;
+  margin: 25px auto 100px auto;
 }
 
 .btn-faq span {
@@ -604,8 +605,8 @@ img[alt="Buscar-Donador"] {
 
 .acordeon {
   list-style: none;
-  margin: 0;
   padding: 0;
+  margin-bottom: 50px;
 
   height: 100%;
   --title-size: 20px;
@@ -639,18 +640,18 @@ img[alt="Buscar-Donador"] {
 
 .acordeon > li > h2 {
   margin: 0;
-  background: url(../imgs/arrow.svg) calc(100% - 20px) center/auto
+  background: url(../imgs/chevron-down.svg) calc(100% - 20px) center/auto
     var(--title-size) no-repeat;
   color: white;
   font-size: var(--title-size);
   line-height: var(--title-size);
   padding: var(--title-padding);
-  color: #ff6100;
+  color: hsl(25, 100%, 80%);
   cursor: pointer;
 }
 
 .acordeon > li.open > h2 {
-  background-image: url(../imgs/arrow2.svg);
+  background-image: url(../imgs/chevron-up.svg);
 }
 
 .acordeon > li > div {
@@ -658,7 +659,7 @@ img[alt="Buscar-Donador"] {
 }
 
 .acordeon h2:hover {
-  background-color: #ff6100;
+  background-color: hsl(25, 100%, 80%);
   color: white;
 }
 
@@ -675,11 +676,13 @@ img[alt="Buscar-Donador"] {
   color: var(--dark-color);
 }
 
-#ingresar-comedor {
+#ingresar-comedor, #ubicaciones-comedores {
   height: 957px;
   background-image: url(../imgs/bgi-buscar-comedores.png);
+  background-size: cover;
   position: relative;
 }
+
 
 #suma-tu-ayuda {
   position: absolute;
@@ -1490,10 +1493,7 @@ img[alt="Buscar-Comedor"] {
   #buscar-comedores h3 {
     font-size: 25px;
   }
-  #ingresar-comedor {
-    height: 420px;
-    background-size: cover;
-  }
+ 
   #suma-tu-ayuda > h2 {
     font-size: 30px !important;
     text-align: center;
@@ -1533,6 +1533,9 @@ img[alt="Buscar-Comedor"] {
     left: 45%;
     transform: translateX(-50%);
   }
+
+
+ 
 
   #buscar-comedores {
     margin-bottom: 50px;
@@ -1611,3 +1614,37 @@ img[alt="Buscar-Comedor"] {
     margin-right: 0px;
   }
 }
+
+/* MAPAS COMEDORES */
+
+#ubicaciones-comedores{
+  border: 3px solid black;
+  padding-top: 31px
+}
+
+#ubicaciones-comedores h2{
+  width: 621px;
+  height: 110px;
+  font-size: 48px;
+  font-weight: bold;  
+  margin: auto;
+}
+
+#contenedor-mapa {
+  width: 759px;
+  height: 784px;
+  margin: 10px auto;
+  padding-top: 41px;
+  background-color: rgba(234, 247, 250, 0.55);
+
+}
+
+#mapa-puntos {
+  width: 621px;
+  height: 712px;
+  margin: auto;
+}
+
+
+
+

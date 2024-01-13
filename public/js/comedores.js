@@ -43,4 +43,3 @@ document.addEventListener('DOMContentLoaded', async () =>{
   mostrarComedores(comedores)
 
 })
-
