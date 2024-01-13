@@ -289,15 +289,15 @@ header nav a:hover {
 
 #ingresar-donacion {
   background-color: #75d0e962;
-}
-
-#ingresar-donacion {
   margin-top: 55px;
   display: block;
   justify-content: space-around;
   box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.199);
-  height: 950px;
-  background-color: #75d0e962;
+  height: 1107px;
+  background-image: url("../imgs/footer-top.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100%;
 }
 
 #buscar-donadores h3,
