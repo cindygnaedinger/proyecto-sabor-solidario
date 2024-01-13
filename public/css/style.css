@@ -18,13 +18,30 @@
 
 html {
   scroll-behavior: smooth;
-}
-
-body {
   font-family: "Karla", sans-serif;
   color: var(--dark-color);
-  margin: auto;
-  max-width: 1024px;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns:
+    [full-width-start] 100px [breakout-start] 100px [content-start] minmax(
+      1000px,
+      1fr
+    )
+    [content-end] 100px [breakout-end] 100px [full-width-end];
+}
+
+.content-grid > * {
+  grid-column: content-start / content-end;
+}
+
+.content-grid > .breakout {
+  grid-column: breakout-start / breakout-end;
+}
+
+.content-grid > .full-width {
+  grid-column: full-width-start / full-width-end;
 }
 
 a {
@@ -43,9 +60,10 @@ li {
   justify-content: space-between;
   padding-top: 20px;
   font-weight: 500;
-  background-image: url(../imgs/hero-banner.png);
+  background-image: url(../imgs/wave.svg);
   background-repeat: no-repeat;
   background-size: 100%;
+  background-position: bottom;
 }
 
 .header-sin-img {
@@ -54,6 +72,12 @@ li {
   justify-content: space-between;
   padding-top: 20px;
   font-weight: 500;
+}
+
+.hero__people {
+  position: absolute;
+  bottom: 0px;
+  right: 100px;
 }
 
 .img-menu-header {
@@ -89,7 +113,7 @@ header nav a:hover {
 #hero-banner {
   position: absolute;
   top: 135px;
-  left: 100px;
+  left: 200px;
 }
 
 #hero-banner h1 {
@@ -152,6 +176,8 @@ header nav a:hover {
   text-align: center;
   font-size: 24px;
   padding-right: 109px;
+  padding-top: 80px;
+  max-width: 1024px;
   margin: 0 auto;
 }
 
@@ -190,7 +216,7 @@ header nav a:hover {
 
 .slide-track {
   display: flex;
-  width: calc(149px * 9);
+  justify-content: center;
 }
 
 .slide-track:hover {
@@ -255,14 +281,21 @@ header nav a:hover {
 /*--------------- BUSQUEDA DONADORES --------------------*/
 
 #buscar-donadores {
+  height: 1057px;
   margin-top: 1px;
   text-align: center;
+  margin-bottom: 131px;
+}
+
+#ingresar-donacion {
+  background-color: #75d0e962;
 }
 
 #ingresar-donacion {
   margin-top: 55px;
   display: block;
   justify-content: space-around;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.199);
   height: 950px;
   background-color: #75d0e962;
 }
@@ -521,7 +554,6 @@ img[alt="Buscar-Donador"] {
 }
 
 .guia-article {
-  margin-top: 25px;
   padding: 40px;
   border-radius: 8px;
   background-color: hsl(25, 100%, 80%);
@@ -584,7 +616,7 @@ img[alt="Buscar-Donador"] {
   color: #3d3d3d;
   font-weight: 600;
   padding-top: 20px;
-  margin: 25px auto 100px auto;
+  margin: 20px auto 100px auto;
 }
 
 .btn-faq span {
@@ -605,8 +637,8 @@ img[alt="Buscar-Donador"] {
 
 .acordeon {
   list-style: none;
+  margin: 0;
   padding: 0;
-  margin-bottom: 50px;
 
   height: 100%;
   --title-size: 20px;
@@ -640,18 +672,18 @@ img[alt="Buscar-Donador"] {
 
 .acordeon > li > h2 {
   margin: 0;
-  background: url(../imgs/chevron-down.svg) calc(100% - 20px) center/auto
+  background: url(../imgs/arrow.svg) calc(100% - 20px) center/auto
     var(--title-size) no-repeat;
   color: white;
   font-size: var(--title-size);
   line-height: var(--title-size);
   padding: var(--title-padding);
-  color: hsl(25, 100%, 80%);
+  color: #ff6100;
   cursor: pointer;
 }
 
 .acordeon > li.open > h2 {
-  background-image: url(../imgs/chevron-up.svg);
+  background-image: url(../imgs/arrow2.svg);
 }
 
 .acordeon > li > div {
@@ -676,20 +708,23 @@ img[alt="Buscar-Donador"] {
   color: var(--dark-color);
 }
 
-#ingresar-comedor, #ubicaciones-comedores {
+#ingresar-comedor,
+#ubicaciones-comedores {
   height: 957px;
   background-image: url(../imgs/bgi-buscar-comedores.png);
-  background-size: cover;
   position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
 }
 
-
 #suma-tu-ayuda {
-  position: absolute;
-  height: 350px;
-  width: 333px;
-  top: 354px;
-  left: 51px;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
 }
 
 #suma-tu-ayuda h2 {
@@ -744,9 +779,6 @@ img[alt="Buscar-Comedor"] {
 }
 
 #mapa {
-  position: absolute;
-  top: 253px;
-  left: 436px;
   box-shadow: 61px 43px 1px hsl(193, 61%, 88%, 0.87);
 }
 
@@ -1202,7 +1234,7 @@ img[alt="Buscar-Comedor"] {
   border-color: transparent transparent hsla(0, 1%, 13%, 0.349) transparent;
 }
 
-/*-----------PERFILES---------------------*/
+/*-----------PERFIL COMEDORES---------------------*/
 .perfil-comedor {
   width: 900px;
   height: 900px;
@@ -1217,10 +1249,10 @@ img[alt="Buscar-Comedor"] {
   padding-top: 20px;
   font-weight: 500;
   position: relative;
-  justify-content: space-between;
-  background-image: url(../imgs/perfil-bg.png);
+  background-image: url(../imgs/perfil-bg.svg);
   background-repeat: no-repeat;
   background-size: 100%;
+  background-position: bottom;
 }
 
 .perfil-comedor__container {
@@ -1408,8 +1440,16 @@ img[alt="Buscar-Comedor"] {
 }
 
 /* DISEÑO RESPONSIVE */
-
 @media (max-width: 600px) {
+  .content-grid {
+    grid-template-columns:
+      [full-width-start] 50px [breakout-start] 50px [content-start] minmax(
+        400px,
+        1fr
+      )
+      [content-end] 50px [breakout-end] 50px [full-width-end];
+  }
+
   .menu-header {
     display: none;
   }
@@ -1427,9 +1467,18 @@ img[alt="Buscar-Comedor"] {
     justify-content: space-between;
     padding-top: 20px;
     font-weight: 500;
-    background-image: url(../imgs/hero-banner.png);
+    background-image: url(../imgs/wave.svg);
     background-repeat: no-repeat;
   }
+
+  .hero__people {
+    display: none;
+  }
+
+  #hero-banner {
+    left: 50px;
+  }
+
   #hero-banner h1 {
     width: 183px;
     font-size: 23px;
@@ -1493,7 +1542,10 @@ img[alt="Buscar-Comedor"] {
   #buscar-comedores h3 {
     font-size: 25px;
   }
- 
+  #ingresar-comedor {
+    height: 420px;
+    background-size: cover;
+  }
   #suma-tu-ayuda > h2 {
     font-size: 30px !important;
     text-align: center;
@@ -1533,9 +1585,6 @@ img[alt="Buscar-Comedor"] {
     left: 45%;
     transform: translateX(-50%);
   }
-
-
- 
 
   #buscar-comedores {
     margin-bottom: 50px;
@@ -1614,37 +1663,3 @@ img[alt="Buscar-Comedor"] {
     margin-right: 0px;
   }
 }
-
-/* MAPAS COMEDORES */
-
-#ubicaciones-comedores{
-  border: 3px solid black;
-  padding-top: 31px
-}
-
-#ubicaciones-comedores h2{
-  width: 621px;
-  height: 110px;
-  font-size: 48px;
-  font-weight: bold;  
-  margin: auto;
-}
-
-#contenedor-mapa {
-  width: 759px;
-  height: 784px;
-  margin: 10px auto;
-  padding-top: 41px;
-  background-color: rgba(234, 247, 250, 0.55);
-
-}
-
-#mapa-puntos {
-  width: 621px;
-  height: 712px;
-  margin: auto;
-}
-
-
-
-
