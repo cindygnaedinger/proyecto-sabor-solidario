@@ -1,6 +1,6 @@
 // IMPORTACIONES
 
-import http from './client/http.js'
+import http from "./client/http.js";
 
 // BUSCAR ELEMENTOS DEL DOM
 
@@ -15,12 +15,11 @@ let inputBuscarComedor = document.getElementById("input-buscar-comedor");
 let articleDonador = document.getElementById("article-donador");
 let btnBack = document.getElementById("btn-back-resultado-donador");
 let btnNext = document.getElementById("btn-next-resultado-donador");
-let divIngresarComedor = document.getElementById("ingresar-comedor")
-let divResultadosComedores = document.getElementById("ubicaciones-comedores")
-let necesidad = document.getElementById("necesidadComedor")
+let divIngresarComedor = document.getElementById("ingresar-comedor");
+let divResultadosComedores = document.getElementById("ubicaciones-comedores");
+let necesidad = document.getElementById("necesidadComedor");
 
 // FUNCIONES
-
 
 //Funcion filtrar donadores, esta funcion filtra los donadores que tengan la donacion
 
@@ -41,10 +40,8 @@ function filtrarDonadores(donadores, donacionBuscada) {
 
 //Funcion para mostrar los donadores filtrados
 
-
 function mostrarDonadores(donadores, donacionBuscada) {
-
-  const donadoresFiltrados = filtrarDonadores(donadores, donacionBuscada)
+  const donadoresFiltrados = filtrarDonadores(donadores, donacionBuscada);
 
   if (donadoresFiltrados != 0) {
     donadoresFiltrados.forEach((donador) => {
@@ -67,28 +64,22 @@ function mostrarDonadores(donadores, donacionBuscada) {
                 </div>
             </article>
         `;
-    
-      divResultadosDonadores.innerHTML += nuevoDonador
-      
-      
-      
+
+      divResultadosDonadores.innerHTML += nuevoDonador;
     });
   } else {
-    donadores.innerHTML = 'No se encontró ningun donador que tenga el producto ingresado'
+    donadores.innerHTML =
+      "No se encontró ningun donador que tenga el producto ingresado";
   }
 }
 
 //Funcion buscar donadores
 
 const getDonadores = async () => {
-
-  const donadores = await http.get('http://127.0.0.1:8080/api/donadores/');
-  console.log(donadores)
+  const donadores = await http.get("http://127.0.0.1:8080/api/donadores/");
+  console.log(donadores);
   return donadores;
-
 };
-
-
 
 //EVENTOS
 
@@ -97,16 +88,16 @@ const getDonadores = async () => {
 btnBuscarDonador.addEventListener("click", async () => {
   divBuscarDonador.style.display = "none";
   divResultadosDonadores.style.display = "block";
-  const donadores = await getDonadores()
-  mostrarDonadores(donadores, inputBuscarDonador.value.toLowerCase())
+  const donadores = await getDonadores();
+  mostrarDonadores(donadores, inputBuscarDonador.value.toLowerCase());
 });
 
 inputBuscarDonador.addEventListener("keydown", async (event) => {
   if (event.key === "Enter" && inputBuscarDonador.value !== "") {
     divBuscarDonador.style.display = "none";
     divResultadosDonadores.style.display = "block";
-    const donadores = await getDonadores()
-    mostrarDonadores(donadores, inputBuscarDonador.value.toLowerCase())
+    const donadores = await getDonadores();
+    mostrarDonadores(donadores, inputBuscarDonador.value.toLowerCase());
   }
 });
 
@@ -127,12 +118,12 @@ inputBuscarDonador.addEventListener("input", () => {
 });
 
 btnBack.addEventListener("click", () => {
-  const donadores = document.getElementById('donadores-filtrados')  
+  const donadores = document.getElementById("donadores-filtrados");
   donadores.scrollLeft -= 280;
 });
 
 btnNext.addEventListener("click", () => {
-  const donadores = document.getElementById('donadores-filtrados')  
+  const donadores = document.getElementById("donadores-filtrados");
   donadores.scrollLeft += 280;
 });
 
@@ -154,85 +145,19 @@ inputBuscarComedor.addEventListener("input", () => {
   }
 });
 
-// pruebas modal
-const abrirModal = document.getElementById("abrir-modal");
-const modalDonar = document.getElementById("modal-donar");
-const modalUnirse = document.getElementById("modal-unirse");
-const modalRecibir = document.getElementById("modal-recibir");
-/**
- * modal--show -> clase que hace que el modal se muestre. (le agrega opacidad: 1)
- */
-
-function abrirModalUnirse() {
-  modalDonar.classList.add("modal--show");
-}
-
-function abrirFormUnirse() {
-  modalDonar.classList.remove("modal--show");
-  modalUnirse.classList.add("modal--show");
-}
-
-function cerrarModalRegistro() {
-  modalUnirse.classList.remove("modal--show");
-}
-
-const botonCerrar = document.getElementById("cerrar-modal-donar");
-botonCerrar.addEventListener("click", () => {
-  modalDonar.classList.remove("modal--show");
-});
-
-const botonRegistro = document.getElementById("boton-registrarse");
-botonRegistro.addEventListener("click", () => {
-  modalDonar.classList.remove("modal--show");
-});
-
-const botonIngresar = document.getElementById("abrir-modal-ingresar");
-const modalIngresar = document.getElementById("modal-ingresar");
-
-botonIngresar.addEventListener("click", () => {
-  modalIngresar.classList.add("modal--show");
-});
-
-function cerrarModalIngresar(){
-  modalIngresar.classList.remove("modal--show");
-}
-
-function cerrarModalDonar(){
-  modalDonar.classList.remove("modal--show");
-}
-
-const botonCruz = document.getElementById("boton--cruz");
-botonCruz.addEventListener("click", () => {
-  modalIngresar.classList.remove("modal--show");
-  modalRecibir.classList.remove("modal--show");
-  modalDonar.classList.remove("modal--show");
-});
-
-/*------------ FORM QUIERO RECIBIR ---------------------*/
-function abrirFormRecibir() {
-  modalDonar.classList.remove("modal--show");
-  modalRecibir.classList.add("modal--show");
-}
-
-function cerrarModalRecibir() {
-  modalRecibir.classList.remove("modal--show");
-}
-
 /*=============== GSAP ANIMATION ===============*/
 gsap.from("#header-logo", 1.5, { opacity: 0, y: -40, delay: 0.2 });
 gsap.from("nav", 1.5, { opacity: 0, y: -40, delay: 0.3 });
 gsap.from("#hero-banner", 1.5, { opacity: 0, y: -100, delay: 0.4 });
 
-
 /*=============== FUNCIONES PARA BUSCAR COMEDORES ===============*/
 
 //MAPA DE COMEDORES
 
- //Obtener comedores
+//Obtener comedores
 
- const getComedores = async () => {
-
-  const comedores = await http.get('http://127.0.0.1:8080/api/comedores/');
+const getComedores = async () => {
+  const comedores = await http.get("http://127.0.0.1:8080/api/comedores/");
   return comedores;
 };
 
@@ -254,16 +179,13 @@ function filtrarComedores(comedores, donacion) {
   return comedoresFiltrados;
 }
 
-
-
-
 //Mostrar comedores
 
 const mostrarComedoresEnMapa = async (donacion) => {
   const comedores = await getComedores();
   const comedoresFiltrados = filtrarComedores(comedores, donacion);
 
-  const mapa = new google.maps.Map(document.getElementById('mapa-puntos'), {
+  const mapa = new google.maps.Map(document.getElementById("mapa-puntos"), {
     zoom: 12,
     center: { lat: -31.399054703829734, lng: -64.35902632911242 },
   });
@@ -271,7 +193,6 @@ const mostrarComedoresEnMapa = async (donacion) => {
   comedoresFiltrados.forEach(async (comedor) => {
     const direccion = `${comedor.calle} ${comedor.altura}`;
     const coordenadas = await obtenerCoordenadas(direccion);
-   
 
     if (coordenadas) {
       const marker = new google.maps.Marker({
@@ -280,27 +201,28 @@ const mostrarComedoresEnMapa = async (donacion) => {
         title: comedor.nombre,
       });
     } else {
-      console.log('no hay coordenadas')
+      console.log("no hay coordenadas");
     }
   });
 };
 
-
-// Función para obtener coordenadas 
+// Función para obtener coordenadas
 
 const obtenerCoordenadas = async (direccion) => {
   try {
-    const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${direccion}&key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik`);
+    const response = await fetch(
+      `https://maps.googleapis.com/maps/api/geocode/json?address=${direccion}&key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik`
+    );
     const data = await response.json();
-  
+
     if (data.results.length > 0) {
       const ubicacion = data.results[0].geometry.location;
       return ubicacion;
     } else {
       return null;
     }
-  } catch(error) {
-    console.log('NO SE PUDO REALIZAR LA PETICION' + error.message)
+  } catch (error) {
+    console.log("NO SE PUDO REALIZAR LA PETICION" + error.message);
   }
 };
 
@@ -310,8 +232,8 @@ const obtenerCoordenadas = async (direccion) => {
 btnBuscarComedor.addEventListener("click", async () => {
   divIngresarComedor.style.display = "none";
   divResultadosComedores.style.display = "block";
-  await mostrarComedoresEnMapa(inputBuscarComedor.value.toLowerCase())
-  necesidad.innerHTML = inputBuscarComedor.value.toUpperCase()
+  await mostrarComedoresEnMapa(inputBuscarComedor.value.toLowerCase());
+  necesidad.innerHTML = inputBuscarComedor.value.toUpperCase();
 });
 
 //por enter
@@ -319,11 +241,7 @@ inputBuscarComedor.addEventListener("keydown", async (event) => {
   if (event.key === "Enter" && inputBuscarComedor.value !== "") {
     divIngresarComedor.style.display = "none";
     divResultadosComedores.style.display = "block";
-    await mostrarComedoresEnMapa(inputBuscarComedor.value.toLowerCase())
-    necesidad.innerHTML = inputBuscarComedor.value.toUpperCase()
+    await mostrarComedoresEnMapa(inputBuscarComedor.value.toLowerCase());
+    necesidad.innerHTML = inputBuscarComedor.value.toUpperCase();
   }
 });
-
-
-
-
