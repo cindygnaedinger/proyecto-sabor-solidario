@@ -13,11 +13,20 @@ let mainComedores = document.getElementById('main-comedores')
   return comedores;
 };
 
+//ORDENAR COMEDORES POR NIVEL DE URGENCIA
+
+function ordenarUrgencia(comedores){
+
+
+}
+
 
 //muestra todos los comedores
 
   function mostrarComedores(comedores){
-
+    
+    comedores.sort((a, b) => b.urgencia - a.urgencia)
+    
     comedores.forEach(comedor => {
 
       let comedorHTML = `<article class="comedor">

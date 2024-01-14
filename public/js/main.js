@@ -77,7 +77,6 @@ function mostrarDonadores(donadores, donacionBuscada) {
 
 const getDonadores = async () => {
   const donadores = await http.get("http://127.0.0.1:8080/api/donadores/");
-  console.log(donadores);
   return donadores;
 };
 
@@ -189,6 +188,7 @@ const mostrarComedoresEnMapa = async (donacion) => {
     zoom: 12,
     center: { lat: -31.399054703829734, lng: -64.35902632911242 },
   });
+  console.log(mapa)
 
   comedoresFiltrados.forEach(async (comedor) => {
     const direccion = `${comedor.calle} ${comedor.altura}`;
