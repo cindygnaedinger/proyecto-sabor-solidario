@@ -25,7 +25,7 @@ let mainComedores = document.getElementById('main-comedores')
       <div class="datos-comedor">
         <h3>${comedor.nombre}</h3>
         <h4>${comedor.calle} ${comedor.altura}</h4>
-        <button>CONTACTAR</button>
+        <button onclick="window.location.href='mailto:${comedor.mail}';">CONTACTAR</button>
       </div>  
       <div class="urgencia">
         <h4>Nivel de urgencia: </h4>

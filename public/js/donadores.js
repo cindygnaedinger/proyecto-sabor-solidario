@@ -5,7 +5,6 @@ import http from './client/http.js'
 
 let mainDonadores = document.getElementById('main-donadores')
 
-
 //peticion para donadores
 
 
@@ -27,7 +26,7 @@ const getDonadores = async () => {
       <div class="datos-donador">
         <h3>${donador.nombre}</h3>
         <h4>Cantidad de donaciones <span>${donador.cantidadDonaciones}</span></h4>
-        <button>CONTACTAR</button>
+        <button id='contactar-donador'onclick="window.location.href='mailto:${donador.mail}';">CONTACTAR</button>
       </div>       
     </article>`
   
@@ -49,4 +48,3 @@ const getDonadores = async () => {
   });
 
 
-// MANEJO DE BUSQUEDA DE DONADORES

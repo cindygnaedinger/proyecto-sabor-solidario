@@ -12,7 +12,7 @@ let btnBuscarDonador = document.getElementById("btn-buscar-donar");
 let divResultadosDonadores = document.getElementById("resultados-donadores");
 let btnBuscarComedor = document.getElementById("btn-buscar-comedor");
 let inputBuscarComedor = document.getElementById("input-buscar-comedor");
-let articleDonador = document.getElementById("article-donador");
+let carruselDonadores = document.getElementById("donadores-filtrados");
 let btnBack = document.getElementById("btn-back-resultado-donador");
 let btnNext = document.getElementById("btn-next-resultado-donador");
 let divIngresarComedor = document.getElementById("ingresar-comedor");
@@ -59,13 +59,13 @@ function mostrarDonadores(donadores, donacionBuscada) {
                     <img src="imgs/mail.png" alt="Icono mail">
                     <h3>${donador.mail}</h3>
                     <div id="boton-contenedor">
-                        <button>CONTACTAR</button>
+                        <button onclick="window.location.href='mailto:${donador.mail}';">CONTACTAR</button>
                     </div>
                 </div>
             </article>
         `;
 
-      divResultadosDonadores.innerHTML += nuevoDonador;
+      carruselDonadores.innerHTML += nuevoDonador;
     });
   } else {
     donadores.innerHTML =

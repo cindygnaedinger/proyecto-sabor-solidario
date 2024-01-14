@@ -379,6 +379,7 @@ img[alt="Buscar-Donador"] {
   scroll-behavior: smooth;
 }
 
+
 #btn-back-resultado-donador,
 #btn-next-resultado-donador {
   height: 68px;
@@ -485,6 +486,7 @@ img[alt="Buscar-Donador"] {
   background-color: var(--primer-color);
   color: #fff;
 }
+
 
 /* ------ GUÍA ------------------------------------*/
 
@@ -1402,6 +1404,12 @@ img[alt="Buscar-Comedor"] {
 }
 
 .comedor button:hover {
+  background-color: var(--primer-color);
+  color: white;
+  cursor: pointer;
+}
+
+#contactar-donador:hover{
   background-color: var(--primer-color);
   color: white;
   cursor: pointer;
