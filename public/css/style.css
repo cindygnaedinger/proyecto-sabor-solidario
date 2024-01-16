@@ -723,6 +723,34 @@ img[alt="Buscar-Donador"] {
   gap: 48px;
 }
 
+#ubicaciones-comedores{
+  padding-top: 31px;
+}
+
+#ubicaciones-comedores h2 {
+  margin: auto;
+  width: 829px;
+  height: 88px;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+#contenedor-mapa{
+  margin: 38px auto;
+  width: 1000px;
+  height: 784px;
+  background-color: rgb(219, 247, 250, 0.55);
+  display: flex;
+  align-items: center;
+}
+
+#mapa-puntos{
+  margin: auto;
+  width: 900px;
+  height: 702px;  
+}
+
+
 #suma-tu-ayuda {
   display: flex;
   flex-direction: column;
