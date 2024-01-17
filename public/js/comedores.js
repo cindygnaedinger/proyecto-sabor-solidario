@@ -34,6 +34,7 @@ function ordenarUrgencia(comedores){
       <div class="datos-comedor">
         <h3>${comedor.nombre}</h3>
         <h4>${comedor.calle} ${comedor.altura}</h4>
+        <h4><span>Necesito recibir: ${comedor.necesidades}</span></h4>
         <button onclick="window.location.href='mailto:${comedor.mail}';">CONTACTAR</button>
       </div>  
       <div class="urgencia">

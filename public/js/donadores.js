@@ -25,7 +25,8 @@ const getDonadores = async () => {
       <img src="./imgs/imagen-donador.png" alt="">
       <div class="datos-donador">
         <h3>${donador.nombre}</h3>
-        <h4>Cantidad de donaciones <span>${donador.cantidadDonaciones}</span></h4>
+        <h4 style='margin-top: 8px'>Cantidad de donaciones <span>${donador.cantidadDonaciones}</span></h4>
+        <h4 style='color:#1e1e1e'>Tengo para donar: ${donador.donaciones}</h4>
         <button id='contactar-donador'onclick="window.location.href='mailto:${donador.mail}';">CONTACTAR</button>
       </div>       
     </article>`

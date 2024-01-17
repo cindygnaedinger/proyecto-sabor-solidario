@@ -1390,10 +1390,10 @@ img[alt="Buscar-Comedor"] {
 .donador {
   border: rgba(61, 61, 61, 0.3) 3px solid;
   width: 780px;
-  height: 304px;
+  height: 320px;
   position: relative;
   display: flex;
-  padding: 75px 41px;
+  padding: 50px 41px;
   color: var(--primer-color);
   box-shadow: 10px 6px 10px rgba(0, 0, 0, 0.3);
   margin-bottom: 35px;
@@ -1413,6 +1413,11 @@ img[alt="Buscar-Comedor"] {
 .datos-donador h4 {
   margin: 2px 0px 18px 0px;
   display: flex;
+}
+
+.datos-comedor span{
+  color: #1e1e1e;
+  font-weight: bold;
 }
 
 .comedor img {
