@@ -1,16 +1,11 @@
 // IMPORTACIONES
 
-import http from "./client/http.js";
-import dotenv from 'dotenv';
-
-// LIBRERIA
-
-dotenv.config();
-
+import http from "./client/http.js"
+import varEnt from "./variableEntorno.js"
+const apiKey = varEnt.apiKey
+console.log(apiKey)
 
 // ApiKey
-
-const apiKey = process.env.apiKey;
 
 // BUSCAR ELEMENTOS DEL DOM
 
