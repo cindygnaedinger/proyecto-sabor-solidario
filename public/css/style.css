@@ -379,7 +379,6 @@ img[alt="Buscar-Donador"] {
   scroll-behavior: smooth;
 }
 
-
 #btn-back-resultado-donador,
 #btn-next-resultado-donador {
   height: 68px;
@@ -486,7 +485,6 @@ img[alt="Buscar-Donador"] {
   background-color: var(--primer-color);
   color: #fff;
 }
-
 
 /* ------ GUÍA ------------------------------------*/
 
@@ -723,7 +721,7 @@ img[alt="Buscar-Donador"] {
   gap: 48px;
 }
 
-#ubicaciones-comedores{
+#ubicaciones-comedores {
   padding-top: 31px;
 }
 
@@ -735,7 +733,7 @@ img[alt="Buscar-Donador"] {
   font-weight: bold;
 }
 
-#contenedor-mapa{
+#contenedor-mapa {
   margin: 38px auto;
   width: 1000px;
   height: 784px;
@@ -744,12 +742,11 @@ img[alt="Buscar-Donador"] {
   align-items: center;
 }
 
-#mapa-puntos{
+#mapa-puntos {
   margin: auto;
   width: 900px;
-  height: 702px;  
+  height: 702px;
 }
-
 
 #suma-tu-ayuda {
   display: flex;
@@ -1122,6 +1119,7 @@ img[alt="Buscar-Comedor"] {
 /* FOOTER */
 .img-footer-top {
   width: 100%;
+  display: block;
 }
 
 #footer-container {
@@ -1415,7 +1413,7 @@ img[alt="Buscar-Comedor"] {
   display: flex;
 }
 
-.datos-comedor span{
+.datos-comedor span {
   color: #1e1e1e;
   font-weight: bold;
 }
@@ -1442,7 +1440,7 @@ img[alt="Buscar-Comedor"] {
   cursor: pointer;
 }
 
-#contactar-donador:hover{
+#contactar-donador:hover {
   background-color: var(--primer-color);
   color: white;
   cursor: pointer;
@@ -1661,7 +1659,6 @@ img[alt="Buscar-Comedor"] {
   }
 
   #footer-top {
-    background-size: 100% !important;
     width: 100%;
   }
   #footer-container {
