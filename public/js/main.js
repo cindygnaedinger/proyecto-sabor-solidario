@@ -1,6 +1,16 @@
 // IMPORTACIONES
 
 import http from "./client/http.js";
+import dotenv from 'dotenv';
+
+// LIBRERIA
+
+dotenv.config();
+
+
+// ApiKey
+
+const apiKey = process.env.apiKey;
 
 // BUSCAR ELEMENTOS DEL DOM
 
@@ -180,8 +190,7 @@ function filtrarComedores(comedores, donacion) {
 
 //Mostrar comedores
 
-const mostrarComedoresEnMapa = async (donacion) => {
-  apiKey = 'AIzaSyDYnPG9TJdu9tFjyEgaII_SKJ26Xl5qrZc'
+const mostrarComedoresEnMapa = async (donacion, apiKey) => {
   const comedores = await getComedores();
   const comedoresFiltrados = filtrarComedores(comedores, donacion);
 
@@ -233,7 +242,7 @@ const obtenerCoordenadas = async (direccion, apiKey) => {
 btnBuscarComedor.addEventListener("click", async () => {
   divIngresarComedor.style.display = "none";
   divResultadosComedores.style.display = "block";
-  await mostrarComedoresEnMapa(inputBuscarComedor.value.toLowerCase());
+  await mostrarComedoresEnMapa(inputBuscarComedor.value.toLowerCase(), apiKey);
   necesidad.innerHTML = inputBuscarComedor.value.toUpperCase();
 });
 
@@ -242,7 +251,7 @@ inputBuscarComedor.addEventListener("keydown", async (event) => {
   if (event.key === "Enter" && inputBuscarComedor.value !== "") {
     divIngresarComedor.style.display = "none";
     divResultadosComedores.style.display = "block";
-    await mostrarComedoresEnMapa(inputBuscarComedor.value.toLowerCase());
+    await mostrarComedoresEnMapa(inputBuscarComedor.value.toLowerCase(), apiKey);
     necesidad.innerHTML = inputBuscarComedor.value.toUpperCase();
   }
 });
