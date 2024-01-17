@@ -181,6 +181,7 @@ function filtrarComedores(comedores, donacion) {
 //Mostrar comedores
 
 const mostrarComedoresEnMapa = async (donacion) => {
+  apiKey = 'AIzaSyDYnPG9TJdu9tFjyEgaII_SKJ26Xl5qrZc'
   const comedores = await getComedores();
   const comedoresFiltrados = filtrarComedores(comedores, donacion);
 
@@ -192,7 +193,7 @@ const mostrarComedoresEnMapa = async (donacion) => {
 
   comedoresFiltrados.forEach(async (comedor) => {
     const direccion = `${comedor.calle} ${comedor.altura}`;
-    const coordenadas = await obtenerCoordenadas(direccion);
+    const coordenadas = await obtenerCoordenadas(direccion, apiKey);
 
     if (coordenadas) {
       const marker = new google.maps.Marker({
@@ -208,10 +209,10 @@ const mostrarComedoresEnMapa = async (donacion) => {
 
 // Función para obtener coordenadas
 
-const obtenerCoordenadas = async (direccion) => {
+const obtenerCoordenadas = async (direccion, apiKey) => {
   try {
     const response = await fetch(
-      `https://maps.googleapis.com/maps/api/geocode/json?address=${direccion}&key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik`
+      `https://maps.googleapis.com/maps/api/geocode/json?address=${direccion}&key=${apiKey}`
     );
     const data = await response.json();
 
