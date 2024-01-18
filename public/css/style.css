@@ -281,10 +281,8 @@ header nav a:hover {
 /*--------------- BUSQUEDA DONADORES --------------------*/
 
 #buscar-donadores {
-  height: 1057px;
   margin-top: 1px;
   text-align: center;
-  margin-bottom: 131px;
 }
 
 #ingresar-donacion {
@@ -360,23 +358,25 @@ img[alt="Buscar-Donador"] {
 }
 
 #resultados-donadores h2 {
-  margin: 208px auto 91px auto;
+  margin: auto;
   width: 477px;
   height: 76px;
+  line-height: 3;
   font-size: 80px;
 }
 
 #resultados-donadores #carrusel-donadores {
-  width: 1010px;
+  width: 1270px;
   height: 402px;
   margin: auto;
   display: flex;
   align-items: center;
   gap: 10px;
+  padding-top: 200px;
 }
 
 #carrusel-donadores #donadores-filtrados {
-  width: 840px;
+  width: 1110px;
   height: 402px;
   margin: auto auto auto 4px;
   padding-left: 10px;
@@ -387,6 +387,7 @@ img[alt="Buscar-Donador"] {
 
 #btn-back-resultado-donador,
 #btn-next-resultado-donador {
+  margin-top: 155px;
   height: 68px;
   background-color: transparent;
   border: none;
@@ -1636,8 +1637,8 @@ img[alt="Buscar-Comedor"] {
   }
   #buscar-donadores {
     height: fit-content;
-    margin-bottom: 50px;
   }
+
   #buscar-donadores h3 {
     font-size: 25px;
   }
