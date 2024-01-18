@@ -3,7 +3,6 @@
 import http from "./client/http.js"
 import varEnt from "./variableEntorno.js"
 const apiKey = varEnt.apiKey
-console.log(apiKey)
 
 // ApiKey
 
@@ -167,7 +166,8 @@ const getComedores = async () => {
 
 // filtrar comedores segun donacion ingresada
 
-function filtrarComedores(comedores, donacion) {
+async function filtrarComedores(donacion) {
+  const comedores = await getComedores()
   let comedoresFiltrados = [];
 
   //Un primer forEach para el array de comedores y el segundo para el array de necesidades de cada donador
@@ -183,61 +183,76 @@ function filtrarComedores(comedores, donacion) {
   return comedoresFiltrados;
 }
 
-//Mostrar comedores
 
-const mostrarComedoresEnMapa = async (donacion, apiKey) => {
-  const comedores = await getComedores();
-  const comedoresFiltrados = filtrarComedores(comedores, donacion);
 
-  const mapa = new google.maps.Map(document.getElementById("mapa-puntos"), {
-    zoom: 12,
-    center: { lat: -31.399054703829734, lng: -64.35902632911242 },
-  });
-  console.log(mapa)
+//Obtener coordenadas
 
-  comedoresFiltrados.forEach(async (comedor) => {
-    const direccion = `${comedor.calle} ${comedor.altura}`;
-    const coordenadas = await obtenerCoordenadas(direccion, apiKey);
 
-    if (coordenadas) {
-      const marker = new google.maps.Marker({
-        position: coordenadas,
-        map: mapa,
-        title: comedor.nombre,
+/*function obtenerCoordenadas(ubicacion) {
+  return new Promise((resolve, reject) => {
+      let geocoder = new google.maps.Geocoder();
+
+      geocoder.geocode({ 'address': ubicacion }, (results, status) => {
+          if (status === 'OK') {
+              let coordenadas = {
+                  lat: results[0].geometry.location.lat(),
+                  lng: results[0].geometry.location.lng()
+              };
+              resolve(coordenadas);
+          } else {
+              console.error(`Error al obtener coordenadas de ${ubicacion}. Estado: ${status}`);
+              reject(status);
+          }
       });
-    } else {
-      console.log("no hay coordenadas");
-    }
   });
-};
+}
 
-// Función para obtener coordenadas
 
-const obtenerCoordenadas = async (direccion, apiKey) => {
-  try {
-    const response = await fetch(
-      `https://maps.googleapis.com/maps/api/geocode/json?address=${direccion}&key=${apiKey}`
-    );
-    const data = await response.json();
 
-    if (data.results.length > 0) {
-      const ubicacion = data.results[0].geometry.location;
-      return ubicacion;
-    } else {
+//Creacion de mapa 
+
+async function marcarUbicaciones(comedores) {
+  let mapaNuevo = new google.maps.Map(
+    document.getElementById("mapa-puntos"),
+    { zoom: 12 },
+  );
+
+  console.log("Nuevo mapa:", mapaNuevo);
+
+  const arrayCoordenadas = await Promise.all(comedores.map(async (comedor) => {
+    const ubicacion = `${comedor.calle} ${comedor.altura}`;
+    try {
+      const coordenadas = await obtenerCoordenadas(ubicacion);
+      return coordenadas;
+    } catch (error) {
+      console.error(`Error al obtener coordenadas de ${ubicacion}. Estado: ${error}`);
       return null;
     }
-  } catch (error) {
-    console.log("NO SE PUDO REALIZAR LA PETICION" + error.message);
-  }
-};
+  }));
+
+  arrayCoordenadas.forEach(coordenada => {
+    if (coordenada) {
+      let marker = new google.maps.Marker({ position: coordenada, map: mapaNuevo });
+    } else {
+      console.error("Coordenadas no válidas:", coordenada);
+    }
+  });
+}
+
+  
+
+  */
+
 
 //LLAMADO A LA FUNCION
 
 //por button
+
 btnBuscarComedor.addEventListener("click", async () => {
   divIngresarComedor.style.display = "none";
   divResultadosComedores.style.display = "block";
-  await mostrarComedoresEnMapa(inputBuscarComedor.value.toLowerCase(), apiKey);
+  //const comedores = await filtrarComedores(inputBuscarComedor.value.toLowerCase())
+  //await marcarUbicaciones(comedores)  
   necesidad.innerHTML = inputBuscarComedor.value.toUpperCase();
 });
 
@@ -246,7 +261,8 @@ inputBuscarComedor.addEventListener("keydown", async (event) => {
   if (event.key === "Enter" && inputBuscarComedor.value !== "") {
     divIngresarComedor.style.display = "none";
     divResultadosComedores.style.display = "block";
-    await mostrarComedoresEnMapa(inputBuscarComedor.value.toLowerCase(), apiKey);
+    //const comedores = await filtrarComedores(inputBuscarComedor.value.toLowerCase())
+    //await marcarUbicaciones(comedores)
     necesidad.innerHTML = inputBuscarComedor.value.toUpperCase();
   }
-});
+}); 

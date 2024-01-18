@@ -550,7 +550,36 @@
     <!--=============== MAIN.JS ===============-->
     <script type="module" src="./js/main.js"></script>
 
-    <!--=============== API MAPS ===============-->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&libraries=places"></script>
+    <!--=============== APPI MAPS ===============-->
+
+    <script>
+
+      function initMap(){
+
+        const arrayCoordenadas = [
+        { lat: -31.4201, lng: -64.1888 },
+        { lat: -31.4147, lng: -64.1950 },
+        { lat: -31.4271, lng: -64.1834 },
+        { lat: -31.4089, lng: -64.1821 },
+        { lat: -31.4266, lng: -64.1863 },
+        { lat: -31.4110, lng: -64.1994 },
+        { lat: -31.4302, lng: -64.1940 },
+        { lat: -31.4175, lng: -64.1948 },
+        { lat: -31.4237, lng: -64.1895 },
+        { lat: -31.4101, lng: -64.1777 }
+      ];
+
+
+      let cordoba = {lat: -31.4167, lng: -64.1833}
+      let map = new google.maps.Map(
+        document.getElementById("mapa-puntos"),
+        {zoom:13, center: cordoba}
+      );
+      arrayCoordenadas.forEach(coordenadas => {let marker = new google.maps.Marker({position: coordenadas, map: map })})
+      }
+
+    </script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYnPG9TJdu9tFjyEgaII_SKJ26Xl5qrZc&callback=initMap"></script>
+    
   </body>
 </html>
