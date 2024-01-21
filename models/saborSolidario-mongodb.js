@@ -1,12 +1,12 @@
-const mongooseDB = require('mongoose');
-require('dotenv').config({ path: '.env' });
+const mongooseDB = require("mongoose");
+require("dotenv").config({ path: ".env" });
 
 let connected = false;
 
 const connectDB = async () => {
   try {
     await mongooseDB.connect(process.env.MONGO_DB_STR);
-    console.log('Conexión con MongoDB exitosa');
+    console.log("Conexión con MongoDB exitosa");
     connected = true;
   } catch (error) {
     console.error(
@@ -39,8 +39,8 @@ const donadoresSchema = mongooseDB.Schema({
   cantidadDonaciones: Number,
 });
 
-const comedoresModel = mongooseDB.model('comedores', comedoresSchema);
-const donadoresModel = mongooseDB.model('donadores', donadoresSchema);
+const comedoresModel = mongooseDB.model("comedores", comedoresSchema);
+const donadoresModel = mongooseDB.model("donadores", donadoresSchema);
 
 const createComedor = async (comedor) => {
   try {
@@ -122,7 +122,7 @@ const updateComedor = async (id, comedor) => {
       id,
       { $set: comedor },
       {
-        returnDocument: 'after',
+        returnDocument: "after",
       }
     );
     return updatedComedor;
@@ -140,7 +140,7 @@ const updateDonador = async (id, donador) => {
       id,
       { $set: donador },
       {
-        returnDocument: 'after',
+        returnDocument: "after",
       }
     );
     return updatedDonador;
