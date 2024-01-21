@@ -1,2 +1,5 @@
 node_modules
 variablesEntorno.js
+# Local Netlify folder
+.netlify
+.env
