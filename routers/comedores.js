@@ -1,40 +1,30 @@
-import express from 'express';
-import controller from '../controllers/comedores.js';
-
-const routerComedores = express.Router();
+const controllerComedores = require('../controllers/comedores.js');
+const routerComedores = require('express').Router();
 
 ///////////////////////////////////////////////////////////////////////////////
 //                                 Rutas GET                                 //
 ///////////////////////////////////////////////////////////////////////////////`
 
-routerComedores.get('/', controller.getComedores);
+routerComedores.get('/', controllerComedores.getComedoresController);
 
-routerComedores.get('/:id', controller.getComedor);
-
+routerComedores.get('/:id', controllerComedores.getComedorController);
 
 ////////////////////////////////////////////////////////////////////////////////
 //                                 Rutas POST                                 //
 ////////////////////////////////////////////////////////////////////////////////
 
-routerComedores.post('/', controller.postComedor);
-
+routerComedores.post('/', controllerComedores.postComedorController);
 
 ////////////////////////////////////////////////////////////////////////////////
 //                                 Rutas PUT                                  //
 ////////////////////////////////////////////////////////////////////////////////
 
-routerComedores.put('/:id', controller.putComedor);
-
+routerComedores.put('/:id', controllerComedores.putComedorController);
 
 ////////////////////////////////////////////////////////////////////////////////
 //                                Rutas DELETE                                //
 ////////////////////////////////////////////////////////////////////////////////
 
-routerComedores.delete('/:id', controller.deleteComedor);
+routerComedores.delete('/:id', controllerComedores.deleteComedorController);
 
-
-// Método con CommonJS:
-// module.exports = router;
-
-// Método con ES Modules:
-export default routerComedores;
+module.exports = routerComedores;

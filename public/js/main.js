@@ -1,8 +1,9 @@
 // IMPORTACIONES
 
-import http from "./client/http.js"
-import varEnt from "./variableEntorno.js"
-const apiKey = varEnt.apiKey
+import config from '../../config.js';
+import http from './client/http.js';
+import varEnt from './variableEntorno.js';
+const apiKey = varEnt.apiKey;
 
 // ApiKey
 
@@ -10,18 +11,18 @@ const apiKey = varEnt.apiKey
 
 //elementos de CONTACTA CON UN DONADOR
 
-let divBuscarDonador = document.getElementById("ingresar-donacion");
-let inputBuscarDonador = document.getElementById("input-buscar-donador");
-let btnBuscarDonador = document.getElementById("btn-buscar-donar");
-let divResultadosDonadores = document.getElementById("resultados-donadores");
-let btnBuscarComedor = document.getElementById("btn-buscar-comedor");
-let inputBuscarComedor = document.getElementById("input-buscar-comedor");
-let carruselDonadores = document.getElementById("donadores-filtrados");
-let btnBack = document.getElementById("btn-back-resultado-donador");
-let btnNext = document.getElementById("btn-next-resultado-donador");
-let divIngresarComedor = document.getElementById("ingresar-comedor");
-let divResultadosComedores = document.getElementById("ubicaciones-comedores");
-let necesidad = document.getElementById("necesidadComedor");
+let divBuscarDonador = document.getElementById('ingresar-donacion');
+let inputBuscarDonador = document.getElementById('input-buscar-donador');
+let btnBuscarDonador = document.getElementById('btn-buscar-donar');
+let divResultadosDonadores = document.getElementById('resultados-donadores');
+let btnBuscarComedor = document.getElementById('btn-buscar-comedor');
+let inputBuscarComedor = document.getElementById('input-buscar-comedor');
+let carruselDonadores = document.getElementById('donadores-filtrados');
+let btnBack = document.getElementById('btn-back-resultado-donador');
+let btnNext = document.getElementById('btn-next-resultado-donador');
+let divIngresarComedor = document.getElementById('ingresar-comedor');
+let divResultadosComedores = document.getElementById('ubicaciones-comedores');
+let necesidad = document.getElementById('necesidadComedor');
 
 // FUNCIONES
 
@@ -34,7 +35,9 @@ function filtrarDonadores(donadores, donacionBuscada) {
   donadores.forEach((donador) => {
     const donacionesDelDonador = donador.donaciones;
     donacionesDelDonador.forEach((donacion) => {
-      if (donacion === donacionBuscada) {
+      console.log(donacion, donacionBuscada);
+      const formattedDonation = donacion.toString().toLowerCase();
+      if (formattedDonation.includes(donacionBuscada.toLowerCase())) {
         donadoresFiltrados.push(donador);
       }
     });
@@ -46,6 +49,7 @@ function filtrarDonadores(donadores, donacionBuscada) {
 
 function mostrarDonadores(donadores, donacionBuscada) {
   const donadoresFiltrados = filtrarDonadores(donadores, donacionBuscada);
+  console.log('donadoresFitlrados', donadoresFiltrados);
 
   if (donadoresFiltrados != 0) {
     donadoresFiltrados.forEach((donador) => {
@@ -58,12 +62,12 @@ function mostrarDonadores(donadores, donacionBuscada) {
                     </p>
                 </div>
                 <div id="parte-inferior">
-                    <img src="imgs/phone.png" alt="Icono teléfono">
+                    <img src="./public/imgs/phone.png" alt="Icono teléfono">
                     <h3>${donador.telefono}</h3>
-                    <img src="imgs/mail.png" alt="Icono mail">
-                    <h3>${donador.mail}</h3>
+                    <img src="./public/imgs/mail.png" alt="Icono mail">
+                    <h3>${donador.email}</h3>
                     <div id="boton-contenedor">
-                        <button onclick="window.location.href='mailto:${donador.mail}';">CONTACTAR</button>
+                        <button onclick="window.location.href='mailto:${donador.email}';">CONTACTAR</button>
                     </div>
                 </div>
             </article>
@@ -73,14 +77,14 @@ function mostrarDonadores(donadores, donacionBuscada) {
     });
   } else {
     donadores.innerHTML =
-      "No se encontró ningun donador que tenga el producto ingresado";
+      'No se encontró ningun donador que tenga el producto ingresado';
   }
 }
 
 //Funcion buscar donadores
 
 const getDonadores = async () => {
-  const donadores = await http.get("http://127.0.0.1:8080/api/donadores/");
+  const donadores = await http.get(`${config.BASE_URL}/api/donadores/`);
   return donadores;
 };
 
@@ -88,70 +92,71 @@ const getDonadores = async () => {
 
 //Manejador de evento para buscar donadores
 
-btnBuscarDonador.addEventListener("click", async () => {
-  divBuscarDonador.style.display = "none";
-  divResultadosDonadores.style.display = "block";
+btnBuscarDonador.addEventListener('click', async () => {
+  divBuscarDonador.style.display = 'none';
+  divResultadosDonadores.style.display = 'block';
   const donadores = await getDonadores();
+  console.log('donadores', donadores);
   mostrarDonadores(donadores, inputBuscarDonador.value.toLowerCase());
 });
 
-inputBuscarDonador.addEventListener("keydown", async (event) => {
-  if (event.key === "Enter" && inputBuscarDonador.value !== "") {
-    divBuscarDonador.style.display = "none";
-    divResultadosDonadores.style.display = "block";
+inputBuscarDonador.addEventListener('keydown', async (event) => {
+  if (event.key === 'Enter' && inputBuscarDonador.value !== '') {
+    divBuscarDonador.style.display = 'none';
+    divResultadosDonadores.style.display = 'block';
     const donadores = await getDonadores();
     mostrarDonadores(donadores, inputBuscarDonador.value.toLowerCase());
   }
 });
 
-inputBuscarDonador.addEventListener("input", () => {
-  let imgLupaDonador = document.getElementById("img-buscar-donador");
+inputBuscarDonador.addEventListener('input', () => {
+  let imgLupaDonador = document.getElementById('img-buscar-donador');
 
   if (inputBuscarDonador.value) {
     btnBuscarDonador.disabled = false;
-    imgLupaDonador.style.cursor = "pointer";
-    imgLupaDonador.style.transition = "opacity 0.4s";
-    imgLupaDonador.style.opacity = "1";
+    imgLupaDonador.style.cursor = 'pointer';
+    imgLupaDonador.style.transition = 'opacity 0.4s';
+    imgLupaDonador.style.opacity = '1';
   } else {
     btnBuscarDonador.disabled = true;
-    imgLupaDonador.style.cursor = "default";
-    imgLupaDonador.style.transition = "opacity 0.6s";
-    imgLupaDonador.style.opacity = "0.3";
+    imgLupaDonador.style.cursor = 'default';
+    imgLupaDonador.style.transition = 'opacity 0.6s';
+    imgLupaDonador.style.opacity = '0.3';
   }
 });
 
-btnBack.addEventListener("click", () => {
-  const donadores = document.getElementById("donadores-filtrados");
+btnBack.addEventListener('click', () => {
+  const donadores = document.getElementById('donadores-filtrados');
   donadores.scrollLeft -= 280;
 });
 
-btnNext.addEventListener("click", () => {
-  const donadores = document.getElementById("donadores-filtrados");
+btnNext.addEventListener('click', () => {
+  const donadores = document.getElementById('donadores-filtrados');
   donadores.scrollLeft += 280;
 });
 
 //Manejador de eventos para buscar comedores
 
-inputBuscarComedor.addEventListener("input", () => {
-  let imgLupaComedor = document.getElementById("img-buscar-comedor");
+inputBuscarComedor.addEventListener('input', () => {
+  let imgLupaComedor = document.getElementById('img-buscar-comedor');
 
   if (inputBuscarComedor.value) {
     btnBuscarComedor.disabled = false;
-    imgLupaComedor.style.cursor = "pointer";
-    imgLupaComedor.style.transition = "opacity 0.3s";
-    imgLupaComedor.style.opacity = "1";
+    imgLupaComedor.style.cursor = 'pointer';
+    imgLupaComedor.style.transition = 'opacity 0.3s';
+    imgLupaComedor.style.opacity = '1';
   } else {
     btnBuscarComedor.disabled = true;
-    imgLupaComedor.style.cursor = "default";
-    imgLupaComedor.style.transition = "opacity 0.3s";
-    imgLupaComedor.style.opacity = "0.3";
+    imgLupaComedor.style.cursor = 'default';
+    imgLupaComedor.style.transition = 'opacity 0.3s';
+    imgLupaComedor.style.opacity = '0.3';
   }
 });
 
 /*=============== GSAP ANIMATION ===============*/
-gsap.from("#header-logo", 1.5, { opacity: 0, y: -40, delay: 0.2 });
-gsap.from("nav", 1.5, { opacity: 0, y: -40, delay: 0.3 });
-gsap.from("#hero-banner", 1.5, { opacity: 0, y: -100, delay: 0.4 });
+gsap.from('#header-logo', 1.5, { opacity: 0, y: -40, delay: 0.2 });
+gsap.from('nav', 1.5, { opacity: 0, y: -40, delay: 0.3 });
+gsap.from('#hero-banner', 1.5, { opacity: 0, y: -100, delay: 0.4 });
 
 /*=============== FUNCIONES PARA BUSCAR COMEDORES ===============*/
 
@@ -160,14 +165,14 @@ gsap.from("#hero-banner", 1.5, { opacity: 0, y: -100, delay: 0.4 });
 //Obtener comedores
 
 const getComedores = async () => {
-  const comedores = await http.get("http://127.0.0.1:8080/api/comedores/");
+  const comedores = await http.get(`${config.BASE_URL}/api/comedores/`);
   return comedores;
 };
 
 // filtrar comedores segun donacion ingresada
 
 async function filtrarComedores(donacion) {
-  const comedores = await getComedores()
+  const comedores = await getComedores();
   let comedoresFiltrados = [];
 
   //Un primer forEach para el array de comedores y el segundo para el array de necesidades de cada donador
@@ -183,10 +188,7 @@ async function filtrarComedores(donacion) {
   return comedoresFiltrados;
 }
 
-
-
 //Obtener coordenadas
-
 
 /*function obtenerCoordenadas(ubicacion) {
   return new Promise((resolve, reject) => {
@@ -243,26 +245,25 @@ async function marcarUbicaciones(comedores) {
 
   */
 
-
 //LLAMADO A LA FUNCION
 
 //por button
 
-btnBuscarComedor.addEventListener("click", async () => {
-  divIngresarComedor.style.display = "none";
-  divResultadosComedores.style.display = "block";
+btnBuscarComedor.addEventListener('click', async () => {
+  divIngresarComedor.style.display = 'none';
+  divResultadosComedores.style.display = 'block';
   //const comedores = await filtrarComedores(inputBuscarComedor.value.toLowerCase())
-  //await marcarUbicaciones(comedores)  
+  //await marcarUbicaciones(comedores)
   necesidad.innerHTML = inputBuscarComedor.value.toUpperCase();
 });
 
 //por enter
-inputBuscarComedor.addEventListener("keydown", async (event) => {
-  if (event.key === "Enter" && inputBuscarComedor.value !== "") {
-    divIngresarComedor.style.display = "none";
-    divResultadosComedores.style.display = "block";
+inputBuscarComedor.addEventListener('keydown', async (event) => {
+  if (event.key === 'Enter' && inputBuscarComedor.value !== '') {
+    divIngresarComedor.style.display = 'none';
+    divResultadosComedores.style.display = 'block';
     //const comedores = await filtrarComedores(inputBuscarComedor.value.toLowerCase())
     //await marcarUbicaciones(comedores)
     necesidad.innerHTML = inputBuscarComedor.value.toUpperCase();
   }
-}); 
+});

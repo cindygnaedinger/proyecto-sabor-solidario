@@ -1,61 +1,111 @@
-import api from '../API/comedores.js';
+const apiComedores = require('../API/comedores.js');
 
 ////////////////////////////////////////////////////////////////////////////////
 //                               GET Controller                               //
 ////////////////////////////////////////////////////////////////////////////////`
 
-const getComedores = async (req, res) => {
-    const comedores = await api.getComedores();
-    res.json(comedores);
+const getComedoresController = async (req, res) => {
+  const comedores = await apiComedores.getAllComedores();
+  res.json(comedores);
 };
 
-const getComedor = async (req, res) => {
-    const id = req.params.id;
+const getComedorController = async (req, res) => {
+  const id = req.params.id;
 
-    const comedor = await api.getComedor(id);
-    res.json(comedor);
+  const comedor = await apiComedores.getComedor(id);
+  res.json(comedor);
 };
-
 
 ///////////////////////////////////////////////////////////////////////////////
 //                              POST Controller                              //
 ///////////////////////////////////////////////////////////////////////////////
 
-const postComedor = async (req, res) => {
-    const {nombre, calle, altura, barrio, telefono, representante, horario_atencion, sitioweb, breve_descripcion, necesidades, urgencia, email} = req.body;
-    const comedor = { nombre, calle, altura, barrio, telefono, representante, horario_atencion, sitioweb, breve_descripcion, necesidades, urgencia, email};
+const postComedorController = async (req, res) => {
+  const {
+    nombre,
+    calle,
+    altura,
+    barrio,
+    telefono,
+    representante,
+    horario_atencion,
+    sitioweb,
+    breve_descripcion,
+    necesidades,
+    urgencia,
+    email,
+  } = req.body;
+  const comedor = {
+    nombre,
+    calle,
+    altura,
+    barrio,
+    telefono,
+    representante,
+    horario_atencion,
+    sitioweb,
+    breve_descripcion,
+    necesidades,
+    urgencia,
+    email,
+  };
 
-    const newComedor = await api.createComedor(comedor);
-    res.json(newComedor);
+  const newComedor = await apiComedores.createComedor(comedor);
+  res.json(newComedor);
 };
 
 //                               PUT Controller                               //
 
-const putComedor = async (req, res) => {
-    const id = req.params.id;
+const putComedorController = async (req, res) => {
+  const id = req.params.id;
 
-    const {nombre, calle, altura, barrio, telefono, representante, horario_atencion, sitioweb, breve_descripcion, necesidades, urgencia, email,} = req.body;
-    const comedor = {id, nombre, calle, altura, barrio, telefono, representante, horario_atencion, sitioweb, breve_descripcion, necesidades, urgencia, email};
+  const {
+    nombre,
+    calle,
+    altura,
+    barrio,
+    telefono,
+    representante,
+    horario_atencion,
+    sitioweb,
+    breve_descripcion,
+    necesidades,
+    urgencia,
+    email,
+  } = req.body;
+  const comedor = {
+    id,
+    nombre,
+    calle,
+    altura,
+    barrio,
+    telefono,
+    representante,
+    horario_atencion,
+    sitioweb,
+    breve_descripcion,
+    necesidades,
+    urgencia,
+    email,
+  };
 
-    const updatedComedor = await api.updateComedor(id, comedor);
-    res.json(updatedComedor);
+  const updatedComedor = await apiComedores.updateComedor(id, comedor);
+  res.json(updatedComedor);
 };
 
 //                             DELETE Controller                             //
 
+const deleteComedorController = async (req, res) => {
+  const id = req.params.id;
 
-const deleteComedor = async (req, res) => {
-    const id = req.params.id;
-
-    const removedComedor = await api.deleteComedor(id);
-    res.json(removedComedor);
+  const removedComedor = await apiComedores.deleteComedor(id);
+  res.json(removedComedor);
 };
 
-export default {
-    // getcomedores: getcomedores,
-    getComedores,
-    getComedor,
-    postComedor,
-    putComedor,
-    deleteComedor
+module.exports = {
+  getComedoresController,
+  getComedorController,
+  postComedorController,
+  putComedorController,
+  deleteComedorController,
 };

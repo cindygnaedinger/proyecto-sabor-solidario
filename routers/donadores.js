@@ -1,40 +1,31 @@
-import express from 'express';
-import controller from '../controllers/donadores.js';
-
-const routerDonadores = express.Router();
+const routerDonadores = require('express').Router();
+const api = require('../API/donadores.js');
+const controllerDonadores = require('../controllers/donadores.js');
 
 ///////////////////////////////////////////////////////////////////////////////
 //                                 Rutas GET                                 //
 ///////////////////////////////////////////////////////////////////////////////`
 
-routerDonadores.get('/', controller.getDonadores);
+routerDonadores.get('/', controllerDonadores.getDonadoresController);
 
-routerDonadores.get('/:id', controller.getDonador);
-
+routerDonadores.get('/:id', controllerDonadores.getDonadorController);
 
 ////////////////////////////////////////////////////////////////////////////////
 //                                 Rutas POST                                 //
 ////////////////////////////////////////////////////////////////////////////////
 
-routerDonadores.post('/', controller.postDonador);
-
+routerDonadores.post('/', controllerDonadores.postDonadorController);
 
 ////////////////////////////////////////////////////////////////////////////////
 //                                 Rutas PUT                                  //
 ////////////////////////////////////////////////////////////////////////////////
 
-routerDonadores.put('/:id', controller.putDonador);
-
+routerDonadores.put('/:id', controllerDonadores.putDonadorController);
 
 ////////////////////////////////////////////////////////////////////////////////
 //                                Rutas DELETE                                //
 ////////////////////////////////////////////////////////////////////////////////
 
-routerDonadores.delete('/:id', controller.deleteDonador);
+routerDonadores.delete('/:id', controllerDonadores.deleteDonadorController);
 
-
-// Método con CommonJS:
-// module.exports = router;
-
-// Método con ES Modules:
-export default routerDonadores;
+module.exports = routerDonadores;
